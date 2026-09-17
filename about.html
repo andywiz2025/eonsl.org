@@ -1,170 +1,2122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About EON-SL | Elections Observer Network Sierra Leone</title>
-<meta name="description" content="About the Elections Observer Network Sierra Leone (EON-SL): who we are, our mandate, vision, mission, thematic areas, core values, objectives and network.">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<style>
-:root{--blue:#38A9E8;--blue-dark:#1687C7;--navy:#17324D;--footer:#10283D;--white:#fff;--light:#F2F9FD;--grey-light:#E8EEF3;--grey:#64748B;--dark:#17212B;--shadow:0 10px 30px rgba(23,50,77,.10);--radius:16px;--max:1200px}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Arial,Helvetica,sans-serif;line-height:1.6;color:var(--dark);background:#fff}a{text-decoration:none;color:inherit}.container{width:min(92%,var(--max));margin:auto}
-.top-bar{background:var(--navy);color:#fff;font-size:.86rem}.top-inner{min-height:40px;display:flex;align-items:center}.top-contact{display:flex;gap:18px;flex-wrap:wrap}.top-contact i{color:var(--blue);margin-right:6px}
-header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.98);border-bottom:1px solid var(--grey-light);box-shadow:0 2px 12px rgba(23,50,77,.05)}.navbar{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;flex-shrink:0}.brand img{width:58px;height:58px;object-fit:contain}.brand-title{font-size:1rem;font-weight:800;color:var(--navy);line-height:1.15}.brand-subtitle{font-size:.72rem;color:var(--grey);margin-top:3px}
-.desktop-nav{display:flex;align-items:center;gap:3px}.desktop-nav>a,.nav-dropdown>button{border:0;background:transparent;color:var(--navy);font-size:.88rem;font-weight:700;padding:11px 9px;cursor:pointer;border-radius:8px}.desktop-nav>a:hover,.desktop-nav>a.active,.nav-dropdown>button:hover{background:var(--light);color:var(--blue-dark)}.nav-dropdown{position:relative}.nav-dropdown button i{font-size:.65rem;margin-left:4px}.dropdown-menu{position:absolute;top:calc(100% + 8px);left:0;min-width:235px;background:#fff;border:1px solid var(--grey-light);border-radius:12px;box-shadow:var(--shadow);padding:8px;opacity:0;visibility:hidden;transform:translateY(-5px);transition:.2s}.nav-dropdown:hover .dropdown-menu,.nav-dropdown:focus-within .dropdown-menu{opacity:1;visibility:visible;transform:none}.dropdown-menu a{display:block;padding:10px 12px;border-radius:8px;font-size:.86rem;color:var(--navy)}.dropdown-menu a:hover{background:var(--light);color:var(--blue-dark)}
-.social-links{display:flex;gap:7px;align-items:center}.social-links a{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--light);color:var(--navy);transition:.2s}.social-links a:hover{background:var(--blue);color:#fff;transform:translateY(-2px)}
-.mobile-toggle{display:none;width:44px;height:44px;border:1px solid var(--grey-light);border-radius:10px;background:#fff;color:var(--navy);font-size:1.3rem;cursor:pointer}.mobile-menu{display:none;background:#fff;border-top:1px solid var(--grey-light);max-height:calc(100vh - 82px);overflow:auto}.mobile-menu.open{display:block}.mobile-menu>a,.mobile-heading{display:flex;justify-content:space-between;align-items:center;width:100%;padding:14px 4%;border-bottom:1px solid var(--grey-light);background:#fff;color:var(--navy);font-weight:700}.mobile-heading{border:0;cursor:pointer;text-align:left;font-size:.94rem}.mobile-submenu{display:none;background:var(--light)}.mobile-submenu.open{display:block}.mobile-submenu a{display:block;padding:11px 8%;font-size:.86rem;border-bottom:1px solid rgba(232,238,243,.8);color:var(--navy)}.mobile-social{padding:18px 4%;display:flex;gap:9px;flex-wrap:wrap}.mobile-social a{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--light);color:var(--navy)}
-.page-hero{background:linear-gradient(135deg,rgba(22,135,199,.97),rgba(23,50,77,.97));color:#fff;text-align:center;padding:82px 0}.eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.page-hero .eyebrow{display:inline-block;padding:7px 13px;border:1px solid rgba(255,255,255,.3);border-radius:50px;margin-bottom:15px}.page-hero h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.1;margin-bottom:17px}.page-hero p{max-width:780px;margin:auto;font-size:1.04rem;opacity:.93}
-.section{padding:72px 0}.section-heading{text-align:center;max-width:800px;margin:0 auto 42px}.section-heading .eyebrow{color:var(--blue-dark);margin-bottom:8px}.section-heading h2{font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.2;color:var(--navy);margin-bottom:13px}.section-heading p{color:var(--grey)}
-.intro-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:30px}.content-card,.fact-card,.value-card,.theme-card,.network-card,.info-card{border:1px solid var(--grey-light);border-radius:var(--radius);background:#fff;box-shadow:0 5px 20px rgba(23,50,77,.05)}.content-card{padding:30px}.content-card h3{color:var(--navy);font-size:1.35rem;margin-bottom:14px}.content-card p{color:#425466;margin-bottom:14px}.fact-stack{display:grid;gap:15px}.fact-card{padding:20px;background:var(--light)}.fact-card strong{display:block;color:var(--navy);font-size:1.5rem}.fact-card span{color:var(--grey);font-size:.9rem}
-.split-section{background:var(--light)}.timeline{position:relative;max-width:900px;margin:auto}.timeline:before{content:"";position:absolute;left:21px;top:0;bottom:0;width:2px;background:var(--grey-light)}.timeline-item{position:relative;padding:0 0 28px 65px}.timeline-dot{position:absolute;left:10px;top:2px;width:24px;height:24px;border-radius:50%;background:var(--blue);border:5px solid #fff;box-shadow:0 0 0 2px var(--blue)}.timeline-year{color:var(--blue-dark);font-weight:800;font-size:.86rem}.timeline-item h3{color:var(--navy);font-size:1.15rem;margin:3px 0 5px}.timeline-item p{color:var(--grey);font-size:.94rem}
-.mandate-box{max-width:900px;margin:auto;background:var(--navy);color:#fff;padding:40px;border-radius:20px;text-align:center;box-shadow:var(--shadow)}.mandate-box h2{font-size:clamp(1.6rem,4vw,2.3rem);margin:8px 0 14px}.mandate-box p{opacity:.9;font-size:1.03rem}
-.two-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}.info-card{padding:30px}.info-card h3{color:var(--navy);font-size:1.35rem;margin-bottom:12px}.info-card p{color:var(--grey)}.info-card .icon{width:48px;height:48px;border-radius:12px;background:var(--light);color:var(--blue-dark);display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:17px}
-.theme-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.theme-card{padding:23px}.theme-number{color:var(--blue-dark);font-weight:800;font-size:.8rem}.theme-card h3{color:var(--navy);font-size:1rem;margin-top:5px}
-.objectives{display:grid;grid-template-columns:1fr 1fr;gap:15px}.objective{display:flex;gap:12px;padding:17px;background:var(--light);border-radius:11px}.objective i{color:var(--blue-dark);margin-top:4px}.objective span{color:#425466;font-size:.92rem}
-.values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.value-card{padding:20px;text-align:center}.value-card i{font-size:1.25rem;color:var(--blue-dark);margin-bottom:10px}.value-card h3{font-size:.96rem;color:var(--navy)}
-.network-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.network-card{padding:17px;display:flex;align-items:center;gap:12px}.network-card i{color:var(--blue-dark)}.network-card span{color:var(--navy);font-weight:700;font-size:.9rem}.reach{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:25px}.reach span{padding:10px 15px;border-radius:50px;background:var(--light);color:var(--navy);font-weight:800;font-size:.88rem}
-.cta-section{background:var(--light);padding:68px 0}.cta-box{background:var(--navy);color:#fff;border-radius:20px;padding:48px;display:flex;align-items:center;justify-content:space-between;gap:30px}.cta-box h2{font-size:clamp(1.6rem,4vw,2.3rem);line-height:1.2;margin-bottom:9px}.cta-box p{opacity:.88;max-width:680px}.cta-button{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;background:var(--blue);color:#fff;padding:13px 21px;border-radius:9px;font-weight:800}.cta-button:hover{background:var(--blue-dark)}
-footer{background:var(--footer);color:#fff}.footer-main{padding:58px 0 38px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:38px}.footer-brand{display:flex;gap:13px;align-items:flex-start;margin-bottom:17px}.footer-brand img{width:58px;height:58px;object-fit:contain}.footer-brand h3{font-size:1rem;line-height:1.25}.footer-column p{color:rgba(255,255,255,.72);font-size:.88rem}.footer-column h4{font-size:.95rem;margin-bottom:15px}.footer-column ul{list-style:none}.footer-column li{margin-bottom:9px}.footer-column a{color:rgba(255,255,255,.72);font-size:.87rem}.footer-column a:hover{color:var(--blue)}.footer-contact p{margin-bottom:9px}.footer-contact i{width:20px;color:var(--blue)}.footer-social{margin-top:17px}.footer-social .social-links a{background:rgba(255,255,255,.1);color:#fff}.footer-social .social-links a:hover{background:var(--blue)}.footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding:19px 0}.footer-bottom-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-bottom p{font-size:.8rem;color:rgba(255,255,255,.64)}.motto{color:var(--blue)!important;font-weight:800}
-@media(max-width:1100px){.desktop-nav>a,.nav-dropdown>button{font-size:.8rem;padding:10px 6px}.footer-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:900px){.desktop-nav,.navbar>.social-links{display:none}.mobile-toggle{display:flex;align-items:center;justify-content:center}.intro-grid,.two-grid{grid-template-columns:1fr}.theme-grid{grid-template-columns:repeat(2,1fr)}.values-grid{grid-template-columns:repeat(2,1fr)}.cta-box{flex-direction:column;align-items:flex-start}}@media(max-width:620px){.top-bar{display:none}.navbar{min-height:76px}.brand img{width:48px;height:48px}.brand-title{font-size:.88rem}.brand-subtitle{font-size:.64rem}.page-hero{padding:62px 0}.section{padding:53px 0}.theme-grid,.values-grid,.objectives,.network-grid{grid-template-columns:1fr}.content-card,.info-card,.mandate-box{padding:25px}.cta-box{padding:34px 24px}.footer-grid{grid-template-columns:1fr}.footer-bottom-inner{flex-direction:column;align-items:flex-start}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About EON-SL | Elections Observer Network Sierra Leone</title>
+
+  <meta
+    name="description"
+    content="Learn about Elections Observer Network Sierra Leone (EON-SL), its mandate, vision, mission, values and regional presence."
+  >
+
+  <meta
+    name="keywords"
+    content="EON-SL, Elections Observer Network Sierra Leone, election observation, civic participation, Sierra Leone, Guinea, Liberia, Côte d'Ivoire"
+  >
+
+  <meta name="theme-color" content="#38A9E8">
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <style>
+    :root {
+      --eon-sky: #38A9E8;
+      --eon-sky-dark: #1687C7;
+      --eon-navy: #17324D;
+      --eon-dark: #10283D;
+      --eon-text: #263746;
+      --eon-grey: #64748B;
+      --eon-light: #F2F9FD;
+      --eon-border: #E8EEF3;
+      --white: #FFFFFF;
+      --shadow: 0 12px 35px rgba(23, 50, 77, 0.10);
+      --radius: 14px;
+      --container: 1180px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+      color: var(--eon-text);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(var(--container), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* TOP BAR */
+
+    .topbar {
+      background: var(--eon-dark);
+      color: rgba(255,255,255,0.88);
+      font-size: 13px;
+    }
+
+    .topbar-inner {
+      min-height: 38px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .topbar-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .topbar-contact span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .topbar-contact i {
+      color: var(--eon-sky);
+    }
+
+    .topbar-social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .topbar-social a {
+      transition: 0.2s ease;
+    }
+
+    .topbar-social a:hover {
+      color: var(--eon-sky);
+    }
+
+    /* HEADER */
+
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--eon-border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+    }
+
+    .brand-text {
+      line-height: 1.15;
+    }
+
+    .brand-text strong {
+      display: block;
+      color: var(--eon-navy);
+      font-size: 17px;
+    }
+
+    .brand-text span {
+      color: var(--eon-grey);
+      font-size: 11px;
+      letter-spacing: 0.6px;
+    }
+
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .desktop-nav > a,
+    .nav-dropdown > button {
+      border: 0;
+      background: transparent;
+      color: var(--eon-navy);
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 28px 0;
+    }
+
+    .desktop-nav > a:hover,
+    .nav-dropdown > button:hover {
+      color: var(--eon-sky-dark);
+    }
+
+    .nav-dropdown {
+      position: relative;
+    }
+
+    .nav-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 220px;
+      background: var(--white);
+      border: 1px solid var(--eon-border);
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      padding: 10px;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.2s ease;
+    }
+
+    .nav-dropdown:hover .nav-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 7px;
+      color: var(--eon-text);
+      font-size: 13px;
+    }
+
+    .nav-dropdown-menu a:hover {
+      background: var(--eon-light);
+      color: var(--eon-sky-dark);
+    }
+
+    .mobile-menu-button {
+      display: none;
+      border: 0;
+      background: var(--eon-light);
+      color: var(--eon-navy);
+      width: 42px;
+      height: 42px;
+      border-radius: 9px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    .mobile-menu {
+      display: none;
+      padding: 10px 0 20px;
+      border-top: 1px solid var(--eon-border);
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    .mobile-menu a,
+    .mobile-submenu-button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 13px 0;
+      border: 0;
+      background: transparent;
+      color: var(--eon-navy);
+      font-size: 14px;
+      font-weight: 700;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .mobile-submenu {
+      display: none;
+      padding-left: 18px;
+    }
+
+    .mobile-submenu.open {
+      display: block;
+    }
+
+    .mobile-submenu a {
+      font-weight: 600;
+      color: var(--eon-grey);
+      padding: 9px 0;
+    }
+
+    /* HERO */
+
+    .page-hero {
+      min-height: 470px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(16,40,61,0.92) 0%,
+          rgba(16,40,61,0.78) 48%,
+          rgba(16,40,61,0.42) 100%
+        ),
+        url("assets/images/hero/about-hero.jpg") center/cover no-repeat;
+    }
+
+    .page-hero-content {
+      max-width: 760px;
+      color: var(--white);
+      padding: 80px 0;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: var(--eon-sky);
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: 1.7px;
+      text-transform: uppercase;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+      margin-bottom: 20px;
+    }
+
+    .page-hero h1 span {
+      color: var(--eon-sky);
+    }
+
+    .page-hero p {
+      max-width: 680px;
+      color: rgba(255,255,255,0.88);
+      font-size: 17px;
+    }
+
+    /* GENERAL */
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 42px;
+    }
+
+    .section-label {
+      color: var(--eon-sky-dark);
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 9px;
+    }
+
+    .section-heading h2 {
+      color: var(--eon-navy);
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.12;
+      margin-bottom: 15px;
+      letter-spacing: -1px;
+    }
+
+    .section-heading p {
+      color: var(--eon-grey);
+      font-size: 16px;
+    }
+
+    /* ABOUT */
+
+    .about-section {
+      background: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-image {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: var(--eon-light);
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+    }
+
+    .about-copy h2 {
+      color: var(--eon-navy);
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.12;
+      margin-bottom: 20px;
+    }
+
+    .about-copy p {
+      color: var(--eon-grey);
+      margin-bottom: 17px;
+    }
+
+    /* FACTS */
+
+    .facts-section {
+      background: var(--eon-light);
+    }
+
+    .facts-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .fact-card {
+      background: var(--white);
+      border: 1px solid var(--eon-border);
+      border-radius: var(--radius);
+      padding: 28px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .fact-card i {
+      color: var(--eon-sky-dark);
+      font-size: 25px;
+      margin-bottom: 14px;
+    }
+
+    .fact-card strong {
+      display: block;
+      color: var(--eon-navy);
+      font-size: 28px;
+      line-height: 1.1;
+      margin-bottom: 7px;
+    }
+
+    .fact-card span {
+      color: var(--eon-grey);
+      font-size: 13px;
+    }
+
+    /* VISION / MISSION */
+
+    .vision-mission-section {
+      background: var(--white);
+    }
+
+    .vm-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .vm-card {
+      padding: 35px;
+      border: 1px solid var(--eon-border);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--eon-sky);
+    }
+
+    .vm-card h3 {
+      color: var(--eon-navy);
+      font-size: 25px;
+      margin-bottom: 13px;
+    }
+
+    .vm-card p {
+      color: var(--eon-grey);
+      font-size: 15px;
+    }
+
+    /* THEMATIC AREAS */
+
+    .themes-section {
+      background: var(--eon-light);
+    }
+
+    .theme-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .theme-card {
+      background: var(--white);
+      border: 1px solid var(--eon-border);
+      border-radius: var(--radius);
+      padding: 28px;
+      min-height: 210px;
+      box-shadow: var(--shadow);
+    }
+
+    .theme-number {
+      color: var(--eon-sky-dark);
+      font-size: 13px;
+      font-weight: 850;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .theme-card h3 {
+      color: var(--eon-navy);
+      font-size: 18px;
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+
+    .theme-card p {
+      color: var(--eon-grey);
+      font-size: 14px;
+    }
+
+    /* REGIONAL PRESENCE */
+
+    .international-section {
+      background: var(--white);
+    }
+
+    .country-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .country-card {
+      display: block;
+      overflow: hidden;
+      border: 1px solid var(--eon-border);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .country-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 45px rgba(23, 50, 77, 0.14);
+    }
+
+    .country-image {
+      height: 240px;
+      position: relative;
+      overflow: hidden;
+      background: var(--eon-light);
+    }
+
+    .country-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+
+    .country-card:hover .country-image img {
+      transform: scale(1.05);
+    }
+
+    .country-badge {
+      position: absolute;
+      left: 16px;
+      bottom: 16px;
+      padding: 7px 12px;
+      border-radius: 20px;
+      background: rgba(16,40,61,0.88);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .country-content {
+      padding: 24px;
+    }
+
+    .country-content h3 {
+      color: var(--eon-navy);
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .country-content p {
+      color: var(--eon-grey);
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .country-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--eon-sky-dark);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    /* CORE VALUES */
+
+    .values-section {
+      background: var(--eon-light);
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .value-card {
+      background: var(--white);
+      border: 1px solid var(--eon-border);
+      border-radius: var(--radius);
+      padding: 25px;
+    }
+
+    .value-card i {
+      color: var(--eon-sky-dark);
+      font-size: 21px;
+      margin-bottom: 13px;
+    }
+
+    .value-card h3 {
+      color: var(--eon-navy);
+      font-size: 17px;
+      margin-bottom: 7px;
+    }
+
+    .value-card p {
+      color: var(--eon-grey);
+      font-size: 13px;
+    }
+
+    /* CTA */
+
+    .final-cta {
+      padding: 65px 0;
+      background: var(--eon-navy);
+      color: var(--white);
+    }
+
+    .final-cta-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .final-cta h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+
+    .final-cta p {
+      color: rgba(255,255,255,0.75);
+      max-width: 650px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 21px;
+      border-radius: 8px;
+      background: var(--eon-sky);
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 800;
+      transition: 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      background: var(--eon-sky-dark);
+      transform: translateY(-1px);
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--eon-dark);
+      color: rgba(255,255,255,0.78);
+      padding: 65px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.8fr 0.8fr 1.2fr;
+      gap: 40px;
+      padding-bottom: 45px;
+    }
+
+    .footer-brand img {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+
+    .footer-brand p {
+      max-width: 350px;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .footer-column h3 {
+      color: var(--white);
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    .footer-column a {
+      display: block;
+      color: rgba(255,255,255,0.72);
+      font-size: 13px;
+      margin-bottom: 9px;
+    }
+
+    .footer-column a:hover {
+      color: var(--eon-sky);
+    }
+
+    .footer-contact p {
+      display: flex;
+      gap: 10px;
+      font-size: 13px;
+      margin-bottom: 11px;
+    }
+
+    .footer-contact i {
+      color: var(--eon-sky);
+      margin-top: 4px;
+    }
+
+    .footer-social {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      margin-top: 18px;
+    }
+
+    .social-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      min-width: 38px;
+      flex: 0 0 38px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      color: var(--white);
+      transition: 0.2s ease;
+    }
+
+    .social-icon:hover {
+      background: var(--eon-sky);
+      transform: translateY(-2px);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      font-size: 12px;
+    }
+
+    .footer-motto {
+      color: var(--eon-sky);
+      font-weight: 800;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 980px) {
+      .desktop-nav {
+        display: none;
+      }
+
+      .mobile-menu-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .facts-grid,
+      .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .theme-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .country-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(100% - 28px, var(--container));
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .topbar-inner {
+        padding: 8px 0;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 7px;
+      }
+
+      .topbar-contact {
+        gap: 8px 15px;
+      }
+
+      .page-hero {
+        min-height: 430px;
+      }
+
+      .page-hero-content {
+        padding: 65px 0;
+      }
+
+      .page-hero h1 {
+        font-size: 42px;
+      }
+
+      .about-image img {
+        height: 330px;
+      }
+
+      .facts-grid,
+      .values-grid,
+      .theme-grid,
+      .country-grid,
+      .vm-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .country-image {
+        height: 220px;
+      }
+
+      .final-cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-social {
+        justify-content: center;
+        gap: 7px;
+      }
+
+      .social-icon {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        flex-basis: 36px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="top-bar"><div class="container top-inner"><div class="top-contact">
-<a href="mailto:electionsobsnet@gmail.com"><i class="fa-solid fa-envelope"></i>electionsobsnet@gmail.com</a>
-<a href="tel:+23234210118"><i class="fa-solid fa-phone"></i>+232 34 210 118</a>
-<a href="tel:+23276508888"><i class="fa-solid fa-mobile-screen-button"></i>+232 76 508 888</a>
-</div></div></div>
+  <!-- TOP BAR -->
 
-<header><div class="container navbar">
-<a href="index.html" class="brand"><img src="assets/images/eon-logo.png" alt="EON-SL Logo"><div><div class="brand-title">Elections Observer Network Sierra Leone</div><div class="brand-subtitle">Anchoring Transparent &amp; Credible Elections</div></div></a>
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-inner">
 
-<nav class="desktop-nav" aria-label="Main navigation">
-<a href="index.html">Home</a>
-<div class="nav-dropdown"><button type="button" class="active">About EON <i class="fa-solid fa-chevron-down"></i></button><div class="dropdown-menu">
-<a href="about.html">Who We Are</a><a href="about.html#vision-mission">Vision &amp; Mission</a><a href="about.html#mandate">Mandate</a><a href="about.html#values">Core Values</a><a href="about.html#objectives">Aims &amp; Objectives</a><a href="staff.html">Leadership &amp; Staff</a><a href="about.html#network">Member Organisations</a>
-</div></div>
-<div class="nav-dropdown"><button type="button">Elections <i class="fa-solid fa-chevron-down"></i></button><div class="dropdown-menu">
-<a href="elections.html">Current Election Cycle</a><a href="elections.html#calendar">Election Calendar</a><a href="elections.html#process">Electoral Process</a><a href="elections.html#management">Election Management</a><a href="elections.html#registration">Voter Registration</a><a href="elections.html#voting">Voting &amp; Counting</a><a href="elections.html#results">Results &amp; Tabulation</a><a href="elections.html#disputes">Complaints &amp; Disputes</a>
-</div></div>
-<div class="nav-dropdown"><button type="button">Observation <i class="fa-solid fa-chevron-down"></i></button><div class="dropdown-menu">
-<a href="observation.html">Methodology</a><a href="observation.html#plan">Observation Plan</a><a href="observation.html#lto-sto">LTO / STO</a><a href="observation.html#election-day">Election Day</a><a href="observation.html#media">Media Monitoring</a><a href="observation.html#incidents">Incident Monitoring</a><a href="observation.html#map">Observation Map</a>
-</div></div>
-<div class="nav-dropdown"><button type="button">Reports &amp; Data <i class="fa-solid fa-chevron-down"></i></button><div class="dropdown-menu">
-<a href="reports.html">All Reports</a><a href="reports.html#situation">Situation Reports</a><a href="reports.html#preliminary">Preliminary Statements</a><a href="reports.html#final">Final Reports</a><a href="reports.html#research">Research</a><a href="reports.html#data">Open Data</a>
-</div></div>
-<div class="nav-dropdown"><button type="button">Civic Education <i class="fa-solid fa-chevron-down"></i></button><div class="dropdown-menu">
-<a href="civic-education.html">Know Your Rights</a><a href="civic-education.html#voter-education">Voter Education</a><a href="civic-education.html#peaceful-elections">Peaceful Elections</a><a href="civic-education.html#inclusion">Inclusion</a><a href="civic-education.html#faqs">FAQs</a>
-</div></div>
-<div class="nav-dropdown"><button type="button">Get Involved <i class="fa-solid fa-chevron-down"></i></button><div class="dropdown-menu">
-<a href="get-involved.html">Get Involved</a><a href="volunteer.html">Volunteer</a><a href="observer-registration.html">Become an Observer</a><a href="get-involved.html#training">Training</a><a href="partnership.html">Partner With EON</a>
-</div></div>
-<a href="contact.html">Contact</a>
-</nav>
+        <div class="topbar-contact">
+          <span>
+            <i class="fa-solid fa-envelope"></i>
+            electionsobsnet@gmail.com
+          </span>
 
-<div class="social-links">
-<a href="https://www.facebook.com/EON-Sierra-Leone" data-social="facebook" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-<a href="https://wa.me/23234210118" data-social="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-<a href="https://www.linkedin.com/company/eon-sierra-leone/" data-social="linkedin" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-<a href="https://x.com/EON_OBSERVE2023" data-social="x" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-<a href="https://www.instagram.com/eon_sierra_leone/" data-social="instagram" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-<a href="https://www.youtube.com/@EON_SierraLeone" data-social="youtube" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-<a href="https://www.tiktok.com/@eon_sierra_leone" data-social="tiktok" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-</div>
+          <span>
+            <i class="fa-solid fa-phone"></i>
+            +232 34 210 118
+          </span>
+        </div>
 
-<button class="mobile-toggle" id="mobileToggle" type="button" aria-expanded="false" aria-label="Open navigation menu"><i class="fa-solid fa-bars"></i></button>
-</div>
+        <div class="topbar-social">
+          <a data-social="facebook" target="_blank" rel="noopener" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
 
-<div class="mobile-menu" id="mobileMenu">
-<a href="index.html">Home</a>
-<button class="mobile-heading" type="button" data-submenu="m-about" aria-expanded="false">About EON <i class="fa-solid fa-chevron-down"></i></button>
-<div class="mobile-submenu" id="m-about"><a href="about.html">Who We Are</a><a href="about.html#vision-mission">Vision &amp; Mission</a><a href="about.html#mandate">Mandate</a><a href="about.html#values">Core Values</a><a href="about.html#objectives">Aims &amp; Objectives</a><a href="staff.html">Leadership &amp; Staff</a><a href="about.html#network">Member Organisations</a></div>
-<button class="mobile-heading" type="button" data-submenu="m-elections" aria-expanded="false">Elections <i class="fa-solid fa-chevron-down"></i></button>
-<div class="mobile-submenu" id="m-elections"><a href="elections.html">Current Election Cycle</a><a href="elections.html#calendar">Election Calendar</a><a href="elections.html#process">Electoral Process</a><a href="elections.html#management">Election Management</a><a href="elections.html#registration">Voter Registration</a><a href="elections.html#voting">Voting &amp; Counting</a><a href="elections.html#results">Results &amp; Tabulation</a><a href="elections.html#disputes">Complaints &amp; Disputes</a></div>
-<button class="mobile-heading" type="button" data-submenu="m-observation" aria-expanded="false">Observation <i class="fa-solid fa-chevron-down"></i></button>
-<div class="mobile-submenu" id="m-observation"><a href="observation.html">Methodology</a><a href="observation.html#plan">Observation Plan</a><a href="observation.html#lto-sto">LTO / STO</a><a href="observation.html#election-day">Election Day</a><a href="observation.html#media">Media Monitoring</a><a href="observation.html#incidents">Incident Monitoring</a><a href="observation.html#map">Observation Map</a></div>
-<button class="mobile-heading" type="button" data-submenu="m-reports" aria-expanded="false">Reports &amp; Data <i class="fa-solid fa-chevron-down"></i></button>
-<div class="mobile-submenu" id="m-reports"><a href="reports.html">All Reports</a><a href="reports.html#situation">Situation Reports</a><a href="reports.html#preliminary">Preliminary Statements</a><a href="reports.html#final">Final Reports</a><a href="reports.html#research">Research</a><a href="reports.html#data">Open Data</a></div>
-<button class="mobile-heading" type="button" data-submenu="m-civic" aria-expanded="false">Civic Education <i class="fa-solid fa-chevron-down"></i></button>
-<div class="mobile-submenu" id="m-civic"><a href="civic-education.html">Know Your Rights</a><a href="civic-education.html#voter-education">Voter Education</a><a href="civic-education.html#peaceful-elections">Peaceful Elections</a><a href="civic-education.html#inclusion">Inclusion</a><a href="civic-education.html#faqs">FAQs</a></div>
-<button class="mobile-heading" type="button" data-submenu="m-involved" aria-expanded="false">Get Involved <i class="fa-solid fa-chevron-down"></i></button>
-<div class="mobile-submenu" id="m-involved"><a href="get-involved.html">Get Involved</a><a href="volunteer.html">Volunteer</a><a href="observer-registration.html">Become an Observer</a><a href="get-involved.html#training">Training</a><a href="partnership.html">Partner With EON</a></div>
-<a href="contact.html">Contact</a>
-<div class="mobile-social">
-<a href="https://www.facebook.com/EON-Sierra-Leone" data-social="facebook" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="https://wa.me/23234210118" data-social="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a><a href="https://www.linkedin.com/company/eon-sierra-leone/" data-social="linkedin" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://x.com/EON_OBSERVE2023" data-social="x" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a><a href="https://www.instagram.com/eon_sierra_leone/" data-social="instagram" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://www.youtube.com/@EON_SierraLeone" data-social="youtube" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="https://www.tiktok.com/@eon_sierra_leone" data-social="tiktok" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-</div>
-</div></header>
+          <a data-social="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
 
-<section class="page-hero"><div class="container"><div class="eyebrow">About EON-SL</div><h1>Who We Are</h1><p>Elections Observer Network Sierra Leone is an independent, impartial and non-partisan consortium observing the processes and procedures of the electoral cycle in Sierra Leone.</p></div></section>
+          <a data-social="linkedin" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
 
-<main>
-<section class="section" id="who-we-are"><div class="container"><div class="section-heading"><div class="eyebrow">Our Identity</div><h2>An Independent Electoral Observation Network</h2><p>EON brings together civil society, faith-based, professional, youth and women’s groups to support citizen participation and electoral observation.</p></div>
-<div class="intro-grid"><div class="content-card"><h3>Elections Observer Network (EON)</h3><p>Elections Observer Network (EON) is an independent, impartial and non-partisan consortium of civil society groups, faith-based, professional bodies, Youths and Women’s groups to observe the processes and procedures of the electoral cycle in Sierra Leone.</p><p>EON was formed in June 2019 and launched in September 2020 with 180 members regardless of political affiliation.</p></div>
-<div class="fact-stack"><div class="fact-card"><strong>June 2019</strong><span>Formation of EON</span></div><div class="fact-card"><strong>17 September 2020</strong><span>Formal launch of EON</span></div><div class="fact-card"><strong>180</strong><span>Members at launch, regardless of political affiliation</span></div></div></div></div></section>
+          <a data-social="x" target="_blank" rel="noopener" aria-label="X">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+        </div>
 
-<section class="section split-section" id="journey"><div class="container"><div class="section-heading"><div class="eyebrow">Our Journey</div><h2>From Formation to Regional Reach</h2><p>Key milestones supplied by EON describing its formation, launch, national coordination network and expansion beyond Sierra Leone.</p></div>
-<div class="timeline">
-<div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">JUNE 2019</div><h3>EON Formed</h3><p>Elections Observer Network was formed as a consortium focused on observing the electoral cycle in Sierra Leone.</p></div>
-<div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">17 SEPTEMBER 2020</div><h3>Formal Launch</h3><p>EON was formally launched with 180 members regardless of political affiliation.</p></div>
-<div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">NATIONAL NETWORK</div><h3>Regional &amp; District Coordination</h3><p>The Network succeeded in installing Regional and District coordinators across the country to facilitate the easy deployment of observation teams for elections.</p></div>
-<div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">REGIONAL EXPANSION</div><h3>Established Beyond Sierra Leone</h3><p>EON currently states that it has been established in Liberia, Côte d’Ivoire and Guinea.</p></div>
-</div></div></section>
+      </div>
+    </div>
+  </div>
 
-<section class="section" id="mandate"><div class="container"><div class="mandate-box"><div class="eyebrow">Our Mandate</div><h2>Mobilising Citizens. Supporting Credible Elections.</h2><p>Our mandate is to mobilize citizens to actively participate and to complement the efforts of the Election Management Bodies (EMBs) in ensuring a free, fair, inclusive, peaceful, transparent and credible elections.</p></div></div></section>
 
-<section class="section split-section" id="vision-mission"><div class="container"><div class="section-heading"><div class="eyebrow">Direction</div><h2>Vision &amp; Mission</h2></div><div class="two-grid">
-<div class="info-card"><div class="icon"><i class="fa-solid fa-eye"></i></div><h3>Our Vision</h3><p>Is a democratic society where transparent, inclusive and credible elections exist for the furtherance of the wishes and aspirations of the citizens</p></div>
-<div class="info-card"><div class="icon"><i class="fa-solid fa-handshake"></i></div><h3>Our Mission</h3><p>Our mission Is to work in partnership with all Election Management Bodies (EMBs) in enhancing citizen’s participation in the electoral processes</p></div>
-</div></div></section>
+  <!-- HEADER -->
 
-<section class="section" id="themes"><div class="container"><div class="section-heading"><div class="eyebrow">What We Focus On</div><h2>Thematic Areas</h2><p>EON’s thematic areas reflect the Network’s stated areas of work.</p></div><div class="theme-grid">
-<div class="theme-card"><div class="theme-number">01</div><h3>Credible, Transparent &amp; Democratic Good Governance</h3></div>
-<div class="theme-card"><div class="theme-number">02</div><h3>Elections &amp; Electoral Reforms</h3></div>
-<div class="theme-card"><div class="theme-number">03</div><h3>Voter Registration, Education &amp; Participation</h3></div>
-<div class="theme-card"><div class="theme-number">04</div><h3>Peace &amp; Human Right Education</h3></div>
-<div class="theme-card"><div class="theme-number">05</div><h3>Women’s Empowerment through Political Participation</h3></div>
-<div class="theme-card"><div class="theme-number">06</div><h3>Research, Monitoring &amp; Evaluation</h3></div>
-</div></div></section>
+  <header>
+    <div class="container">
 
-<section class="section split-section" id="objectives"><div class="container"><div class="section-heading"><div class="eyebrow">Our Work</div><h2>Aims &amp; Objectives</h2><p>Key aims and objectives stated in EON’s organisational material.</p></div><div class="objectives">
-<div class="objective"><i class="fa-solid fa-check"></i><span>Encourage citizen participation throughout the electoral process.</span></div>
-<div class="objective"><i class="fa-solid fa-check"></i><span>Critically analyse systematic electoral activities undertaken by ECSL, PPRC, NCRA &amp; Statistics Office.</span></div>
-<div class="objective"><i class="fa-solid fa-check"></i><span>Promote free, fair, inclusive, transparent and accountable elections.</span></div>
-<div class="objective"><i class="fa-solid fa-check"></i><span>Prevent electoral fraud.</span></div>
-<div class="objective"><i class="fa-solid fa-check"></i><span>Promote issue-based campaigns.</span></div>
-<div class="objective"><i class="fa-solid fa-check"></i><span>Enhance the credibility of electoral outcomes.</span></div>
-<div class="objective"><i class="fa-solid fa-check"></i><span>Identify successes and challenges and make recommendations to Election Management Bodies.</span></div>
-</div></div></section>
+      <div class="header-inner">
 
-<section class="section" id="values"><div class="container"><div class="section-heading"><div class="eyebrow">Our Principles</div><h2>Core Values</h2><p>The values that guide EON-SL’s organisational identity and approach.</p></div><div class="values-grid">
-<div class="value-card"><i class="fa-solid fa-scale-balanced"></i><h3>Transparency &amp; Accountability</h3></div><div class="value-card"><i class="fa-solid fa-award"></i><h3>Credibility</h3></div><div class="value-card"><i class="fa-solid fa-briefcase"></i><h3>Professionalism</h3></div><div class="value-card"><i class="fa-solid fa-shield-halved"></i><h3>Independence</h3></div><div class="value-card"><i class="fa-solid fa-equals"></i><h3>Impartiality</h3></div><div class="value-card"><i class="fa-solid fa-fingerprint"></i><h3>Integrity</h3></div><div class="value-card"><i class="fa-solid fa-people-group"></i><h3>Co-operation</h3></div><div class="value-card"><i class="fa-solid fa-hands-helping"></i><h3>Volunteerism</h3></div>
-</div></div></section>
+        <a href="index.html" class="brand" aria-label="EON-SL Home">
 
-<section class="section split-section" id="network"><div class="container"><div class="section-heading"><div class="eyebrow">Our Consortium</div><h2>Member Organisations</h2><p>EON has identified the following organisations as member organisations in the information supplied to the Network.</p></div><div class="network-grid">
-<div class="network-card"><i class="fa-solid fa-users"></i><span>Eminent Women for Peace Mediators</span></div><div class="network-card"><i class="fa-solid fa-users"></i><span>Amnesty International</span></div><div class="network-card"><i class="fa-solid fa-users"></i><span>Sierra Leone Scouts Association</span></div><div class="network-card"><i class="fa-solid fa-users"></i><span>Women’s Forum Sierra Leone</span></div><div class="network-card"><i class="fa-solid fa-users"></i><span>Southern Province Women’s Network (SProWNet)</span></div><div class="network-card"><i class="fa-solid fa-users"></i><span>Northern Region Women’s Network (NoRWeN)</span></div><div class="network-card"><i class="fa-solid fa-users"></i><span>Initiative for Civic Education (ICE)</span></div>
-</div><div class="section-heading" style="margin-top:48px;margin-bottom:15px"><div class="eyebrow">Geographical Reach</div><h2 style="font-size:1.8rem">Beyond Sierra Leone</h2></div><div class="reach"><span>Sierra Leone</span><span>Liberia</span><span>Côte d’Ivoire</span><span>Guinea</span></div></div></section>
+          <img
+            src="assets/images/eon-logo.png"
+            alt="EON-SL Logo"
+          >
 
-<section class="cta-section"><div class="container"><div class="cta-box"><div><h2>Meet the EON-SL Team</h2><p>Explore the leadership and management team supporting EON-SL’s programmes, coordination, training, quality assurance, finance and technology functions.</p></div><a class="cta-button" href="staff.html">Leadership &amp; Staff <i class="fa-solid fa-arrow-right"></i></a></div></div></section>
-</main>
+          <div class="brand-text">
+            <strong>Elections Observer Network</strong>
+            <span>Sierra Leone</span>
+          </div>
 
-<footer><div class="footer-main"><div class="container footer-grid">
-<div class="footer-column"><div class="footer-brand"><img src="assets/images/eon-logo.png" alt="EON-SL Logo"><h3>Elections Observer Network<br>Sierra Leone</h3></div><p>An independent, impartial and non-partisan consortium of civil society groups, faith-based organisations, professional bodies, youth and women’s groups observing electoral processes in Sierra Leone.</p><div class="footer-social"><div class="social-links">
-<a href="https://www.facebook.com/EON-Sierra-Leone" data-social="facebook" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="https://wa.me/23234210118" data-social="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a><a href="https://www.linkedin.com/company/eon-sierra-leone/" data-social="linkedin" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://x.com/EON_OBSERVE2023" data-social="x" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a><a href="https://www.instagram.com/eon_sierra_leone/" data-social="instagram" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://www.youtube.com/@EON_SierraLeone" data-social="youtube" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="https://www.tiktok.com/@eon_sierra_leone" data-social="tiktok" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-</div></div></div>
-<div class="footer-column"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About EON</a></li><li><a href="elections.html">Elections</a></li><li><a href="observation.html">Observation</a></li><li><a href="reports.html">Reports &amp; Data</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-<div class="footer-column"><h4>About</h4><ul><li><a href="about.html#vision-mission">Vision &amp; Mission</a></li><li><a href="about.html#mandate">Mandate</a></li><li><a href="about.html#themes">Thematic Areas</a></li><li><a href="about.html#objectives">Aims &amp; Objectives</a></li><li><a href="about.html#values">Core Values</a></li><li><a href="staff.html">Leadership &amp; Staff</a></li></ul></div>
-<div class="footer-column footer-contact"><h4>Contact EON-SL</h4><p><i class="fa-solid fa-location-dot"></i>5 Jesse Drive, Bango Farm,<br>Ghana Compound, Adonkia,<br>Goderich, Freetown,<br>Sierra Leone</p><p><i class="fa-solid fa-envelope"></i><a href="mailto:electionsobsnet@gmail.com">electionsobsnet@gmail.com</a></p><p><i class="fa-solid fa-envelope"></i><a href="mailto:eonslhq@gmail.com">eonslhq@gmail.com</a></p><p><i class="fa-solid fa-phone"></i><a href="tel:+23234210118">+232 34 210 118</a></p><p><i class="fa-solid fa-mobile-screen-button"></i><a href="tel:+23276508888">+232 76 508 888</a></p></div>
-</div></div><div class="footer-bottom"><div class="container footer-bottom-inner"><p>&copy; 2026 Elections Observer Network Sierra Leone. All rights reserved.</p><p class="motto">We Observe, Document and Report</p></div></div></footer>
+        </a>
 
-<script>
-const EON_SOCIAL_LINKS={facebook:"https://www.facebook.com/EON-Sierra-Leone",whatsapp:"https://wa.me/23234210118",linkedin:"https://www.linkedin.com/company/eon-sierra-leone/",x:"https://x.com/EON_OBSERVE2023",instagram:"https://www.instagram.com/eon_sierra_leone/",youtube:"https://www.youtube.com/@EON_SierraLeone",tiktok:"https://www.tiktok.com/@eon_sierra_leone/"};
-document.querySelectorAll("[data-social]").forEach(link=>{const key=link.dataset.social;if(EON_SOCIAL_LINKS[key])link.href=EON_SOCIAL_LINKS[key]});
-const mobileToggle=document.getElementById("mobileToggle"),mobileMenu=document.getElementById("mobileMenu");
-mobileToggle.addEventListener("click",()=>{const open=mobileMenu.classList.toggle("open");mobileToggle.setAttribute("aria-expanded",open);mobileToggle.setAttribute("aria-label",open?"Close navigation menu":"Open navigation menu");mobileToggle.innerHTML=open?'<i class="fa-solid fa-xmark"></i>':'<i class="fa-solid fa-bars"></i>'});
-document.querySelectorAll("[data-submenu]").forEach(button=>{button.addEventListener("click",()=>{const submenu=document.getElementById(button.dataset.submenu),open=submenu.classList.toggle("open");button.setAttribute("aria-expanded",open);const icon=button.querySelector("i");if(icon)icon.style.transform=open?"rotate(180deg)":"rotate(0deg)"})});
-mobileMenu.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{mobileMenu.classList.remove("open");mobileToggle.setAttribute("aria-expanded","false");mobileToggle.setAttribute("aria-label","Open navigation menu");mobileToggle.innerHTML='<i class="fa-solid fa-bars"></i>'}));
-window.addEventListener("resize",()=>{if(window.innerWidth>900){mobileMenu.classList.remove("open");mobileToggle.setAttribute("aria-expanded","false");mobileToggle.innerHTML='<i class="fa-solid fa-bars"></i>'}});
-</script>
+
+        <nav class="desktop-nav" aria-label="Main navigation">
+
+          <a href="index.html">Home</a>
+
+          <div class="nav-dropdown">
+
+            <button type="button">
+              About
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            <div class="nav-dropdown-menu">
+              <a href="about.html">About EON-SL</a>
+              <a href="staff.html">Leadership & Staff</a>
+            </div>
+
+          </div>
+
+          <a href="elections.html">Elections</a>
+
+          <a href="observation.html">Observation</a>
+
+          <a href="reports.html">Reports & Data</a>
+
+          <div class="nav-dropdown">
+
+            <button type="button">
+              Get Involved
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            <div class="nav-dropdown-menu">
+              <a href="civic-education.html">Civic Education</a>
+              <a href="volunteer.html">Volunteer</a>
+              <a href="observer-registration.html">Become an Observer</a>
+              <a href="partnership.html">Partner With EON-SL</a>
+            </div>
+
+          </div>
+
+          <a href="contact.html">Contact</a>
+
+        </nav>
+
+
+        <button
+          class="mobile-menu-button"
+          id="mobileMenuButton"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          type="button"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+      </div>
+
+
+      <!-- MOBILE MENU -->
+
+      <div class="mobile-menu" id="mobileMenu">
+
+        <a href="index.html">Home</a>
+
+        <button
+          class="mobile-submenu-button"
+          type="button"
+          data-submenu="aboutSubmenu"
+          aria-expanded="false"
+        >
+          About
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="mobile-submenu" id="aboutSubmenu">
+          <a href="about.html">About EON-SL</a>
+          <a href="staff.html">Leadership & Staff</a>
+        </div>
+
+        <a href="elections.html">Elections</a>
+        <a href="observation.html">Observation</a>
+        <a href="reports.html">Reports & Data</a>
+
+        <button
+          class="mobile-submenu-button"
+          type="button"
+          data-submenu="involvedSubmenu"
+          aria-expanded="false"
+        >
+          Get Involved
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="mobile-submenu" id="involvedSubmenu">
+          <a href="civic-education.html">Civic Education</a>
+          <a href="volunteer.html">Volunteer</a>
+          <a href="observer-registration.html">Become an Observer</a>
+          <a href="partnership.html">Partner With EON-SL</a>
+        </div>
+
+        <a href="contact.html">Contact</a>
+
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+
+  <main>
+
+    <section class="page-hero">
+
+      <div class="container">
+
+        <div class="page-hero-content">
+
+          <div class="eyebrow">
+            About EON-SL
+          </div>
+
+          <h1>
+            Who We Are
+            <span>& What We Do</span>
+          </h1>
+
+          <p>
+            Elections Observer Network Sierra Leone (EON-SL) is an
+            independent, impartial and non-partisan consortium of civil
+            society groups, faith-based and professional bodies, youth
+            and women’s groups observing processes and procedures
+            throughout the electoral cycle.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT EON -->
+
+    <section class="about-section">
+
+      <div class="container">
+
+        <div class="about-grid">
+
+          <div class="about-image">
+
+            <img
+              src="assets/images/hero/about-hero.jpg"
+              alt="EON-SL community and electoral observation activities"
+            >
+
+          </div>
+
+
+          <div class="about-copy">
+
+            <div class="section-label">
+              About EON-SL
+            </div>
+
+            <h2>
+              Strengthening citizen participation in electoral processes.
+            </h2>
+
+            <p>
+              Elections Observer Network Sierra Leone (EON-SL) is an
+              independent, impartial and non-partisan consortium of
+              civil society groups, faith-based and professional bodies,
+              youth and women’s groups.
+            </p>
+
+            <p>
+              EON-SL was established in 2020 and works to observe
+              processes and procedures throughout the electoral cycle,
+              while mobilising citizens and complementing the efforts
+              of Election Management Bodies.
+            </p>
+
+            <p>
+              Its mandate is to mobilize citizens to actively participate
+              in electoral processes and contribute to free, fair,
+              inclusive, peaceful, transparent and credible elections.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- KEY FACTS -->
+
+    <section class="facts-section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="section-label">
+            EON-SL at a Glance
+          </div>
+
+          <h2>
+            Our Organisation
+          </h2>
+
+          <p>
+            EON-SL brings together civil society, professional,
+            faith-based, youth and women’s groups around citizen
+            participation and electoral observation.
+          </p>
+
+        </div>
+
+
+        <div class="facts-grid">
+
+          <article class="fact-card">
+
+            <i class="fa-solid fa-calendar-days"></i>
+
+            <strong>2020</strong>
+
+            <span>
+              Established
+            </span>
+
+          </article>
+
+
+          <article class="fact-card">
+
+            <i class="fa-solid fa-users"></i>
+
+            <strong>180</strong>
+
+            <span>
+              Members at establishment
+            </span>
+
+          </article>
+
+
+          <article class="fact-card">
+
+            <i class="fa-solid fa-eye"></i>
+
+            <strong>Electoral Cycle</strong>
+
+            <span>
+              Observation before, during and after elections
+            </span>
+
+          </article>
+
+
+          <article class="fact-card">
+
+            <i class="fa-solid fa-earth-africa"></i>
+
+            <strong>Regional</strong>
+
+            <span>
+              Presence beyond Sierra Leone
+            </span>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- VISION & MISSION -->
+
+    <section class="vision-mission-section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="section-label">
+            Our Direction
+          </div>
+
+          <h2>
+            Vision & Mission
+          </h2>
+
+          <p>
+            EON-SL's work is guided by its vision for democratic
+            participation and its mission of partnership with
+            Election Management Bodies.
+          </p>
+
+        </div>
+
+
+        <div class="vm-grid">
+
+          <article class="vm-card">
+
+            <h3>
+              <i class="fa-solid fa-eye"></i>
+              Vision
+            </h3>
+
+            <p>
+              Is a democratic society where transparent, inclusive and
+              credible elections exist for the furtherance of the wishes
+              and aspirations of the citizens.
+            </p>
+
+          </article>
+
+
+          <article class="vm-card">
+
+            <h3>
+              <i class="fa-solid fa-handshake"></i>
+              Mission
+            </h3>
+
+            <p>
+              Our mission Is to work in partnership with all Election
+              Management Bodies (EMBs) in enhancing citizen’s
+              participation in the electoral processes.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- THEMATIC AREAS -->
+
+    <section class="themes-section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="section-label">
+            What We Focus On
+          </div>
+
+          <h2>
+            Thematic Areas
+          </h2>
+
+          <p>
+            EON-SL's work is structured around key areas supporting
+            credible elections, democratic governance and meaningful
+            citizen participation.
+          </p>
+
+        </div>
+
+
+        <div class="theme-grid">
+
+          <article class="theme-card">
+
+            <div class="theme-number">01</div>
+
+            <h3>
+              Credible, Transparent & Democratic Good Governance
+            </h3>
+
+            <p>
+              Promoting transparent and accountable democratic governance.
+            </p>
+
+          </article>
+
+
+          <article class="theme-card">
+
+            <div class="theme-number">02</div>
+
+            <h3>
+              Elections & Electoral Reforms
+            </h3>
+
+            <p>
+              Supporting informed observation and discussion of
+              electoral processes and reforms.
+            </p>
+
+          </article>
+
+
+          <article class="theme-card">
+
+            <div class="theme-number">03</div>
+
+            <h3>
+              Voter Registration, Education & Participation
+            </h3>
+
+            <p>
+              Encouraging informed and meaningful citizen participation.
+            </p>
+
+          </article>
+
+
+          <article class="theme-card">
+
+            <div class="theme-number">04</div>
+
+            <h3>
+              Peace & Human Right Education
+            </h3>
+
+            <p>
+              Supporting peaceful participation and awareness of rights.
+            </p>
+
+          </article>
+
+
+          <article class="theme-card">
+
+            <div class="theme-number">05</div>
+
+            <h3>
+              Women’s Empowerment through Political Participation
+            </h3>
+
+            <p>
+              Supporting women's participation in political and
+              electoral processes.
+            </p>
+
+          </article>
+
+
+          <article class="theme-card">
+
+            <div class="theme-number">06</div>
+
+            <h3>
+              Research, Monitoring & Evaluation
+            </h3>
+
+            <p>
+              Generating evidence through research, monitoring
+              and evaluation.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- INTERNATIONAL PRESENCE -->
+
+    <section class="international-section" id="international-presence">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="section-label">
+            Regional Presence
+          </div>
+
+          <h2>
+            EON Beyond Sierra Leone
+          </h2>
+
+          <p>
+            EON has established a presence beyond Sierra Leone,
+            extending its network and experience to Liberia,
+            Côte d’Ivoire and Guinea.
+          </p>
+
+        </div>
+
+
+        <div class="country-grid">
+
+
+          <!-- GUINEA -->
+
+          <a
+            href="guinea.html"
+            class="country-card"
+            aria-label="Visit EON Guinea office"
+          >
+
+            <div class="country-image">
+
+              <img
+                src="assets/images/missions/guinea.jpg"
+                alt="EON mission and activities in Guinea"
+                loading="lazy"
+              >
+
+              <span class="country-badge">
+                Guinea
+              </span>
+
+            </div>
+
+            <div class="country-content">
+
+              <h3>
+                Guinea
+              </h3>
+
+              <p>
+                EON mission and country presence in Guinea.
+              </p>
+
+              <span class="country-link">
+                Visit Guinea Office
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <!-- LIBERIA -->
+
+          <a
+            href="liberia.html"
+            class="country-card"
+            aria-label="Visit EON Liberia office"
+          >
+
+            <div class="country-image">
+
+              <img
+                src="assets/images/missions/liberia.jpg"
+                alt="EON mission and activities in Liberia"
+                loading="lazy"
+              >
+
+              <span class="country-badge">
+                Liberia
+              </span>
+
+            </div>
+
+            <div class="country-content">
+
+              <h3>
+                Liberia
+              </h3>
+
+              <p>
+                EON mission and country presence in Liberia.
+              </p>
+
+              <span class="country-link">
+                Visit Liberia Office
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <!-- CÔTE D'IVOIRE -->
+
+          <a
+            href="cote-divoire.html"
+            class="country-card"
+            aria-label="Visit EON Côte d'Ivoire office"
+          >
+
+            <div class="country-image">
+
+              <img
+                src="assets/images/missions/cote-divoire.jpg"
+                alt="EON mission and activities in Côte d'Ivoire"
+                loading="lazy"
+              >
+
+              <span class="country-badge">
+                Côte d’Ivoire
+              </span>
+
+            </div>
+
+            <div class="country-content">
+
+              <h3>
+                Côte d’Ivoire
+              </h3>
+
+              <p>
+                EON mission and country presence in Côte d’Ivoire.
+              </p>
+
+              <span class="country-link">
+                Visit Côte d’Ivoire Office
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+
+            </div>
+
+          </a>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CORE VALUES -->
+
+    <section class="values-section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="section-label">
+            What Guides Us
+          </div>
+
+          <h2>
+            Our Core Values
+          </h2>
+
+          <p>
+            EON-SL is guided by principles intended to sustain
+            credible, transparent and professional electoral
+            observation.
+          </p>
+
+        </div>
+
+
+        <div class="values-grid">
+
+          <article class="value-card">
+            <i class="fa-solid fa-scale-balanced"></i>
+            <h3>Transparency & Accountability</h3>
+            <p>
+              Our activities will be open to the public.
+            </p>
+          </article>
+
+
+          <article class="value-card">
+            <i class="fa-solid fa-circle-check"></i>
+            <h3>Credibility</h3>
+            <p>
+              We will endeavour to give objective and honest reports
+              on electoral processes.
+            </p>
+          </article>
+
+
+          <article class="value-card">
+            <i class="fa-solid fa-briefcase"></i>
+            <h3>Professionalism</h3>
+            <p>
+              We will work in line with standard rules and regulations.
+            </p>
+          </article>
+
+
+          <article class="value-card">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>Independence</h3>
+            <p>
+              Members are properly vetted to avoid political
+              party influence.
+            </p>
+          </article>
+
+
+          <article class="value-card">
+            <i class="fa-solid fa-equals"></i>
+            <h3>Impartiality</h3>
+            <p>
+              EON-SL does not take sides.
+            </p>
+          </article>
+
+
+          <article class="value-card">
+            <i class="fa-solid fa-fingerprint"></i>
+            <h3>Integrity</h3>
+            <p>
+              We maintain self-respect, trust, honesty and discipline.
+            </p>
+          </article>
+
+
+          <article class="value-card">
+            <i class="fa-solid fa-people-arrows"></i>
+            <h3>Co-operation</h3>
+            <p>
+              We work with partners, donors and Election Management Bodies.
+            </p>
+          </article>
+
+
+          <article class="value-card">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+            <h3>Volunteerism</h3>
+            <p>
+              We encourage volunteering and service to the nation.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FINAL CTA -->
+
+    <section class="final-cta">
+
+      <div class="container">
+
+        <div class="final-cta-inner">
+
+          <div>
+
+            <h2>
+              Anchoring Transparent & Credible Elections
+            </h2>
+
+            <p>
+              Learn more about EON-SL's observation work,
+              civic education, reports and opportunities to participate.
+            </p>
+
+          </div>
+
+          <a href="contact.html" class="btn">
+            Contact EON-SL
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+          <img
+            src="assets/images/eon-logo.png"
+            alt="EON-SL Logo"
+          >
+
+          <p>
+            Elections Observer Network Sierra Leone (EON-SL) is an
+            independent, impartial and non-partisan consortium
+            observing electoral processes and promoting citizen
+            participation.
+          </p>
+
+
+          <div class="footer-social">
+
+            <a
+              class="social-icon"
+              data-social="facebook"
+              target="_blank"
+              rel="noopener"
+              aria-label="Facebook"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a
+              class="social-icon"
+              data-social="whatsapp"
+              target="_blank"
+              rel="noopener"
+              aria-label="WhatsApp"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+            <a
+              class="social-icon"
+              data-social="linkedin"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a
+              class="social-icon"
+              data-social="x"
+              target="_blank"
+              rel="noopener"
+              aria-label="X"
+            >
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a
+              class="social-icon"
+              data-social="instagram"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a
+              class="social-icon"
+              data-social="youtube"
+              target="_blank"
+              rel="noopener"
+              aria-label="YouTube"
+            >
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a
+              class="social-icon"
+              data-social="tiktok"
+              target="_blank"
+              rel="noopener"
+              aria-label="TikTok"
+            >
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h3>
+            Explore
+          </h3>
+
+          <a href="index.html">Home</a>
+          <a href="about.html">About EON-SL</a>
+          <a href="elections.html">Elections</a>
+          <a href="observation.html">Observation</a>
+          <a href="reports.html">Reports & Data</a>
+          <a href="staff.html">Leadership & Staff</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h3>
+            Get Involved
+          </h3>
+
+          <a href="civic-education.html">Civic Education</a>
+          <a href="volunteer.html">Volunteer</a>
+          <a href="observer-registration.html">Become an Observer</a>
+          <a href="partnership.html">Partner With EON-SL</a>
+          <a href="contact.html">Contact</a>
+
+        </div>
+
+
+        <div class="footer-column footer-contact">
+
+          <h3>
+            Contact EON-SL
+          </h3>
+
+          <p>
+            <i class="fa-solid fa-location-dot"></i>
+            5 Jesse Drive, Bango Farm, Ghana Compound,
+            Adonkia, Goderich, Freetown, Sierra Leone
+          </p>
+
+          <p>
+            <i class="fa-solid fa-envelope"></i>
+            electionsobsnet@gmail.com
+          </p>
+
+          <p>
+            <i class="fa-solid fa-envelope"></i>
+            eonslhq@gmail.com
+          </p>
+
+          <p>
+            <i class="fa-solid fa-phone"></i>
+            +232 34 210 118
+          </p>
+
+          <p>
+            <i class="fa-solid fa-phone"></i>
+            +232 76 508 888
+          </p>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <div>
+          © 2026 Elections Observer Network Sierra Leone.
+          All rights reserved.
+        </div>
+
+        <div class="footer-motto">
+          We Observe, Document and Report
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    /*
+    ==========================================================
+    EON-SL SOCIAL MEDIA LINKS
+    ==========================================================
+
+    Change the URLs below when official profiles are confirmed.
+    ==========================================================
+    */
+
+    const EON_SOCIAL_LINKS = {
+
+      facebook:
+        "https://www.facebook.com/EON-Sierra-Leone",
+
+      whatsapp:
+        "https://wa.me/23276210000",
+
+      linkedin:
+        "https://www.linkedin.com/company/eon-sierra-leone/",
+
+      x:
+        "https://x.com/EON_OBSERVE2023",
+
+      instagram:
+        "https://www.instagram.com/eon_sierra_leone/",
+
+      youtube:
+        "https://www.youtube.com/@EON-SierraLeone",
+
+      tiktok:
+        "https://www.tiktok.com/@eon_sierra_leone/"
+
+    };
+
+
+    /*
+    ==========================================================
+    APPLY SOCIAL LINKS
+    ==========================================================
+    */
+
+    document
+      .querySelectorAll("[data-social]")
+      .forEach(function(link) {
+
+        const platform =
+          link.getAttribute("data-social");
+
+        if (EON_SOCIAL_LINKS[platform]) {
+
+          link.href =
+            EON_SOCIAL_LINKS[platform];
+
+        }
+
+      });
+
+
+    /*
+    ==========================================================
+    MOBILE MENU
+    ==========================================================
+    */
+
+    const mobileMenuButton =
+      document.getElementById("mobileMenuButton");
+
+    const mobileMenu =
+      document.getElementById("mobileMenu");
+
+
+    mobileMenuButton.addEventListener(
+      "click",
+      function() {
+
+        const isOpen =
+          mobileMenu.classList.toggle("open");
+
+        mobileMenuButton.setAttribute(
+          "aria-expanded",
+          isOpen ? "true" : "false"
+        );
+
+        mobileMenuButton.setAttribute(
+          "aria-label",
+          isOpen
+            ? "Close navigation menu"
+            : "Open navigation menu"
+        );
+
+        mobileMenuButton.innerHTML =
+          isOpen
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>';
+
+      }
+    );
+
+
+    /*
+    ==========================================================
+    MOBILE SUBMENUS
+    ==========================================================
+    */
+
+    document
+      .querySelectorAll("[data-submenu]")
+      .forEach(function(button) {
+
+        button.addEventListener(
+          "click",
+          function() {
+
+            const submenuId =
+              button.getAttribute("data-submenu");
+
+            const submenu =
+              document.getElementById(submenuId);
+
+            const isOpen =
+              submenu.classList.toggle("open");
+
+            button.setAttribute(
+              "aria-expanded",
+              isOpen ? "true" : "false"
+            );
+
+            const icon =
+              button.querySelector("i");
+
+            if (icon) {
+
+              icon.className =
+                isOpen
+                  ? "fa-solid fa-chevron-up"
+                  : "fa-solid fa-chevron-down";
+
+            }
+
+          }
+        );
+
+      });
+
+
+    /*
+    ==========================================================
+    CLOSE MOBILE MENU WHEN LINK IS SELECTED
+    ==========================================================
+    */
+
+    mobileMenu
+      .querySelectorAll("a")
+      .forEach(function(link) {
+
+        link.addEventListener(
+          "click",
+          function() {
+
+            mobileMenu.classList.remove("open");
+
+            mobileMenuButton.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+            mobileMenuButton.setAttribute(
+              "aria-label",
+              "Open navigation menu"
+            );
+
+            mobileMenuButton.innerHTML =
+              '<i class="fa-solid fa-bars"></i>';
+
+          }
+        );
+
+      });
+
+  </script>
+
 </body>
 </html>

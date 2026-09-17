@@ -18,7 +18,6 @@
 
   <meta name="theme-color" content="#38A9E8">
 
-  <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -48,6 +47,8 @@
 
     html {
       scroll-behavior: smooth;
+      max-width: 100%;
+      overflow-x: hidden;
     }
 
     body {
@@ -63,6 +64,7 @@
       background: var(--white);
       line-height: 1.6;
       overflow-x: hidden;
+      max-width: 100%;
     }
 
     img {
@@ -80,11 +82,13 @@
     }
 
     .container {
-      width: min(1180px, calc(100% - 40px));
+      width: min(var(--container), calc(100% - 40px));
       margin: 0 auto;
     }
 
-    /* TOP BAR */
+    /* ==========================================================
+       TOP BAR
+       ========================================================== */
 
     .topbar {
       background: var(--eon-dark);
@@ -118,7 +122,8 @@
 
     .topbar-social {
       display: flex;
-      gap: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .topbar-social a {
@@ -129,7 +134,9 @@
       color: var(--eon-sky);
     }
 
-    /* HEADER */
+    /* ==========================================================
+       HEADER
+       ========================================================== */
 
     .site-header {
       position: sticky;
@@ -145,7 +152,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 25px;
+      gap: 20px;
+      min-width: 0;
     }
 
     .brand {
@@ -153,12 +161,17 @@
       align-items: center;
       gap: 12px;
       flex-shrink: 0;
+      min-width: 0;
     }
 
     .brand img {
       width: 58px;
       height: 58px;
       object-fit: contain;
+    }
+
+    .brand-text {
+      min-width: 0;
     }
 
     .brand-text strong {
@@ -177,12 +190,15 @@
       margin-top: 3px;
     }
 
-    /* DESKTOP NAV */
+    /* ==========================================================
+       DESKTOP NAVIGATION
+       ========================================================== */
 
     .desktop-nav {
       display: flex;
       align-items: center;
       gap: 2px;
+      min-width: 0;
     }
 
     .nav-item {
@@ -191,12 +207,12 @@
 
     .nav-link {
       min-height: 82px;
-      padding: 0 11px;
+      padding: 0 9px;
       display: inline-flex;
       align-items: center;
       gap: 6px;
       color: var(--eon-navy);
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 650;
       white-space: nowrap;
       transition: 0.2s ease;
@@ -208,7 +224,7 @@
     }
 
     .nav-link i {
-      font-size: 10px;
+      font-size: 9px;
     }
 
     .dropdown {
@@ -247,16 +263,29 @@
       background: var(--eon-light);
     }
 
-    .desktop-social {
+    /* ==========================================================
+       SOCIAL ICONS
+       ========================================================== */
+
+    .desktop-social,
+    .header-social {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       gap: 7px;
-      margin-left: 8px;
+      max-width: 100%;
+      min-width: 0;
+    }
+
+    .desktop-social {
+      margin-left: 5px;
     }
 
     .social-icon {
       width: 32px;
       height: 32px;
+      min-width: 32px;
+      flex: 0 0 32px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -265,6 +294,7 @@
       color: var(--eon-navy);
       background: var(--white);
       transition: 0.2s ease;
+      box-sizing: border-box;
     }
 
     .social-icon:hover {
@@ -274,7 +304,9 @@
       transform: translateY(-2px);
     }
 
-    /* MOBILE */
+    /* ==========================================================
+       MOBILE NAVIGATION
+       ========================================================== */
 
     .mobile-menu-button {
       display: none;
@@ -286,14 +318,16 @@
       color: var(--eon-navy);
       cursor: pointer;
       font-size: 20px;
+      flex-shrink: 0;
     }
 
     .mobile-menu {
       display: none;
       border-top: 1px solid var(--eon-border);
       background: var(--white);
-      max-height: calc(100vh - 82px);
+      max-height: calc(100vh - 74px);
       overflow-y: auto;
+      overflow-x: hidden;
     }
 
     .mobile-menu.open {
@@ -317,6 +351,7 @@
       font-size: 15px;
       font-weight: 650;
       color: var(--eon-navy);
+      min-width: 0;
     }
 
     .mobile-expand {
@@ -326,6 +361,7 @@
       background: transparent;
       color: var(--eon-sky-dark);
       cursor: pointer;
+      flex-shrink: 0;
     }
 
     .mobile-submenu {
@@ -353,10 +389,24 @@
       padding: 20px;
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 8px;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
     }
 
-    /* HERO */
+    .mobile-social .social-icon {
+      width: 38px;
+      height: 38px;
+      min-width: 38px;
+      flex-basis: 38px;
+    }
+
+    /* ==========================================================
+       HERO
+       ========================================================== */
 
     .hero {
       position: relative;
@@ -459,7 +509,9 @@
       color: var(--eon-navy);
     }
 
-    /* INTRO */
+    /* ==========================================================
+       INTRO
+       ========================================================== */
 
     .intro {
       margin-top: -55px;
@@ -505,7 +557,9 @@
       font-size: 14px;
     }
 
-    /* GENERAL */
+    /* ==========================================================
+       GENERAL
+       ========================================================== */
 
     section {
       padding: 90px 0;
@@ -538,7 +592,9 @@
       font-size: 16px;
     }
 
-    /* ACTIVITY GALLERY */
+    /* ==========================================================
+       ACTIVITY GALLERY
+       ========================================================== */
 
     .activities {
       background: var(--eon-light);
@@ -588,13 +644,14 @@
       from {
         transform: translateX(0);
       }
-
       to {
         transform: translateX(calc(-50% - 9px));
       }
     }
 
-    /* ABOUT */
+    /* ==========================================================
+       ABOUT
+       ========================================================== */
 
     .about-grid {
       display: grid;
@@ -653,7 +710,92 @@
       font-size: 14px;
     }
 
-    /* THEMES */
+    /* ==========================================================
+       INTERNATIONAL / REGIONAL PRESENCE
+       ========================================================== */
+
+    .international-section {
+      background: var(--white);
+    }
+
+    .country-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .country-card {
+      display: block;
+      overflow: hidden;
+      border: 1px solid var(--eon-border);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: 0 8px 25px rgba(23,50,77,0.06);
+      transition: 0.25s ease;
+    }
+
+    .country-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      border-color: #b7def2;
+    }
+
+    .country-image {
+      position: relative;
+      height: 225px;
+      overflow: hidden;
+      background: var(--eon-light);
+    }
+
+    .country-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+
+    .country-card:hover .country-image img {
+      transform: scale(1.05);
+    }
+
+    .country-badge {
+      position: absolute;
+      left: 16px;
+      bottom: 16px;
+      padding: 7px 12px;
+      border-radius: 20px;
+      background: rgba(16,40,61,0.88);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .4px;
+    }
+
+    .country-content {
+      padding: 23px;
+    }
+
+    .country-content h3 {
+      color: var(--eon-navy);
+      font-size: 20px;
+      margin-bottom: 7px;
+    }
+
+    .country-content p {
+      color: var(--eon-grey);
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .country-link {
+      color: var(--eon-sky-dark);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    /* ==========================================================
+       THEMATIC AREAS
+       ========================================================== */
 
     .themes {
       background: var(--eon-light);
@@ -699,7 +841,9 @@
       font-size: 13px;
     }
 
-    /* PROCESS */
+    /* ==========================================================
+       OBSERVATION PROCESS
+       ========================================================== */
 
     .process-grid {
       display: grid;
@@ -738,7 +882,9 @@
       font-size: 12px;
     }
 
-    /* CIVIC */
+    /* ==========================================================
+       CIVIC EDUCATION
+       ========================================================== */
 
     .civic {
       background:
@@ -791,7 +937,9 @@
       margin-bottom: 18px;
     }
 
-    /* GET INVOLVED */
+    /* ==========================================================
+       GET INVOLVED
+       ========================================================== */
 
     .involved-grid {
       display: grid;
@@ -833,7 +981,9 @@
       text-decoration: underline;
     }
 
-    /* CTA */
+    /* ==========================================================
+       FINAL CTA
+       ========================================================== */
 
     .final-cta {
       padding: 75px 0;
@@ -870,7 +1020,9 @@
       background: var(--eon-light);
     }
 
-    /* FOOTER */
+    /* ==========================================================
+       FOOTER
+       ========================================================== */
 
     footer {
       background: var(--eon-dark);
@@ -927,6 +1079,7 @@
       flex-wrap: wrap;
       gap: 9px;
       margin-top: 15px;
+      max-width: 100%;
     }
 
     .footer-social .social-icon {
@@ -955,7 +1108,9 @@
       font-weight: 750;
     }
 
-    /* LIGHTBOX */
+    /* ==========================================================
+       LIGHTBOX
+       ========================================================== */
 
     .lightbox {
       position: fixed;
@@ -998,23 +1153,28 @@
       background: rgba(255,255,255,0.22);
     }
 
-    /* RESPONSIVE */
+    /* ==========================================================
+       RESPONSIVE
+       ========================================================== */
 
     @media (max-width: 1150px) {
 
       .nav-link {
-        padding: 0 8px;
-        font-size: 13px;
+        padding: 0 6px;
+        font-size: 12px;
       }
 
       .desktop-social {
         gap: 4px;
       }
 
-      .social-icon {
+      .desktop-social .social-icon {
         width: 29px;
         height: 29px;
+        min-width: 29px;
+        flex-basis: 29px;
       }
+
     }
 
     @media (max-width: 980px) {
@@ -1049,7 +1209,8 @@
 
       .intro-grid,
       .theme-grid,
-      .involved-grid {
+      .involved-grid,
+      .country-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
@@ -1071,12 +1232,13 @@
         align-items: flex-start;
         flex-direction: column;
       }
+
     }
 
     @media (max-width: 650px) {
 
       .container {
-        width: min(100% - 28px, 1180px);
+        width: min(100% - 28px, var(--container));
       }
 
       .topbar {
@@ -1112,6 +1274,7 @@
       .theme-grid,
       .involved-grid,
       .vision-mission,
+      .country-grid,
       .footer-grid {
         grid-template-columns: 1fr;
       }
@@ -1130,10 +1293,27 @@
         flex-basis: 245px;
       }
 
+      .country-image {
+        height: 210px;
+      }
+
       .footer-bottom {
         align-items: flex-start;
         flex-direction: column;
       }
+
+      .mobile-social {
+        justify-content: center;
+        gap: 7px;
+      }
+
+      .mobile-social .social-icon {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        flex-basis: 36px;
+      }
+
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -1151,13 +1331,16 @@
       *::after {
         transition-duration: 0.01ms !important;
       }
+
     }
   </style>
 </head>
 
 <body>
 
-  <!-- TOP BAR -->
+  <!-- ==========================================================
+       TOP BAR
+       ========================================================== -->
 
   <div class="topbar">
 
@@ -1177,55 +1360,33 @@
 
       </div>
 
-
       <div class="topbar-social">
 
-        <a data-social="facebook"
-           target="_blank"
-           rel="noopener"
-           aria-label="Facebook">
+        <a data-social="facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-brands fa-facebook-f"></i>
         </a>
 
-        <a data-social="whatsapp"
-           target="_blank"
-           rel="noopener"
-           aria-label="WhatsApp">
+        <a data-social="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
           <i class="fa-brands fa-whatsapp"></i>
         </a>
 
-        <a data-social="linkedin"
-           target="_blank"
-           rel="noopener"
-           aria-label="LinkedIn">
+        <a data-social="linkedin" target="_blank" rel="noopener" aria-label="LinkedIn">
           <i class="fa-brands fa-linkedin-in"></i>
         </a>
 
-        <a data-social="x"
-           target="_blank"
-           rel="noopener"
-           aria-label="X">
+        <a data-social="x" target="_blank" rel="noopener" aria-label="X">
           <i class="fa-brands fa-x-twitter"></i>
         </a>
 
-        <a data-social="instagram"
-           target="_blank"
-           rel="noopener"
-           aria-label="Instagram">
+        <a data-social="instagram" target="_blank" rel="noopener" aria-label="Instagram">
           <i class="fa-brands fa-instagram"></i>
         </a>
 
-        <a data-social="youtube"
-           target="_blank"
-           rel="noopener"
-           aria-label="YouTube">
+        <a data-social="youtube" target="_blank" rel="noopener" aria-label="YouTube">
           <i class="fa-brands fa-youtube"></i>
         </a>
 
-        <a data-social="tiktok"
-           target="_blank"
-           rel="noopener"
-           aria-label="TikTok">
+        <a data-social="tiktok" target="_blank" rel="noopener" aria-label="TikTok">
           <i class="fa-brands fa-tiktok"></i>
         </a>
 
@@ -1236,15 +1397,15 @@
   </div>
 
 
-  <!-- HEADER -->
+  <!-- ==========================================================
+       HEADER
+       ========================================================== -->
 
   <header class="site-header">
 
     <div class="container nav-container">
 
-      <a href="index.html"
-         class="brand"
-         aria-label="EON-SL Home">
+      <a href="index.html" class="brand" aria-label="EON-SL Home">
 
         <img
           src="assets/images/eon-logo.png"
@@ -1276,7 +1437,6 @@
           </a>
         </div>
 
-
         <div class="nav-item">
 
           <a class="nav-link" href="about.html">
@@ -1294,7 +1454,6 @@
           </div>
 
         </div>
-
 
         <div class="nav-item">
 
@@ -1316,7 +1475,6 @@
 
         </div>
 
-
         <div class="nav-item">
 
           <a class="nav-link" href="observation.html">
@@ -1336,7 +1494,6 @@
           </div>
 
         </div>
-
 
         <div class="nav-item">
 
@@ -1358,7 +1515,6 @@
 
         </div>
 
-
         <div class="nav-item">
 
           <a class="nav-link" href="civic-education.html">
@@ -1376,7 +1532,6 @@
           </div>
 
         </div>
-
 
         <div class="nav-item">
 
@@ -1396,13 +1551,11 @@
 
         </div>
 
-
         <div class="nav-item">
           <a class="nav-link" href="news.html">
             News & Media
           </a>
         </div>
-
 
         <div class="nav-item">
           <a class="nav-link" href="contact.html">
@@ -1417,59 +1570,31 @@
 
       <div class="desktop-social">
 
-        <a class="social-icon"
-           data-social="facebook"
-           target="_blank"
-           rel="noopener"
-           aria-label="Facebook">
+        <a class="social-icon" data-social="facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-brands fa-facebook-f"></i>
         </a>
 
-        <a class="social-icon"
-           data-social="whatsapp"
-           target="_blank"
-           rel="noopener"
-           aria-label="WhatsApp">
+        <a class="social-icon" data-social="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
           <i class="fa-brands fa-whatsapp"></i>
         </a>
 
-        <a class="social-icon"
-           data-social="linkedin"
-           target="_blank"
-           rel="noopener"
-           aria-label="LinkedIn">
+        <a class="social-icon" data-social="linkedin" target="_blank" rel="noopener" aria-label="LinkedIn">
           <i class="fa-brands fa-linkedin-in"></i>
         </a>
 
-        <a class="social-icon"
-           data-social="x"
-           target="_blank"
-           rel="noopener"
-           aria-label="X">
+        <a class="social-icon" data-social="x" target="_blank" rel="noopener" aria-label="X">
           <i class="fa-brands fa-x-twitter"></i>
         </a>
 
-        <a class="social-icon"
-           data-social="instagram"
-           target="_blank"
-           rel="noopener"
-           aria-label="Instagram">
+        <a class="social-icon" data-social="instagram" target="_blank" rel="noopener" aria-label="Instagram">
           <i class="fa-brands fa-instagram"></i>
         </a>
 
-        <a class="social-icon"
-           data-social="youtube"
-           target="_blank"
-           rel="noopener"
-           aria-label="YouTube">
+        <a class="social-icon" data-social="youtube" target="_blank" rel="noopener" aria-label="YouTube">
           <i class="fa-brands fa-youtube"></i>
         </a>
 
-        <a class="social-icon"
-           data-social="tiktok"
-           target="_blank"
-           rel="noopener"
-           aria-label="TikTok">
+        <a class="social-icon" data-social="tiktok" target="_blank" rel="noopener" aria-label="TikTok">
           <i class="fa-brands fa-tiktok"></i>
         </a>
 
@@ -1500,18 +1625,14 @@
         </div>
       </div>
 
-
       <div class="mobile-nav-item">
 
         <div class="mobile-nav-row">
-
           <a href="about.html">About EON</a>
 
-          <button class="mobile-expand"
-                  aria-label="Expand About EON">
+          <button class="mobile-expand" aria-label="Expand About EON">
             <i class="fa-solid fa-chevron-down"></i>
           </button>
-
         </div>
 
         <div class="mobile-submenu">
@@ -1525,18 +1646,14 @@
 
       </div>
 
-
       <div class="mobile-nav-item">
 
         <div class="mobile-nav-row">
-
           <a href="elections.html">Elections</a>
 
-          <button class="mobile-expand"
-                  aria-label="Expand Elections">
+          <button class="mobile-expand" aria-label="Expand Elections">
             <i class="fa-solid fa-chevron-down"></i>
           </button>
-
         </div>
 
         <div class="mobile-submenu">
@@ -1552,18 +1669,14 @@
 
       </div>
 
-
       <div class="mobile-nav-item">
 
         <div class="mobile-nav-row">
-
           <a href="observation.html">Observation</a>
 
-          <button class="mobile-expand"
-                  aria-label="Expand Observation">
+          <button class="mobile-expand" aria-label="Expand Observation">
             <i class="fa-solid fa-chevron-down"></i>
           </button>
-
         </div>
 
         <div class="mobile-submenu">
@@ -1579,18 +1692,14 @@
 
       </div>
 
-
       <div class="mobile-nav-item">
 
         <div class="mobile-nav-row">
-
           <a href="reports.html">Reports & Data</a>
 
-          <button class="mobile-expand"
-                  aria-label="Expand Reports & Data">
+          <button class="mobile-expand" aria-label="Expand Reports & Data">
             <i class="fa-solid fa-chevron-down"></i>
           </button>
-
         </div>
 
         <div class="mobile-submenu">
@@ -1606,18 +1715,14 @@
 
       </div>
 
-
       <div class="mobile-nav-item">
 
         <div class="mobile-nav-row">
-
           <a href="civic-education.html">Civic Education</a>
 
-          <button class="mobile-expand"
-                  aria-label="Expand Civic Education">
+          <button class="mobile-expand" aria-label="Expand Civic Education">
             <i class="fa-solid fa-chevron-down"></i>
           </button>
-
         </div>
 
         <div class="mobile-submenu">
@@ -1631,18 +1736,14 @@
 
       </div>
 
-
       <div class="mobile-nav-item">
 
         <div class="mobile-nav-row">
-
           <a href="get-involved.html">Get Involved</a>
 
-          <button class="mobile-expand"
-                  aria-label="Expand Get Involved">
+          <button class="mobile-expand" aria-label="Expand Get Involved">
             <i class="fa-solid fa-chevron-down"></i>
           </button>
-
         </div>
 
         <div class="mobile-submenu">
@@ -1656,22 +1757,16 @@
 
       </div>
 
-
       <div class="mobile-nav-item">
-
         <div class="mobile-nav-row">
           <a href="news.html">News & Media</a>
         </div>
-
       </div>
 
-
       <div class="mobile-nav-item">
-
         <div class="mobile-nav-row">
           <a href="contact.html">Contact</a>
         </div>
-
       </div>
 
 
@@ -1679,59 +1774,31 @@
 
       <div class="mobile-social">
 
-        <a class="social-icon"
-           data-social="facebook"
-           target="_blank"
-           rel="noopener"
-           aria-label="Facebook">
+        <a class="social-icon" data-social="facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-brands fa-facebook-f"></i>
         </a>
 
-        <a class="social-icon"
-           data-social="whatsapp"
-           target="_blank"
-           rel="noopener"
-           aria-label="WhatsApp">
+        <a class="social-icon" data-social="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
           <i class="fa-brands fa-whatsapp"></i>
         </a>
 
-        <a class="social-icon"
-           data-social="linkedin"
-           target="_blank"
-           rel="noopener"
-           aria-label="LinkedIn">
+        <a class="social-icon" data-social="linkedin" target="_blank" rel="noopener" aria-label="LinkedIn">
           <i class="fa-brands fa-linkedin-in"></i>
         </a>
 
-        <a class="social-icon"
-           data-social="x"
-           target="_blank"
-           rel="noopener"
-           aria-label="X">
+        <a class="social-icon" data-social="x" target="_blank" rel="noopener" aria-label="X">
           <i class="fa-brands fa-x-twitter"></i>
         </a>
 
-        <a class="social-icon"
-           data-social="instagram"
-           target="_blank"
-           rel="noopener"
-           aria-label="Instagram">
+        <a class="social-icon" data-social="instagram" target="_blank" rel="noopener" aria-label="Instagram">
           <i class="fa-brands fa-instagram"></i>
         </a>
 
-        <a class="social-icon"
-           data-social="youtube"
-           target="_blank"
-           rel="noopener"
-           aria-label="YouTube">
+        <a class="social-icon" data-social="youtube" target="_blank" rel="noopener" aria-label="YouTube">
           <i class="fa-brands fa-youtube"></i>
         </a>
 
-        <a class="social-icon"
-           data-social="tiktok"
-           target="_blank"
-           rel="noopener"
-           aria-label="TikTok">
+        <a class="social-icon" data-social="tiktok" target="_blank" rel="noopener" aria-label="TikTok">
           <i class="fa-brands fa-tiktok"></i>
         </a>
 
@@ -1742,9 +1809,13 @@
   </header>
 
 
-  <!-- HERO -->
+  <!-- ==========================================================
+       MAIN CONTENT
+       ========================================================== -->
 
   <main>
+
+    <!-- HERO -->
 
     <section class="hero">
 
@@ -1775,8 +1846,10 @@
               <i class="fa-solid fa-arrow-right"></i>
             </a>
 
-            <a href="observer-registration.html"
-               class="btn btn-outline-light">
+            <a
+              href="observer-registration.html"
+              class="btn btn-outline-light"
+            >
               Become an Observer
             </a>
 
@@ -1803,7 +1876,9 @@
               <i class="fa-solid fa-scale-balanced"></i>
             </div>
 
-            <h3>Independent & Impartial</h3>
+            <h3>
+              Independent & Impartial
+            </h3>
 
             <p>
               EON-SL observes electoral processes independently,
@@ -1819,7 +1894,9 @@
               <i class="fa-solid fa-eye"></i>
             </div>
 
-            <h3>Observe the Electoral Cycle</h3>
+            <h3>
+              Observe the Electoral Cycle
+            </h3>
 
             <p>
               Our work covers electoral activities and procedures
@@ -1835,7 +1912,9 @@
               <i class="fa-solid fa-file-circle-check"></i>
             </div>
 
-            <h3>Document & Report</h3>
+            <h3>
+              Document & Report
+            </h3>
 
             <p>
               We document observations, identify challenges and
@@ -1883,84 +1962,118 @@
         <div class="activity-track">
 
           <div class="activity-item">
-            <img src="assets/images/activities/activity-01.jpg"
-                 alt="EON-SL activity">
+            <img
+              src="assets/images/activities/activity-01.jpg"
+              alt="EON-SL activity"
+            >
           </div>
 
           <div class="activity-item">
-            <img src="assets/images/activities/activity-02.jpg"
-                 alt="EON-SL activity">
+            <img
+              src="assets/images/activities/activity-02.jpg"
+              alt="EON-SL activity"
+            >
           </div>
 
           <div class="activity-item">
-            <img src="assets/images/activities/activity-03.jpg"
-                 alt="EON-SL activity">
+            <img
+              src="assets/images/activities/activity-03.jpg"
+              alt="EON-SL activity"
+            >
           </div>
 
           <div class="activity-item">
-            <img src="assets/images/activities/activity-04.jpg"
-                 alt="EON-SL activity">
+            <img
+              src="assets/images/activities/activity-04.jpg"
+              alt="EON-SL activity"
+            >
           </div>
 
           <div class="activity-item">
-            <img src="assets/images/activities/activity-05.jpg"
-                 alt="EON-SL activity">
+            <img
+              src="assets/images/activities/activity-05.jpg"
+              alt="EON-SL activity"
+            >
           </div>
 
           <div class="activity-item">
-            <img src="assets/images/activities/activity-06.jpg"
-                 alt="EON-SL activity">
+            <img
+              src="assets/images/activities/activity-06.jpg"
+              alt="EON-SL activity"
+            >
           </div>
 
           <div class="activity-item">
-            <img src="assets/images/activities/activity-07.jpg"
-                 alt="EON-SL activity">
+            <img
+              src="assets/images/activities/activity-07.jpg"
+              alt="EON-SL activity"
+            >
           </div>
 
           <div class="activity-item">
-            <img src="assets/images/activities/activity-08.jpg"
-                 alt="EON-SL activity">
+            <img
+              src="assets/images/activities/activity-08.jpg"
+              alt="EON-SL activity"
+            >
           </div>
 
 
+          <!-- DUPLICATE SET FOR CONTINUOUS SCROLL -->
+
           <div class="activity-item">
-            <img src="assets/images/activities/activity-01.jpg"
-                 alt="EON-SL activity">
+            <img
+              src="assets/images/activities/activity-01.jpg"
+              alt="EON-SL activity"
+            >
           </div>
 
           <div class="activity-item">
-            <img src="assets/images/activities/activity-02.jpg"
-                 alt="EON-SL activity">
+            <img
+              src="assets/images/activities/activity-02.jpg"
+              alt="EON-SL activity"
+            >
           </div>
 
           <div class="activity-item">
-            <img src="assets/images/activities/activity-03.jpg"
-                 alt="EON-SL activity">
+            <img
+              src="assets/images/activities/activity-03.jpg"
+              alt="EON-SL activity"
+            >
           </div>
 
           <div class="activity-item">
-            <img src="assets/images/activities/activity-04.jpg"
-                 alt="EON-SL activity">
+            <img
+              src="assets/images/activities/activity-04.jpg"
+              alt="EON-SL activity"
+            >
           </div>
 
           <div class="activity-item">
-            <img src="assets/images/activities/activity-05.jpg"
-                 alt="EON-SL activity">
+            <img
+              src="assets/images/activities/activity-05.jpg"
+              alt="EON-SL activity"
+            >
           </div>
 
           <div class="activity-item">
-            <img src="assets/images/activities/activity-06.jpg"
-                 alt="EON-SL activity">
+            <img
+              src="assets/images/activities/activity-06.jpg"
+              alt="EON-SL activity"
+            >
           </div>
 
           <div class="activity-item">
-            <img src="assets/images/activities/activity-07.jpg"
-                 alt="EON-SL activity">
+            <img
+              src="assets/images/activities/activity-07.jpg"
+              alt="EON-SL activity"
+            >
           </div>
 
           <div class="activity-item">
-            <img src="assets/images/activities/activity-08.jpg"
-                 alt="EON-SL activity">
+            <img
+              src="assets/images/activities/activity-08.jpg"
+              alt="EON-SL activity"
+            >
           </div>
 
         </div>
@@ -1972,7 +2085,7 @@
 
     <!-- ABOUT -->
 
-    <section>
+    <section id="about">
 
       <div class="container">
 
@@ -2007,7 +2120,7 @@
             </p>
 
             <p>
-              Established in 2020 with 170 members, EON-SL observes
+              Established in 2020 with 180 members, EON-SL observes
               processes and procedures throughout the electoral cycle
               while mobilising citizens and complementing the efforts of
               Election Management Bodies.
@@ -2023,7 +2136,9 @@
 
               <div class="vm-card">
 
-                <h3>Vision</h3>
+                <h3>
+                  Vision
+                </h3>
 
                 <p>
                   Is a democratic society where transparent, inclusive and
@@ -2036,7 +2151,9 @@
 
               <div class="vm-card">
 
-                <h3>Mission</h3>
+                <h3>
+                  Mission
+                </h3>
 
                 <p>
                   Our mission Is to work in partnership with all Election
@@ -2049,6 +2166,159 @@
             </div>
 
           </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- INTERNATIONAL / REGIONAL PRESENCE -->
+
+    <section
+      class="international-section"
+      id="international-presence"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="section-label">
+            Regional Presence
+          </div>
+
+          <h2>
+            EON Beyond Sierra Leone
+          </h2>
+
+          <p>
+            EON has established a presence beyond Sierra Leone, including
+            offices and missions in Guinea, Liberia and Côte d’Ivoire.
+            Select a country to visit its dedicated EON office page.
+          </p>
+
+        </div>
+
+
+        <div class="country-grid">
+
+          <a
+            class="country-card"
+            href="guinea.html"
+            aria-label="Visit EON Guinea office"
+          >
+
+            <div class="country-image">
+
+              <img
+                src="assets/images/missions/guinea.jpg"
+                alt="EON mission activities in Guinea"
+              >
+
+              <span class="country-badge">
+                Guinea
+              </span>
+
+            </div>
+
+            <div class="country-content">
+
+              <h3>
+                Guinea
+              </h3>
+
+              <p>
+                EON mission and country office.
+              </p>
+
+              <span class="country-link">
+                Visit Guinea Office
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <a
+            class="country-card"
+            href="liberia.html"
+            aria-label="Visit EON Liberia office"
+          >
+
+            <div class="country-image">
+
+              <img
+                src="assets/images/missions/liberia.jpg"
+                alt="EON mission activities in Liberia"
+              >
+
+              <span class="country-badge">
+                Liberia
+              </span>
+
+            </div>
+
+            <div class="country-content">
+
+              <h3>
+                Liberia
+              </h3>
+
+              <p>
+                EON mission and country office.
+              </p>
+
+              <span class="country-link">
+                Visit Liberia Office
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <a
+            class="country-card"
+            href="cote-divoire.html"
+            aria-label="Visit EON Côte d’Ivoire office"
+          >
+
+            <div class="country-image">
+
+              <img
+                src="assets/images/missions/cote-divoire.jpg"
+                alt="EON mission activities in Côte d’Ivoire"
+              >
+
+              <span class="country-badge">
+                Côte d’Ivoire
+              </span>
+
+            </div>
+
+            <div class="country-content">
+
+              <h3>
+                Côte d’Ivoire
+              </h3>
+
+              <p>
+                EON mission and country office.
+              </p>
+
+              <span class="country-link">
+                Visit Côte d’Ivoire Office
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+
+            </div>
+
+          </a>
 
         </div>
 
@@ -2086,7 +2356,9 @@
 
           <article class="theme-card">
 
-            <div class="theme-number">01</div>
+            <div class="theme-number">
+              01
+            </div>
 
             <h3>
               Credible, Transparent & Democratic Good Governance
@@ -2101,7 +2373,9 @@
 
           <article class="theme-card">
 
-            <div class="theme-number">02</div>
+            <div class="theme-number">
+              02
+            </div>
 
             <h3>
               Elections & Electoral Reforms
@@ -2117,7 +2391,9 @@
 
           <article class="theme-card">
 
-            <div class="theme-number">03</div>
+            <div class="theme-number">
+              03
+            </div>
 
             <h3>
               Voter Registration, Education & Participation
@@ -2132,7 +2408,9 @@
 
           <article class="theme-card">
 
-            <div class="theme-number">04</div>
+            <div class="theme-number">
+              04
+            </div>
 
             <h3>
               Peace & Human Right Education
@@ -2147,7 +2425,9 @@
 
           <article class="theme-card">
 
-            <div class="theme-number">05</div>
+            <div class="theme-number">
+              05
+            </div>
 
             <h3>
               Women’s Empowerment through Political Participation
@@ -2163,7 +2443,9 @@
 
           <article class="theme-card">
 
-            <div class="theme-number">06</div>
+            <div class="theme-number">
+              06
+            </div>
 
             <h3>
               Research, Monitoring & Evaluation
@@ -2216,7 +2498,9 @@
               <i class="fa-solid fa-eye"></i>
             </div>
 
-            <h3>Observe</h3>
+            <h3>
+              Observe
+            </h3>
 
             <p>
               Monitor electoral activities and procedures.
@@ -2231,7 +2515,9 @@
               <i class="fa-solid fa-clipboard-list"></i>
             </div>
 
-            <h3>Document</h3>
+            <h3>
+              Document
+            </h3>
 
             <p>
               Record relevant observations and information.
@@ -2246,7 +2532,9 @@
               <i class="fa-solid fa-magnifying-glass-chart"></i>
             </div>
 
-            <h3>Analyse</h3>
+            <h3>
+              Analyse
+            </h3>
 
             <p>
               Examine evidence and identify issues.
@@ -2261,7 +2549,9 @@
               <i class="fa-solid fa-file-lines"></i>
             </div>
 
-            <h3>Report</h3>
+            <h3>
+              Report
+            </h3>
 
             <p>
               Communicate findings through reports.
@@ -2276,7 +2566,9 @@
               <i class="fa-solid fa-lightbulb"></i>
             </div>
 
-            <h3>Recommend</h3>
+            <h3>
+              Recommend
+            </h3>
 
             <p>
               Identify practical recommendations.
@@ -2291,7 +2583,9 @@
               <i class="fa-solid fa-arrows-rotate"></i>
             </div>
 
-            <h3>Follow Up</h3>
+            <h3>
+              Follow Up
+            </h3>
 
             <p>
               Track issues and recommendations.
@@ -2347,13 +2641,12 @@
               participation.
             </p>
 
-            <a href="civic-education.html"
-               class="btn btn-primary">
-
+            <a
+              href="civic-education.html"
+              class="btn btn-primary"
+            >
               Explore Civic Education
-
               <i class="fa-solid fa-arrow-right"></i>
-
             </a>
 
           </div>
@@ -2404,8 +2697,10 @@
               observation activities.
             </p>
 
-            <a href="observer-registration.html"
-               class="text-link">
+            <a
+              href="observer-registration.html"
+              class="text-link"
+            >
               Observer Registration →
             </a>
 
@@ -2424,8 +2719,10 @@
               Join EON-SL's wider civic and electoral engagement efforts.
             </p>
 
-            <a href="volunteer.html"
-               class="text-link">
+            <a
+              href="volunteer.html"
+              class="text-link"
+            >
               Volunteer With EON-SL →
             </a>
 
@@ -2445,8 +2742,10 @@
               collaboration.
             </p>
 
-            <a href="partnership.html"
-               class="text-link">
+            <a
+              href="partnership.html"
+              class="text-link"
+            >
               Partnership →
             </a>
 
@@ -2480,13 +2779,12 @@
 
           </div>
 
-          <a href="contact.html"
-             class="btn">
-
+          <a
+            href="contact.html"
+            class="btn"
+          >
             Contact EON-SL
-
             <i class="fa-solid fa-arrow-right"></i>
-
           </a>
 
         </div>
@@ -2498,7 +2796,9 @@
   </main>
 
 
-  <!-- FOOTER -->
+  <!-- ==========================================================
+       FOOTER
+       ========================================================== -->
 
   <footer>
 
@@ -2522,59 +2822,31 @@
 
           <div class="footer-social">
 
-            <a class="social-icon"
-               data-social="facebook"
-               target="_blank"
-               rel="noopener"
-               aria-label="Facebook">
+            <a class="social-icon" data-social="facebook" target="_blank" rel="noopener" aria-label="Facebook">
               <i class="fa-brands fa-facebook-f"></i>
             </a>
 
-            <a class="social-icon"
-               data-social="whatsapp"
-               target="_blank"
-               rel="noopener"
-               aria-label="WhatsApp">
+            <a class="social-icon" data-social="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
               <i class="fa-brands fa-whatsapp"></i>
             </a>
 
-            <a class="social-icon"
-               data-social="linkedin"
-               target="_blank"
-               rel="noopener"
-               aria-label="LinkedIn">
+            <a class="social-icon" data-social="linkedin" target="_blank" rel="noopener" aria-label="LinkedIn">
               <i class="fa-brands fa-linkedin-in"></i>
             </a>
 
-            <a class="social-icon"
-               data-social="x"
-               target="_blank"
-               rel="noopener"
-               aria-label="X">
+            <a class="social-icon" data-social="x" target="_blank" rel="noopener" aria-label="X">
               <i class="fa-brands fa-x-twitter"></i>
             </a>
 
-            <a class="social-icon"
-               data-social="instagram"
-               target="_blank"
-               rel="noopener"
-               aria-label="Instagram">
+            <a class="social-icon" data-social="instagram" target="_blank" rel="noopener" aria-label="Instagram">
               <i class="fa-brands fa-instagram"></i>
             </a>
 
-            <a class="social-icon"
-               data-social="youtube"
-               target="_blank"
-               rel="noopener"
-               aria-label="YouTube">
+            <a class="social-icon" data-social="youtube" target="_blank" rel="noopener" aria-label="YouTube">
               <i class="fa-brands fa-youtube"></i>
             </a>
 
-            <a class="social-icon"
-               data-social="tiktok"
-               target="_blank"
-               rel="noopener"
-               aria-label="TikTok">
+            <a class="social-icon" data-social="tiktok" target="_blank" rel="noopener" aria-label="TikTok">
               <i class="fa-brands fa-tiktok"></i>
             </a>
 
@@ -2696,7 +2968,9 @@
   </footer>
 
 
-  <!-- LIGHTBOX -->
+  <!-- ==========================================================
+       LIGHTBOX
+       ========================================================== -->
 
   <div
     class="lightbox"
@@ -2723,28 +2997,23 @@
   </div>
 
 
-  <!-- JAVASCRIPT -->
+  <!-- ==========================================================
+       JAVASCRIPT
+       ========================================================== -->
 
   <script>
 
     /*
     ==========================================================
     EON-SL SOCIAL MEDIA LINKS
+    ==========================================================
 
-    CHANGE ONLY THE URLS BELOW.
-
-    The links automatically populate:
+    Change the URLs below when official profiles are confirmed.
+    These URLs automatically populate all social icons across:
     - top bar
     - desktop navigation
     - mobile menu
     - footer
-
-    X:
-    Official EON-SL handle supplied in the brochure.
-
-    YouTube and TikTok:
-    Dummy links supplied for now.
-    Replace them with the official EON-SL profiles later.
     ==========================================================
     */
 
@@ -2754,28 +3023,30 @@
         "https://www.facebook.com/EON-Sierra-Leone",
 
       whatsapp:
-        "https://wa.me/23276210000",
+        "https://wa.me/23234210118",
 
       linkedin:
-        "https://www.linkedin.com/company/eon-sierra-leone",
+        "https://www.linkedin.com/company/eon-sierra-leone/",
 
       x:
         "https://x.com/EON_OBSERVE2023",
 
       instagram:
-        "https://www.instagram.com/eon_sierra_leone",
+        "https://www.instagram.com/eon_sierra_leone/",
 
       youtube:
-        "https://www.youtube.com/@EON-SL",
+        "https://www.youtube.com/@EON-SierraLeone",
 
       tiktok:
-        "https://www.tiktok.com/@eon_sl"
+        "https://www.tiktok.com/@eon_sierra_leone/"
 
     };
 
 
     /*
-    Apply social URLs automatically
+    ==========================================================
+    APPLY SOCIAL LINKS
+    ==========================================================
     */
 
     document
@@ -2838,7 +3109,7 @@
 
     /*
     ==========================================================
-    MOBILE EXPAND / COLLAPSE
+    MOBILE SUBMENU EXPAND / COLLAPSE
     ==========================================================
     */
 
