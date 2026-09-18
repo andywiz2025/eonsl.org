@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design System | EON-SL</title>
+  <meta name="description" content="EON-SL website design system and reusable interface patterns.">
+  <link rel="canonical" href="https://www.eonsl.org/style.html">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <style>
+    main { padding: 3rem 0; }
+    .style-section { padding: 2rem 0; border-bottom: 1px solid var(--eon-border); }
+    .style-section h2 { color: var(--eon-navy); margin: 0 0 1rem; }
+    .swatches { display: flex; flex-wrap: wrap; gap: .75rem; }
+    .swatch { min-width: 8rem; padding: 1rem; color: #fff; border-radius: .5rem; }
+    .swatch--sky { background: var(--eon-sky); }
+    .swatch--navy { background: var(--eon-navy); }
+    .swatch--dark { background: var(--eon-dark); }
+    .swatch--light { color: var(--eon-navy); background: var(--eon-light); border: 1px solid var(--eon-border); }
+    .demo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: 1rem; }
+    .demo-card { padding: 1.25rem; border: 1px solid var(--eon-border); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 2.75rem; padding: .65rem 1rem; border: 0; border-radius: .5rem; color: #fff; background: var(--eon-sky-dark); font-weight: 700; text-decoration: none; }
+    .button:hover { background: var(--eon-navy); }
+    code { padding: .15rem .35rem; border-radius: .25rem; background: var(--eon-light); }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a class="brand" href="index.html" aria-label="EON-SL home">
+        <img src="assets/images/eon-logo.png" alt="EON-SL logo" width="52" height="52">
+        <span class="brand-text">
+          <strong>Elections Observer Network</strong>
+          <span>Sierra Leone</span>
+        </span>
+      </a>
+      <button class="mobile-menu-button" type="button" data-mobile-menu-button aria-controls="site-navigation" aria-expanded="false" aria-label="Open navigation menu">☰</button>
+      <nav class="site-nav" id="site-navigation" data-site-nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="staff.html">Leadership &amp; Staff</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container">
+      <section class="style-section">
+        <p>Reusable site foundation</p>
+        <h1>EON-SL Design System</h1>
+        <p>This internal reference page demonstrates the canonical colors, typography, responsive layout, navigation, buttons, cards, accessibility focus states, and reduced-motion behavior used by the site.</p>
+      </section>
+
+      <section class="style-section">
+        <h2>Color palette</h2>
+        <div class="swatches" aria-label="Brand colors">
+          <div class="swatch swatch--sky">Sky<br><code>#38A9E8</code></div>
+          <div class="swatch swatch--navy">Navy<br><code>#17324D</code></div>
+          <div class="swatch swatch--dark">Dark<br><code>#10283D</code></div>
+          <div class="swatch swatch--light">Light<br><code>#F2F9FD</code></div>
+        </div>
+      </section>
+
+      <section class="style-section">
+        <h2>Typography and actions</h2>
+        <h3>Heading level three</h3>
+        <p>Body text should remain readable, concise, and structured with a logical heading hierarchy. Use descriptive links rather than generic labels such as “click here.”</p>
+        <a class="button" href="about.html">View About EON-SL</a>
+      </section>
+
+      <section class="style-section">
+        <h2>Responsive cards</h2>
+        <div class="demo-grid">
+          <article class="demo-card"><h3>Election observation</h3><p>Use cards for concise summaries that link to a complete page.</p></article>
+          <article class="demo-card"><h3>Civic education</h3><p>Cards automatically adapt from multiple columns to a single mobile column.</p></article>
+          <article class="demo-card"><h3>Get involved</h3><p>Keep interactive targets large enough for touch devices.</p></article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h2>EON-SL</h2><p>Elections Observer Network Sierra Leone.</p></div>
+        <div><h2>Explore</h2><p><a href="about.html">About EON-SL</a><br><a href="staff.html">Leadership &amp; Staff</a></p></div>
+        <div><h2>Contact</h2><p><a href="mailto:electionsobsnet@gmail.com">electionsobsnet@gmail.com</a><br><a href="tel:+23234210118">+232 34 210 118</a></p></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Elections Observer Network Sierra Leone.</span><span>We Observe, Document and Report</span></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>
