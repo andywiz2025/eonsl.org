@@ -1,201 +1,400 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Elections Observer Network Sierra Leone | EON-SL</title>
-  <meta name="description" content="Elections Observer Network Sierra Leone promotes transparent, inclusive, peaceful and credible elections through observation, civic education and public engagement.">
-  <meta name="theme-color" content="#38a9e8">
-  <link rel="canonical" href="https://www.eonsl.org/">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="assets/css/site.css">
-  <link rel="preload" as="image" href="assets/images/eon-hero.jpg" fetchpriority="high">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Elections Observer Network Sierra Leone | EON-SL">
-  <meta property="og:description" content="Anchoring transparent and credible elections in Sierra Leone.">
-  <meta property="og:url" content="https://www.eonsl.org/">
-  <meta property="og:image" content="https://www.eonsl.org/assets/images/eon-hero.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Elections Observer Network Sierra Leone",
-    "alternateName": "EON-SL",
-    "url": "https://www.eonsl.org/",
-    "logo": "https://www.eonsl.org/assets/images/eon-logo.png",
-    "description": "Elections observation, civic education and public engagement organization in Sierra Leone.",
-    "email": "electionsobsnet@gmail.com",
-    "telephone": "+23234210118",
-    "sameAs": [
-      "https://www.facebook.com/EON-Sierra-Leone",
-      "https://www.linkedin.com/company/eon-sierra-leone/",
-      "https://x.com/EON_OBSERVE2023",
-      "https://www.instagram.com/eon_sierra_leone/",
-      "https://www.youtube.com/@EON-SierraLeone",
-      "https://www.tiktok.com/@eon_sierra_leone/"
-    ]
-  }
-  </script>
-  <style>
-    .topbar { color: rgba(255,255,255,.88); background: var(--eon-dark); font-size: .8rem; }
-    .topbar-inner { min-height: 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-    .topbar-contact, .social-links { display: flex; align-items: center; flex-wrap: wrap; gap: .8rem; }
-    .topbar-contact a, .social-links a { color: inherit; text-decoration: none; }
-    .social-links a { display: inline-grid; place-items: center; min-width: 2rem; min-height: 2rem; border-radius: 50%; }
-    .social-links a:hover { color: var(--eon-sky); background: rgba(255,255,255,.1); }
-    .hero { position: relative; min-height: clamp(31rem, 72vh, 41rem); display: grid; align-items: center; overflow: hidden; color: #fff; background: #10283d; }
-    .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(16,40,61,.94), rgba(16,40,61,.68), rgba(16,40,61,.32)), url("assets/images/eon-hero.jpg") center/cover no-repeat; }
-    .hero-content { position: relative; z-index: 1; padding: 5rem 0; max-width: 50rem; }
-    .eyebrow { color: #ddf4ff; font-size: .8rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
-    .hero h1 { max-width: 48rem; margin: .8rem 0 1.25rem; font-size: clamp(2.5rem, 7vw, 4.5rem); line-height: 1.05; letter-spacing: -.04em; }
-    .hero p { max-width: 42rem; color: rgba(255,255,255,.9); font-size: clamp(1rem, 2vw, 1.2rem); }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
-    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 2.875rem; padding: .7rem 1rem; border-radius: .5rem; color: #fff; background: var(--eon-sky-dark); font-weight: 700; text-decoration: none; }
-    .button:hover { background: var(--eon-sky); }
-    .button--light { color: var(--eon-navy); background: #fff; }
-    .section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
-    .section--light { background: var(--eon-light); }
-    .section-heading { max-width: 48rem; margin-bottom: 2rem; }
-    .section-heading h2 { margin: .4rem 0 .75rem; color: var(--eon-navy); font-size: clamp(1.9rem, 4vw, 2.8rem); line-height: 1.1; }
-    .section-heading p { color: var(--eon-grey); }
-    .card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
-    .card { padding: 1.35rem; border: 1px solid var(--eon-border); border-radius: var(--radius); background: #fff; box-shadow: var(--shadow); }
-    .card h3 { margin-top: 0; color: var(--eon-navy); }
-    .card p { color: var(--eon-grey); }
-    .image-copy { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(2rem, 6vw, 5rem); align-items: center; }
-    .image-copy img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); }
-    .cta { padding: 3rem 0; color: #fff; background: var(--eon-navy); }
-    .cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
-    .cta h2 { margin: 0 0 .5rem; }
-    .cta p { margin: 0; color: rgba(255,255,255,.8); }
-    .footer-social { margin-top: 1rem; justify-content: flex-start; }
-    @media (max-width: 760px) { .topbar { display: none; } .card-grid, .image-copy { grid-template-columns: 1fr; } .cta-inner { align-items: flex-start; flex-direction: column; } }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Elections Observer Network Sierra Leone | EON-SL</title>
+
+    <meta name="description"
+          content="Elections Observer Network Sierra Leone (EON-SL) promotes transparent, inclusive, peaceful and credible electoral processes through independent election observation, civic education, documentation and public engagement.">
+
+    <meta name="author" content="Elections Observer Network Sierra Leone">
+
+    <meta property="og:title"
+          content="Elections Observer Network Sierra Leone | EON-SL">
+
+    <meta property="og:description"
+          content="Anchoring Transparent & Credible Elections">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.eonsl.org/">
+
+    <link rel="icon"
+          type="image/png"
+          href="assets/images/logo/eon-logo.png">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer">
 </head>
+
 <body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <div class="topbar">
+<!-- =========================================================
+     TOP BAR
+========================================================= -->
+
+<div class="topbar">
+
     <div class="container topbar-inner">
-      <div class="topbar-contact">
-        <a href="mailto:electionsobsnet@gmail.com">electionsobsnet@gmail.com</a>
-        <a href="tel:+23234210118">+232 34 210 118</a>
-      </div>
-      <div class="social-links" aria-label="EON-SL social media links">
-        <a href="https://www.facebook.com/EON-Sierra-Leone" target="_blank" rel="noopener noreferrer" aria-label="EON-SL on Facebook">Facebook</a>
-        <a href="https://wa.me/23234210118" target="_blank" rel="noopener noreferrer" aria-label="EON-SL on WhatsApp">WhatsApp</a>
-        <a href="https://www.linkedin.com/company/eon-sierra-leone/" target="_blank" rel="noopener noreferrer" aria-label="EON-SL on LinkedIn">LinkedIn</a>
-        <a href="https://x.com/EON_OBSERVE2023" target="_blank" rel="noopener noreferrer" aria-label="EON-SL on X">X</a>
-      </div>
+
+        <div class="topbar-contact">
+
+            <a href="mailto:electionsobsnet@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+                electionsobsnet@gmail.com
+            </a>
+
+            <a href="tel:+23234210118">
+                <i class="fa-solid fa-phone"></i>
+                +232 34 210 118
+            </a>
+
+        </div>
+
+
+        <div class="topbar-social" aria-label="EON-SL social media">
+
+            <a href="#"
+               data-social="facebook"
+               aria-label="Facebook"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#"
+               data-social="whatsapp"
+               aria-label="WhatsApp"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+            <a href="#"
+               data-social="linkedin"
+               aria-label="LinkedIn"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a href="#"
+               data-social="x"
+               aria-label="X"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a href="#"
+               data-social="instagram"
+               aria-label="Instagram"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#"
+               data-social="youtube"
+               aria-label="YouTube"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a href="#"
+               data-social="tiktok"
+               aria-label="TikTok"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+        </div>
+
     </div>
-  </div>
 
-  <header class="site-header">
-    <div class="container nav-container">
-      <a class="brand" href="/" aria-label="EON-SL home">
-        <img src="assets/images/eon-logo.png" alt="EON-SL logo" width="52" height="52">
-        <span class="brand-text"><strong>Elections Observer Network</strong><span>Sierra Leone</span></span>
-      </a>
-      <button class="mobile-menu-button" type="button" data-mobile-menu-button aria-controls="site-navigation" aria-expanded="false" aria-label="Open navigation menu">☰</button>
-      <nav class="site-nav" id="site-navigation" data-site-nav aria-label="Main navigation">
-        <a href="/" aria-current="page">Home</a>
-        <a href="about.html">About EON-SL</a>
-        <a href="staff.html">Leadership &amp; Staff</a>
-        <a href="about.html#international-presence">Regional Presence</a>
-        <a href="mailto:electionsobsnet@gmail.com">Contact</a>
-      </nav>
+</div>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header">
+
+    <div class="container header-inner">
+
+        <!-- LOGO -->
+
+        <a href="index.html"
+           class="site-logo"
+           aria-label="EON-SL Home">
+
+            <img src="assets/images/logo/eon-logo.png"
+                 alt="Elections Observer Network Sierra Leone">
+
+            <div class="logo-text">
+
+                <strong>EON-SL</strong>
+
+                <span>
+                    Elections Observer Network Sierra Leone
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button class="mobile-menu-toggle"
+                id="mobileMenuToggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mainNavigation">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+        <!-- =====================================================
+             MAIN NAVIGATION
+        ====================================================== -->
+
+        <nav class="main-navigation"
+             id="mainNavigation"
+             aria-label="Main navigation">
+
+            <ul class="nav-list">
+
+                <!-- HOME -->
+
+                <li>
+                    <a href="index.html" class="active">
+                        Home
+                    </a>
+                </li>
+
+
+                <!-- ABOUT -->
+
+                <li>
+                    <a href="about.html">
+                        About EON-SL
+                    </a>
+                </li>
+
+
+                <!-- =================================================
+                     ELECTIONS
+                ================================================== -->
+
+                <li class="has-dropdown">
+
+                    <a href="elections.html"
+                       class="dropdown-toggle"
+                       aria-haspopup="true">
+
+                        Elections
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </a>
+
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a href="elections.html">
+                                Election Cycle
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="elections.html#calendar">
+                                Election Calendar
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="elections.html#process">
+                                Electoral Process
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="elections.html#registration">
+                                Voter Registration
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="elections.html#voting">
+                                Voting &amp; Counting
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="elections.html#results">
+                                Results &amp; Tabulation
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="elections.html#disputes">
+                                Electoral Disputes
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- OBSERVATION -->
+
+                <li>
+                    <a href="observation.html">
+                        Observation
+                    </a>
+                </li>
+
+
+                <!-- =================================================
+                     REPORTS & DATA
+                ================================================== -->
+
+                <li class="has-dropdown">
+
+                    <a href="reports.html"
+                       class="dropdown-toggle"
+                       aria-haspopup="true">
+
+                        Reports &amp; Data
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </a>
+
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a href="reports.html">
+                                Election Reports
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="reports.html#observation">
+                                Observation Reports
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="reports.html#research">
+                                Research &amp; Publications
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- CIVIC EDUCATION -->
+
+                <li>
+                    <a href="civic-education.html">
+                        Civic Education
+                    </a>
+                </li>
+
+
+                <!-- =================================================
+                     GET INVOLVED
+                ================================================== -->
+
+                <li class="has-dropdown">
+
+                    <a href="#"
+                       class="dropdown-toggle"
+                       aria-haspopup="true">
+
+                        Get Involved
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </a>
+
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a href="observer-registration.html">
+                                Become an Observer
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="volunteer.html">
+                                Volunteer
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="partnership.html">
+                                Partner With EON-SL
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- NEWS & MEDIA -->
+
+                <li>
+                    <a href="news.html">
+                        News &amp; Media
+                    </a>
+                </li>
+
+
+                <!-- CONTACT -->
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
     </div>
-  </header>
 
-  <main id="main-content">
-    <section class="hero" data-critical-image>
-      <div class="container hero-content">
-        <p class="eyebrow">Anchoring transparent and credible elections</p>
-        <h1>Elections Observer Network Sierra Leone</h1>
-        <p>EON-SL supports transparent, inclusive, peaceful and credible electoral processes through independent observation, civic education, documentation and public engagement.</p>
-        <div class="hero-actions">
-          <a class="button" href="about.html">Discover EON-SL</a>
-          <a class="button button--light" href="staff.html">Meet our leadership</a>
-        </div>
-      </div>
-    </section>
+</header>
 
-    <section class="section section--light" aria-labelledby="focus-heading">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow" style="color:var(--eon-sky-dark)">Our focus</p>
-          <h2 id="focus-heading">Strengthening confidence in elections</h2>
-          <p>Our work connects credible information, citizen participation and accountable electoral processes.</p>
-        </div>
-        <div class="card-grid">
-          <article class="card"><h3>Election observation</h3><p>We document electoral processes and share evidence-based observations that support credible elections.</p></article>
-          <article class="card"><h3>Civic education</h3><p>We help citizens understand electoral participation, rights and responsibilities.</p></article>
-          <article class="card"><h3>Public engagement</h3><p>We work with communities and partners to promote peaceful, inclusive and informed participation.</p></article>
-        </div>
-      </div>
-    </section>
 
-    <section class="section" aria-labelledby="about-heading">
-      <div class="container image-copy">
-        <img src="assets/images/eon-about.jpg" alt="EON-SL community and electoral observation activity" loading="lazy" decoding="async" width="900" height="675">
-        <div>
-          <p class="eyebrow" style="color:var(--eon-sky-dark)">Who we are</p>
-          <h2 id="about-heading">A network committed to credible electoral processes</h2>
-          <p>EON-SL brings together election observers, civic educators, coordinators and partners committed to strengthening democracy in Sierra Leone and the wider region.</p>
-          <p>Learn about our mandate, mission, values, objectives and regional presence.</p>
-          <a class="button" href="about.html">Read about EON-SL</a>
-        </div>
-      </div>
-    </section>
+<!-- =========================================================
+     STEP 1 ENDS HERE
+========================================================= -->
 
-    <section class="section section--light" aria-labelledby="activity-heading">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow" style="color:var(--eon-sky-dark)">In the field</p>
-          <h2 id="activity-heading">Observation and community activity</h2>
-          <p>Our work is grounded in field coordination, documentation and engagement with communities.</p>
-        </div>
-        <div class="card-grid">
-          <img class="card" src="assets/images/activities/activity-01.jpg" alt="EON-SL field activity" loading="lazy" decoding="async" width="570" height="410">
-          <img class="card" src="assets/images/activities/activity-02.jpg" alt="EON-SL community engagement" loading="lazy" decoding="async" width="570" height="410">
-          <img class="card" src="assets/images/activities/activity-03.jpg" alt="EON-SL election observation activity" loading="lazy" decoding="async" width="570" height="410">
-        </div>
-      </div>
-    </section>
-
-    <section class="cta" aria-labelledby="cta-heading">
-      <div class="container cta-inner">
-        <div><h2 id="cta-heading">Work with EON-SL</h2><p>Explore our leadership and learn more about the network’s work.</p></div>
-        <a class="button button--light" href="staff.html">View leadership and staff</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <h2>EON-SL</h2>
-          <p>Elections Observer Network Sierra Leone.</p>
-          <p>We Observe, Document and Report.</p>
-          <div class="social-links footer-social" aria-label="EON-SL social media links">
-            <a href="https://www.facebook.com/EON-Sierra-Leone" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
-            <a href="https://wa.me/23234210118" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WhatsApp</a>
-            <a href="https://www.linkedin.com/company/eon-sierra-leone/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
-            <a href="https://x.com/EON_OBSERVE2023" target="_blank" rel="noopener noreferrer" aria-label="X">X</a>
-            <a href="https://www.instagram.com/eon_sierra_leone/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
-            <a href="https://www.youtube.com/@EON-SierraLeone" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a>
-            <a href="https://www.tiktok.com/@eon_sierra_leone/" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TikTok</a>
-          </div>
-        </div>
-        <div><h2>Explore</h2><p><a href="about.html">About EON-SL</a><br><a href="staff.html">Leadership &amp; Staff</a></p></div>
-        <div><h2>Contact</h2><p>Freetown, Sierra Leone<br><a href="mailto:electionsobsnet@gmail.com">electionsobsnet@gmail.com</a><br><a href="tel:+23234210118">+232 34 210 118</a></p></div>
-      </div>
-      <div class="footer-bottom"><span>© 2026 Elections Observer Network Sierra Leone.</span><span><a href="/sitemap.xml">Sitemap</a></span></div>
-    </div>
-  </footer>
-
-  <script src="assets/js/site.js" defer></script>
 </body>
 </html>
