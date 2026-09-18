@@ -1,99 +1,2873 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Design System | EON-SL</title>
-  <meta name="description" content="EON-SL website design system and reusable interface patterns.">
-  <link rel="canonical" href="https://www.eonsl.org/style.html">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="assets/css/site.css">
-  <style>
-    main { padding: 3rem 0; }
-    .style-section { padding: 2rem 0; border-bottom: 1px solid var(--eon-border); }
-    .style-section h2 { color: var(--eon-navy); margin: 0 0 1rem; }
-    .swatches { display: flex; flex-wrap: wrap; gap: .75rem; }
-    .swatch { min-width: 8rem; padding: 1rem; color: #fff; border-radius: .5rem; }
-    .swatch--sky { background: var(--eon-sky); }
-    .swatch--navy { background: var(--eon-navy); }
-    .swatch--dark { background: var(--eon-dark); }
-    .swatch--light { color: var(--eon-navy); background: var(--eon-light); border: 1px solid var(--eon-border); }
-    .demo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: 1rem; }
-    .demo-card { padding: 1.25rem; border: 1px solid var(--eon-border); border-radius: var(--radius); box-shadow: var(--shadow); }
-    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 2.75rem; padding: .65rem 1rem; border: 0; border-radius: .5rem; color: #fff; background: var(--eon-sky-dark); font-weight: 700; text-decoration: none; }
-    .button:hover { background: var(--eon-navy); }
-    code { padding: .15rem .35rem; border-radius: .25rem; background: var(--eon-light); }
-  </style>
-</head>
-<body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
+/* =========================================================
+   EON-SL MASTER STYLESHEET
+   Elections Observer Network Sierra Leone
+   Version: 1.0
+   ========================================================= */
 
-  <header class="site-header">
-    <div class="container nav-container">
-      <a class="brand" href="index.html" aria-label="EON-SL home">
-        <img src="assets/images/eon-logo.png" alt="EON-SL logo" width="52" height="52">
-        <span class="brand-text">
-          <strong>Elections Observer Network</strong>
-          <span>Sierra Leone</span>
-        </span>
-      </a>
-      <button class="mobile-menu-button" type="button" data-mobile-menu-button aria-controls="site-navigation" aria-expanded="false" aria-label="Open navigation menu">☰</button>
-      <nav class="site-nav" id="site-navigation" data-site-nav aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="staff.html">Leadership &amp; Staff</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <main id="main-content">
-    <div class="container">
-      <section class="style-section">
-        <p>Reusable site foundation</p>
-        <h1>EON-SL Design System</h1>
-        <p>This internal reference page demonstrates the canonical colors, typography, responsive layout, navigation, buttons, cards, accessibility focus states, and reduced-motion behavior used by the site.</p>
-      </section>
+/* =========================================================
+   1. DESIGN TOKENS
+   ========================================================= */
 
-      <section class="style-section">
-        <h2>Color palette</h2>
-        <div class="swatches" aria-label="Brand colors">
-          <div class="swatch swatch--sky">Sky<br><code>#38A9E8</code></div>
-          <div class="swatch swatch--navy">Navy<br><code>#17324D</code></div>
-          <div class="swatch swatch--dark">Dark<br><code>#10283D</code></div>
-          <div class="swatch swatch--light">Light<br><code>#F2F9FD</code></div>
-        </div>
-      </section>
+:root {
 
-      <section class="style-section">
-        <h2>Typography and actions</h2>
-        <h3>Heading level three</h3>
-        <p>Body text should remain readable, concise, and structured with a logical heading hierarchy. Use descriptive links rather than generic labels such as “click here.”</p>
-        <a class="button" href="about.html">View About EON-SL</a>
-      </section>
+  /* Brand colours */
+  --eon-sky: #38A9E8;
+  --eon-sky-dark: #1687C7;
+  --eon-sky-soft: #72CBF5;
 
-      <section class="style-section">
-        <h2>Responsive cards</h2>
-        <div class="demo-grid">
-          <article class="demo-card"><h3>Election observation</h3><p>Use cards for concise summaries that link to a complete page.</p></article>
-          <article class="demo-card"><h3>Civic education</h3><p>Cards automatically adapt from multiple columns to a single mobile column.</p></article>
-          <article class="demo-card"><h3>Get involved</h3><p>Keep interactive targets large enough for touch devices.</p></article>
-        </div>
-      </section>
-    </div>
-  </main>
+  --eon-navy: #17324D;
+  --eon-dark: #10283D;
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div><h2>EON-SL</h2><p>Elections Observer Network Sierra Leone.</p></div>
-        <div><h2>Explore</h2><p><a href="about.html">About EON-SL</a><br><a href="staff.html">Leadership &amp; Staff</a></p></div>
-        <div><h2>Contact</h2><p><a href="mailto:electionsobsnet@gmail.com">electionsobsnet@gmail.com</a><br><a href="tel:+23234210118">+232 34 210 118</a></p></div>
-      </div>
-      <div class="footer-bottom"><span>© 2026 Elections Observer Network Sierra Leone.</span><span>We Observe, Document and Report</span></div>
-    </div>
-  </footer>
+  /* Text */
+  --eon-text: #263746;
+  --eon-grey: #64748B;
+  --eon-muted: #94A3B8;
 
-  <script src="assets/js/site.js" defer></script>
-</body>
-</html>
+  /* Backgrounds */
+  --eon-light: #F2F9FD;
+  --eon-white: #FFFFFF;
+  --eon-border: #E8EEF3;
+
+  /* Effects */
+  --eon-shadow:
+    0 12px 35px rgba(23, 50, 77, 0.10);
+
+  --eon-shadow-lg:
+    0 20px 55px rgba(23, 50, 77, 0.14);
+
+  /* Layout */
+  --eon-container: 1180px;
+  --eon-radius: 14px;
+  --eon-radius-sm: 9px;
+
+  /* Animation */
+  --eon-transition: 0.25s ease;
+
+}
+
+
+/* =========================================================
+   2. RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  min-height: 100vh;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+
+  color: var(--eon-text);
+  background: var(--eon-white);
+
+  font-size: 16px;
+  line-height: 1.6;
+
+  overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+svg {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+
+/* =========================================================
+   3. ACCESSIBILITY
+   ========================================================= */
+
+:focus-visible {
+  outline: 3px solid rgba(56, 169, 232, 0.45);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--eon-sky);
+  color: var(--eon-white);
+}
+
+
+/* =========================================================
+   4. GLOBAL CONTAINER
+   ========================================================= */
+
+.container {
+  width: min(
+    var(--eon-container),
+    calc(100% - 40px)
+  );
+
+  margin-inline: auto;
+}
+
+
+/* =========================================================
+   5. TOP CONTACT BAR
+   ========================================================= */
+
+.topbar {
+  background: var(--eon-dark);
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 13px;
+}
+
+.topbar-inner {
+  min-height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.topbar-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.topbar-contact span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.topbar-contact i {
+  color: var(--eon-sky);
+}
+
+.topbar-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topbar-social a {
+  transition: var(--eon-transition);
+}
+
+.topbar-social a:hover {
+  color: var(--eon-sky);
+}
+
+
+/* =========================================================
+   6. MAIN SITE HEADER
+   ========================================================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  border-bottom:
+    1px solid var(--eon-border);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.nav-container {
+  min-height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 12px;
+
+  flex-shrink: 0;
+}
+
+.brand img {
+  width: 58px;
+  height: 58px;
+
+  object-fit: contain;
+}
+
+.brand-text strong {
+  display: block;
+
+  color: var(--eon-navy);
+
+  font-size: 15px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.brand-text span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: var(--eon-sky-dark);
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   7. DESKTOP NAVIGATION
+   ========================================================= */
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  min-height: 82px;
+
+  padding: 0 11px;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  color: var(--eon-navy);
+
+  font-size: 14px;
+  font-weight: 650;
+
+  white-space: nowrap;
+
+  transition: var(--eon-transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--eon-sky-dark);
+}
+
+.nav-link i {
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   8. DESKTOP DROPDOWN
+   ========================================================= */
+
+.dropdown {
+  position: absolute;
+
+  top: calc(100% - 1px);
+  left: 0;
+
+  min-width: 235px;
+
+  padding: 10px;
+
+  background: var(--eon-white);
+
+  border:
+    1px solid var(--eon-border);
+
+  border-radius:
+    0 0 12px 12px;
+
+  box-shadow: var(--eon-shadow);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(8px);
+
+  transition:
+    opacity var(--eon-transition),
+    transform var(--eon-transition),
+    visibility var(--eon-transition);
+}
+
+.nav-item:hover > .dropdown,
+.nav-item:focus-within > .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown a {
+  display: block;
+
+  padding: 10px 12px;
+
+  border-radius: 8px;
+
+  color: var(--eon-text);
+
+  font-size: 13px;
+
+  transition: var(--eon-transition);
+}
+
+.dropdown a:hover,
+.dropdown a.active {
+  color: var(--eon-sky-dark);
+  background: var(--eon-light);
+}
+
+
+/* =========================================================
+   9. SOCIAL ICONS
+   ========================================================= */
+
+.desktop-social {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin-left: 8px;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid var(--eon-border);
+
+  border-radius: 50%;
+
+  color: var(--eon-navy);
+  background: var(--eon-white);
+
+  transition: var(--eon-transition);
+}
+
+.social-icon:hover {
+  color: var(--eon-white);
+  background: var(--eon-sky);
+  border-color: var(--eon-sky);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   10. MOBILE NAVIGATION
+   ========================================================= */
+
+.mobile-menu-button {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  border:
+    1px solid var(--eon-border);
+
+  border-radius: 9px;
+
+  background: var(--eon-white);
+  color: var(--eon-navy);
+
+  font-size: 20px;
+}
+
+.mobile-menu {
+  display: none;
+
+  border-top:
+    1px solid var(--eon-border);
+
+  background: var(--eon-white);
+
+  max-height:
+    calc(100vh - 82px);
+
+  overflow-y: auto;
+}
+
+.mobile-menu.open {
+  display: block;
+}
+
+.mobile-nav-item {
+  border-bottom:
+    1px solid var(--eon-border);
+}
+
+.mobile-nav-row {
+  min-height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-nav-row > a {
+  flex: 1;
+
+  padding: 13px 20px;
+
+  color: var(--eon-navy);
+
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.mobile-expand {
+  width: 50px;
+  height: 48px;
+
+  border: 0;
+
+  background: transparent;
+  color: var(--eon-sky-dark);
+}
+
+.mobile-submenu {
+  display: none;
+
+  background: var(--eon-light);
+}
+
+.mobile-nav-item.expanded .mobile-submenu {
+  display: block;
+}
+
+.mobile-submenu a {
+  display: block;
+
+  padding:
+    11px 25px
+    11px 38px;
+
+  border-top:
+    1px solid rgba(232, 238, 243, 0.8);
+
+  color: var(--eon-text);
+
+  font-size: 14px;
+}
+
+.mobile-submenu a:hover,
+.mobile-submenu a.active {
+  color: var(--eon-sky-dark);
+}
+
+.mobile-social {
+  padding: 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+
+/* =========================================================
+   11. GENERAL SECTIONS
+   ========================================================= */
+
+section {
+  padding: 90px 0;
+}
+
+.section-heading {
+  max-width: 730px;
+  margin-bottom: 42px;
+}
+
+.section-label {
+  margin-bottom: 9px;
+
+  color: var(--eon-sky-dark);
+
+  font-size: 12px;
+  font-weight: 850;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  margin-bottom: 15px;
+
+  color: var(--eon-navy);
+
+  font-size:
+    clamp(30px, 4vw, 46px);
+
+  line-height: 1.12;
+  letter-spacing: -1px;
+}
+
+.section-heading p {
+  color: var(--eon-grey);
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   12. HERO
+   ========================================================= */
+
+.hero {
+  position: relative;
+
+  min-height: 650px;
+
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(16, 40, 61, 0.93) 0%,
+      rgba(16, 40, 61, 0.78) 48%,
+      rgba(16, 40, 61, 0.30) 100%
+    ),
+    url("../assets/images/eon-hero.jpg")
+    center / cover no-repeat;
+
+  color: var(--eon-white);
+}
+
+.hero-content {
+  max-width: 760px;
+  padding: 85px 0;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 18px;
+
+  color: #DDF4FF;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+
+  width: 30px;
+  height: 2px;
+
+  background: var(--eon-sky);
+}
+
+.hero h1 {
+  margin-bottom: 24px;
+
+  font-size:
+    clamp(42px, 6vw, 72px);
+
+  line-height: 1.05;
+  letter-spacing: -2px;
+
+  font-weight: 850;
+}
+
+.hero h1 span {
+  color: var(--eon-sky-soft);
+}
+
+.hero p {
+  max-width: 700px;
+
+  margin-bottom: 32px;
+
+  color: rgba(255,255,255,0.90);
+
+  font-size: 19px;
+  line-height: 1.75;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+
+
+/* =========================================================
+   13. BUTTON SYSTEM
+   ========================================================= */
+
+.btn {
+  min-height: 48px;
+
+  padding: 0 21px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 750;
+
+  cursor: pointer;
+
+  transition: var(--eon-transition);
+}
+
+.btn-primary {
+  color: var(--eon-white);
+  background: var(--eon-sky);
+
+  border: 1px solid var(--eon-sky);
+}
+
+.btn-primary:hover {
+  background: var(--eon-sky-dark);
+  border-color: var(--eon-sky-dark);
+
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  color: var(--eon-navy);
+  background: var(--eon-white);
+
+  border:
+    1px solid var(--eon-border);
+}
+
+.btn-outline:hover {
+  color: var(--eon-sky-dark);
+  border-color: var(--eon-sky);
+}
+
+.btn-outline-light {
+  color: var(--eon-white);
+
+  border:
+    1px solid rgba(255,255,255,0.55);
+
+  background:
+    rgba(255,255,255,0.06);
+}
+
+.btn-outline-light:hover {
+  color: var(--eon-navy);
+  background: var(--eon-white);
+}
+
+.btn-dark {
+  color: var(--eon-white);
+  background: var(--eon-navy);
+
+  border:
+    1px solid var(--eon-navy);
+}
+
+.btn-dark:hover {
+  background: var(--eon-dark);
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   14. INTRO CARDS
+   ========================================================= */
+
+.intro {
+  position: relative;
+
+  margin-top: -55px;
+
+  z-index: 5;
+}
+
+.intro-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.intro-card {
+  padding: 27px;
+
+  background: var(--eon-white);
+
+  border:
+    1px solid var(--eon-border);
+
+  border-radius: var(--eon-radius);
+
+  box-shadow: var(--eon-shadow);
+}
+
+.intro-card-icon {
+  width: 46px;
+  height: 46px;
+
+  margin-bottom: 15px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  color: var(--eon-sky-dark);
+  background: var(--eon-light);
+
+  font-size: 19px;
+}
+
+.intro-card h3 {
+  margin-bottom: 8px;
+
+  color: var(--eon-navy);
+
+  font-size: 18px;
+}
+
+.intro-card p {
+  color: var(--eon-grey);
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   15. ACTIVITY GALLERY
+   ========================================================= */
+
+.activities {
+  overflow: hidden;
+
+  background: var(--eon-light);
+}
+
+.activity-slider {
+  width: 100%;
+
+  overflow: hidden;
+}
+
+.activity-track {
+  width: max-content;
+
+  display: flex;
+
+  gap: 18px;
+
+  animation:
+    activityScroll 42s linear infinite;
+}
+
+.activity-slider:hover .activity-track {
+  animation-play-state: paused;
+}
+
+.activity-item {
+  position: relative;
+
+  width: 285px;
+  height: 205px;
+
+  flex: 0 0 285px;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  cursor: zoom-in;
+
+  background: #dcecf4;
+}
+
+.activity-item img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.35s ease;
+}
+
+.activity-item:hover img {
+  transform: scale(1.05);
+}
+
+@keyframes activityScroll {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform:
+      translateX(calc(-50% - 9px));
+  }
+
+}
+
+
+/* =========================================================
+   16. ABOUT SECTION
+   ========================================================= */
+
+.about-grid {
+  display: grid;
+
+  grid-template-columns:
+    0.95fr 1.05fr;
+
+  gap: 65px;
+
+  align-items: center;
+}
+
+.about-image {
+  min-height: 470px;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: #dcecf4;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.about-copy h2 {
+  margin-bottom: 20px;
+
+  color: var(--eon-navy);
+
+  font-size:
+    clamp(30px, 4vw, 45px);
+
+  line-height: 1.15;
+}
+
+.about-copy p {
+  margin-bottom: 17px;
+  color: var(--eon-grey);
+}
+
+.vision-mission {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 14px;
+
+  margin-top: 25px;
+}
+
+.vm-card {
+  padding: 20px;
+
+  border:
+    1px solid var(--eon-border);
+
+  border-radius: 12px;
+
+  background: var(--eon-light);
+}
+
+.vm-card h3 {
+  margin-bottom: 6px;
+
+  color: var(--eon-navy);
+
+  font-size: 16px;
+}
+
+.vm-card p {
+  margin: 0;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   17. THEMATIC AREAS
+   ========================================================= */
+
+.themes {
+  background: var(--eon-light);
+}
+
+.theme-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.theme-card {
+  min-height: 190px;
+
+  padding: 27px;
+
+  background: var(--eon-white);
+
+  border:
+    1px solid var(--eon-border);
+
+  border-radius: var(--eon-radius);
+
+  transition: var(--eon-transition);
+}
+
+.theme-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: var(--eon-shadow);
+
+  border-color: #b7def2;
+}
+
+.theme-number {
+  margin-bottom: 13px;
+
+  color: var(--eon-sky-dark);
+
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.theme-card h3 {
+  margin-bottom: 9px;
+
+  color: var(--eon-navy);
+
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.theme-card p {
+  color: var(--eon-grey);
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   18. OBSERVATION PROCESS
+   ========================================================= */
+
+.process-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(6, 1fr);
+
+  gap: 12px;
+}
+
+.process-card {
+  padding: 23px 15px;
+
+  text-align: center;
+
+  background: var(--eon-white);
+
+  border:
+    1px solid var(--eon-border);
+
+  border-radius: 12px;
+}
+
+.process-icon {
+  width: 48px;
+  height: 48px;
+
+  margin:
+    0 auto 13px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: var(--eon-sky-dark);
+  background: var(--eon-light);
+}
+
+.process-card h3 {
+  margin-bottom: 5px;
+
+  color: var(--eon-navy);
+
+  font-size: 14px;
+}
+
+.process-card p {
+  color: var(--eon-grey);
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   19. CIVIC EDUCATION
+   ========================================================= */
+
+.civic {
+  color: var(--eon-white);
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(16,40,61,0.95),
+      rgba(23,50,77,0.90)
+    );
+}
+
+.civic-grid {
+  display: grid;
+
+  grid-template-columns:
+    0.8fr 1.2fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+.vote-mark {
+  width: 170px;
+  height: 170px;
+
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  border:
+    1px solid rgba(114,203,245,0.45);
+
+  border-radius: 50%;
+
+  color: #DDF4FF;
+
+  background:
+    rgba(56,169,232,0.08);
+}
+
+.vote-mark strong {
+  font-size: 21px;
+  line-height: 1.2;
+}
+
+.civic-copy .section-label {
+  color: var(--eon-sky-soft);
+}
+
+.civic-copy h2 {
+  margin-bottom: 18px;
+
+  font-size:
+    clamp(32px, 4vw, 48px);
+
+  line-height: 1.1;
+}
+
+.civic-copy p {
+  margin-bottom: 18px;
+
+  color:
+    rgba(255,255,255,0.78);
+}
+
+
+/* =========================================================
+   20. GET INVOLVED
+   ========================================================= */
+
+.involved-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.involved-card {
+  padding: 30px;
+
+  background: var(--eon-white);
+
+  border:
+    1px solid var(--eon-border);
+
+  border-radius: var(--eon-radius);
+
+  transition: var(--eon-transition);
+}
+
+.involved-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--eon-shadow);
+}
+
+.involved-card > i {
+  display: block;
+
+  margin-bottom: 17px;
+
+  color: var(--eon-sky-dark);
+
+  font-size: 24px;
+}
+
+.involved-card h3 {
+  margin-bottom: 8px;
+  color: var(--eon-navy);
+}
+
+.involved-card p {
+  margin-bottom: 17px;
+
+  color: var(--eon-grey);
+
+  font-size: 14px;
+}
+
+.text-link {
+  color: var(--eon-sky-dark);
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   21. CTA
+   ========================================================= */
+
+.final-cta {
+  padding: 75px 0;
+
+  color: var(--eon-white);
+
+  background: var(--eon-sky);
+}
+
+.final-cta-inner {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 35px;
+}
+
+.final-cta h2 {
+  margin-bottom: 9px;
+
+  font-size:
+    clamp(28px, 4vw, 42px);
+
+  line-height: 1.15;
+}
+
+.final-cta p {
+  max-width: 700px;
+
+  color:
+    rgba(255,255,255,0.88);
+}
+
+.final-cta .btn {
+  flex-shrink: 0;
+
+  color: var(--eon-navy);
+  background: var(--eon-white);
+}
+
+.final-cta .btn:hover {
+  background: var(--eon-light);
+}
+
+
+/* =========================================================
+   22. INTERNAL PAGE HERO
+   Reusable for About, Elections, Reports, Observation etc.
+   ========================================================= */
+
+.page-hero {
+  position: relative;
+
+  min-height: 390px;
+
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(16,40,61,0.93),
+      rgba(23,50,77,0.72)
+    ),
+    url("../assets/images/hero/page-hero.jpg")
+    center / cover no-repeat;
+
+  color: var(--eon-white);
+}
+
+.page-hero-content {
+  max-width: 760px;
+}
+
+.page-hero .eyebrow {
+  margin-bottom: 15px;
+}
+
+.page-hero h1 {
+  margin-bottom: 15px;
+
+  font-size:
+    clamp(36px, 5vw, 58px);
+
+  line-height: 1.08;
+}
+
+.page-hero p {
+  max-width: 680px;
+
+  color:
+    rgba(255,255,255,0.85);
+
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   23. CONTENT LAYOUT
+   ========================================================= */
+
+.content-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    300px;
+
+  gap: 45px;
+
+  align-items: start;
+}
+
+.content-main {
+  min-width: 0;
+}
+
+.content-sidebar {
+  position: sticky;
+  top: 105px;
+}
+
+.content-main h2 {
+  margin-bottom: 15px;
+
+  color: var(--eon-navy);
+
+  font-size:
+    clamp(27px, 3vw, 38px);
+
+  line-height: 1.2;
+}
+
+.content-main h3 {
+  margin:
+    30px 0 10px;
+
+  color: var(--eon-navy);
+
+  font-size: 21px;
+}
+
+.content-main p {
+  margin-bottom: 17px;
+  color: var(--eon-grey);
+}
+
+.content-main ul {
+  margin:
+    15px 0 20px;
+
+  padding-left: 22px;
+
+  list-style: disc;
+}
+
+.content-main li {
+  margin-bottom: 8px;
+  color: var(--eon-grey);
+}
+
+
+/* =========================================================
+   24. SIDEBAR
+   ========================================================= */
+
+.sidebar-card {
+  padding: 22px;
+
+  background: var(--eon-light);
+
+  border:
+    1px solid var(--eon-border);
+
+  border-radius: var(--eon-radius);
+}
+
+.sidebar-card + .sidebar-card {
+  margin-top: 18px;
+}
+
+.sidebar-card h3 {
+  margin-bottom: 13px;
+
+  color: var(--eon-navy);
+
+  font-size: 17px;
+}
+
+.sidebar-card a {
+  display: block;
+
+  padding: 8px 0;
+
+  border-bottom:
+    1px solid var(--eon-border);
+
+  color: var(--eon-text);
+
+  font-size: 14px;
+}
+
+.sidebar-card a:last-child {
+  border-bottom: 0;
+}
+
+.sidebar-card a:hover,
+.sidebar-card a.active {
+  color: var(--eon-sky-dark);
+}
+
+
+/* =========================================================
+   25. INFORMATION CARDS
+   ========================================================= */
+
+.card-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.info-card {
+  padding: 27px;
+
+  background: var(--eon-white);
+
+  border:
+    1px solid var(--eon-border);
+
+  border-radius: var(--eon-radius);
+
+  transition: var(--eon-transition);
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--eon-shadow);
+}
+
+.info-card-icon {
+  width: 48px;
+  height: 48px;
+
+  margin-bottom: 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  color: var(--eon-sky-dark);
+  background: var(--eon-light);
+}
+
+.info-card h3 {
+  margin-bottom: 8px;
+  color: var(--eon-navy);
+}
+
+.info-card p {
+  color: var(--eon-grey);
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   26. STATISTICS / AT A GLANCE
+   ========================================================= */
+
+.stats-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+.stat-card {
+  padding: 25px;
+
+  text-align: center;
+
+  background: var(--eon-white);
+
+  border:
+    1px solid var(--eon-border);
+
+  border-radius: var(--eon-radius);
+}
+
+.stat-number {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--eon-sky-dark);
+
+  font-size: 36px;
+  font-weight: 850;
+  line-height: 1;
+}
+
+.stat-label {
+  color: var(--eon-grey);
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   27. STAFF / LEADERSHIP
+   ========================================================= */
+
+.staff-section {
+  margin-bottom: 75px;
+}
+
+.staff-section:last-child {
+  margin-bottom: 0;
+}
+
+.staff-section-heading {
+  margin-bottom: 30px;
+}
+
+.staff-section-heading h2 {
+  color: var(--eon-navy);
+
+  font-size:
+    clamp(27px, 3vw, 38px);
+
+  line-height: 1.15;
+}
+
+.staff-section-heading p {
+  margin-top: 8px;
+  color: var(--eon-grey);
+}
+
+.staff-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+.staff-card {
+  overflow: hidden;
+
+  background: var(--eon-white);
+
+  border:
+    1px solid var(--eon-border);
+
+  border-radius: var(--eon-radius);
+
+  transition: var(--eon-transition);
+}
+
+.staff-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--eon-shadow);
+}
+
+.staff-photo {
+  aspect-ratio: 1 / 1.05;
+
+  overflow: hidden;
+
+  background: var(--eon-light);
+}
+
+.staff-photo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.staff-info {
+  padding: 19px;
+}
+
+.staff-info h3 {
+  margin-bottom: 5px;
+
+  color: var(--eon-navy);
+
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.staff-role {
+  color: var(--eon-sky-dark);
+
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.staff-description {
+  margin-top: 10px;
+
+  color: var(--eon-grey);
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   28. REGIONAL / DISTRICT DIRECTORY
+   ========================================================= */
+
+.directory-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.directory-card {
+  padding: 23px;
+
+  background: var(--eon-white);
+
+  border:
+    1px solid var(--eon-border);
+
+  border-radius: var(--eon-radius);
+}
+
+.directory-card h3 {
+  margin-bottom: 5px;
+
+  color: var(--eon-navy);
+}
+
+.directory-card p {
+  color: var(--eon-grey);
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   29. COUNTRY / REGIONAL PRESENCE
+   ========================================================= */
+
+.country-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 22px;
+}
+
+.country-card {
+  position: relative;
+
+  min-height: 260px;
+
+  overflow: hidden;
+
+  border-radius: var(--eon-radius);
+
+  background: var(--eon-navy);
+}
+
+.country-card img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.country-card:hover img {
+  transform: scale(1.05);
+}
+
+.country-overlay {
+  position: absolute;
+  inset: 0;
+
+  padding: 25px;
+
+  display: flex;
+  align-items: flex-end;
+
+  background:
+    linear-gradient(
+      transparent 35%,
+      rgba(16,40,61,0.92)
+    );
+
+  color: var(--eon-white);
+}
+
+.country-overlay h3 {
+  font-size: 22px;
+}
+
+
+/* =========================================================
+   30. REPORTS
+   ========================================================= */
+
+.report-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+.report-card {
+  padding: 25px;
+
+  display: flex;
+  gap: 18px;
+
+  background: var(--eon-white);
+
+  border:
+    1px solid var(--eon-border);
+
+  border-radius: var(--eon-radius);
+
+  transition: var(--eon-transition);
+}
+
+.report-card:hover {
+  box-shadow: var(--eon-shadow);
+  transform: translateY(-3px);
+}
+
+.report-icon {
+  width: 50px;
+  height: 50px;
+
+  flex: 0 0 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  color: var(--eon-sky-dark);
+  background: var(--eon-light);
+
+  font-size: 20px;
+}
+
+.report-card h3 {
+  margin-bottom: 5px;
+
+  color: var(--eon-navy);
+
+  font-size: 17px;
+}
+
+.report-card p {
+  margin-bottom: 10px;
+
+  color: var(--eon-grey);
+
+  font-size: 13px;
+}
+
+.report-download {
+  color: var(--eon-sky-dark);
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   31. ELECTION INFORMATION
+   ========================================================= */
+
+.election-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.election-card {
+  padding: 25px;
+
+  background: var(--eon-white);
+
+  border:
+    1px solid var(--eon-border);
+
+  border-radius: var(--eon-radius);
+}
+
+.election-card h3 {
+  margin-bottom: 8px;
+
+  color: var(--eon-navy);
+}
+
+.election-card p {
+  color: var(--eon-grey);
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   32. TIMELINE
+   ========================================================= */
+
+.timeline {
+  position: relative;
+
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: "";
+
+  position: absolute;
+
+  top: 5px;
+  bottom: 5px;
+  left: 7px;
+
+  width: 2px;
+
+  background: var(--eon-border);
+}
+
+.timeline-item {
+  position: relative;
+
+  padding:
+    0 0 30px 25px;
+}
+
+.timeline-item::before {
+  content: "";
+
+  position: absolute;
+
+  left: -30px;
+  top: 4px;
+
+  width: 14px;
+  height: 14px;
+
+  border-radius: 50%;
+
+  background: var(--eon-sky);
+
+  border:
+    3px solid var(--eon-white);
+
+  box-shadow:
+    0 0 0 1px var(--eon-sky);
+}
+
+.timeline-item h3 {
+  margin-bottom: 5px;
+
+  color: var(--eon-navy);
+
+  font-size: 17px;
+}
+
+.timeline-item p {
+  color: var(--eon-grey);
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   33. TABLES
+   ========================================================= */
+
+.table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  border:
+    1px solid var(--eon-border);
+
+  border-radius: var(--eon-radius);
+}
+
+.data-table {
+  min-width: 650px;
+}
+
+.data-table th,
+.data-table td {
+  padding: 13px 15px;
+
+  text-align: left;
+
+  border-bottom:
+    1px solid var(--eon-border);
+}
+
+.data-table th {
+  color: var(--eon-navy);
+
+  background: var(--eon-light);
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.data-table td {
+  color: var(--eon-grey);
+
+  font-size: 13px;
+}
+
+.data-table tr:last-child td {
+  border-bottom: 0;
+}
+
+
+/* =========================================================
+   34. ALERT / NOTICE
+   ========================================================= */
+
+.notice {
+  padding: 18px 20px;
+
+  margin-bottom: 25px;
+
+  border-left:
+    4px solid var(--eon-sky);
+
+  background: var(--eon-light);
+
+  color: var(--eon-text);
+
+  border-radius: 8px;
+}
+
+.notice strong {
+  color: var(--eon-navy);
+}
+
+
+/* =========================================================
+   35. FORMS
+   ========================================================= */
+
+.form-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group.full {
+  grid-column: 1 / -1;
+}
+
+.form-label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--eon-navy);
+
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.form-control {
+  width: 100%;
+
+  min-height: 46px;
+
+  padding: 11px 13px;
+
+  border:
+    1px solid var(--eon-border);
+
+  border-radius: 8px;
+
+  background: var(--eon-white);
+
+  color: var(--eon-text);
+
+  outline: none;
+
+  transition: var(--eon-transition);
+}
+
+textarea.form-control {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.form-control:focus {
+  border-color: var(--eon-sky);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(56,169,232,0.12);
+}
+
+.form-help {
+  display: block;
+
+  margin-top: 5px;
+
+  color: var(--eon-muted);
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   36. CONTACT
+   ========================================================= */
+
+.contact-grid {
+  display: grid;
+
+  grid-template-columns:
+    0.9fr 1.1fr;
+
+  gap: 35px;
+}
+
+.contact-card {
+  padding: 25px;
+
+  background: var(--eon-light);
+
+  border:
+    1px solid var(--eon-border);
+
+  border-radius: var(--eon-radius);
+}
+
+.contact-item {
+  display: flex;
+
+  gap: 13px;
+
+  margin-bottom: 20px;
+}
+
+.contact-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact-item-icon {
+  width: 40px;
+  height: 40px;
+
+  flex: 0 0 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: var(--eon-sky-dark);
+  background: var(--eon-white);
+}
+
+.contact-item h3 {
+  margin-bottom: 2px;
+
+  color: var(--eon-navy);
+
+  font-size: 14px;
+}
+
+.contact-item p,
+.contact-item a {
+  color: var(--eon-grey);
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   37. PAGINATION
+   ========================================================= */
+
+.pagination {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  margin-top: 35px;
+}
+
+.pagination a,
+.pagination span {
+  min-width: 38px;
+  height: 38px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid var(--eon-border);
+
+  border-radius: 7px;
+
+  color: var(--eon-navy);
+
+  font-size: 13px;
+}
+
+.pagination a:hover,
+.pagination .active {
+  color: var(--eon-white);
+  background: var(--eon-sky);
+  border-color: var(--eon-sky);
+}
+
+
+/* =========================================================
+   38. FOOTER
+   ========================================================= */
+
+footer {
+  padding:
+    65px 0 25px;
+
+  color:
+    rgba(255,255,255,0.78);
+
+  background: var(--eon-dark);
+}
+
+.footer-grid {
+  display: grid;
+
+  grid-template-columns:
+    1.25fr
+    0.8fr
+    0.8fr
+    1fr;
+
+  gap: 45px;
+
+  padding-bottom: 45px;
+}
+
+.footer-brand img {
+  width: 64px;
+
+  margin-bottom: 15px;
+}
+
+.footer-brand p {
+  max-width: 350px;
+
+  font-size: 14px;
+}
+
+.footer-column h3 {
+  margin-bottom: 15px;
+
+  color: var(--eon-white);
+
+  font-size: 15px;
+}
+
+.footer-column a {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color:
+    rgba(255,255,255,0.78);
+
+  font-size: 13px;
+
+  transition: var(--eon-transition);
+}
+
+.footer-column a:hover {
+  color: var(--eon-sky);
+}
+
+.footer-contact p {
+  margin-bottom: 9px;
+
+  font-size: 13px;
+}
+
+.footer-contact i {
+  width: 20px;
+
+  color: var(--eon-sky);
+}
+
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-top: 15px;
+}
+
+.footer-social .social-icon {
+  color: var(--eon-white);
+
+  background: transparent;
+
+  border-color:
+    rgba(255,255,255,0.18);
+}
+
+.footer-social .social-icon:hover {
+  color: var(--eon-white);
+
+  background: var(--eon-sky);
+
+  border-color: var(--eon-sky);
+}
+
+.footer-bottom {
+  padding-top: 22px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-top:
+    1px solid rgba(255,255,255,0.10);
+
+  font-size: 12px;
+}
+
+.footer-motto {
+  color: var(--eon-sky-soft);
+  font-weight: 750;
+}
+
+
+/* =========================================================
+   39. LIGHTBOX
+   ========================================================= */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+
+  z-index: 3000;
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+
+  background:
+    rgba(5,18,29,0.94);
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: min(1100px, 94vw);
+  max-height: 88vh;
+
+  object-fit: contain;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 25px 70px
+    rgba(0,0,0,0.45);
+}
+
+.lightbox-close {
+  position: absolute;
+
+  top: 20px;
+  right: 25px;
+
+  width: 45px;
+  height: 45px;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,255,255,0.12);
+
+  color: var(--eon-white);
+
+  font-size: 28px;
+}
+
+.lightbox-close:hover {
+  background:
+    rgba(255,255,255,0.22);
+}
+
+
+/* =========================================================
+   40. UTILITY CLASSES
+   ========================================================= */
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-sky {
+  color: var(--eon-sky-dark);
+}
+
+.text-navy {
+  color: var(--eon-navy);
+}
+
+.text-muted {
+  color: var(--eon-grey);
+}
+
+.bg-light {
+  background: var(--eon-light);
+}
+
+.bg-white {
+  background: var(--eon-white);
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.mb-1 {
+  margin-bottom: 10px !important;
+}
+
+.mb-2 {
+  margin-bottom: 20px !important;
+}
+
+.mb-3 {
+  margin-bottom: 30px !important;
+}
+
+.mt-1 {
+  margin-top: 10px !important;
+}
+
+.mt-2 {
+  margin-top: 20px !important;
+}
+
+.mt-3 {
+  margin-top: 30px !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+
+/* =========================================================
+   41. RESPONSIVE — LARGE TABLETS
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .desktop-nav {
+    gap: 0;
+  }
+
+  .nav-link {
+    padding-inline: 8px;
+    font-size: 13px;
+  }
+
+  .desktop-social {
+    display: none;
+  }
+
+  .process-grid {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+  .staff-grid {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   42. RESPONSIVE — TABLETS
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .container {
+    width:
+      min(
+        var(--eon-container),
+        calc(100% - 32px)
+      );
+  }
+
+  section {
+    padding: 70px 0;
+  }
+
+  /* Navigation */
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Hero */
+
+  .hero {
+    min-height: 580px;
+  }
+
+  .hero-content {
+    padding: 70px 0;
+  }
+
+  /* Main grids */
+
+  .about-grid,
+  .civic-grid,
+  .contact-grid,
+  .content-layout {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .content-sidebar {
+    position: static;
+  }
+
+  .theme-grid,
+  .card-grid,
+  .directory-grid,
+  .election-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .country-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .stats-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .involved-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .report-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .staff-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 35px;
+  }
+
+}
+
+
+/* =========================================================
+   43. RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .container {
+    width:
+      calc(100% - 28px);
+  }
+
+  section {
+    padding: 55px 0;
+  }
+
+  /* Top bar */
+
+  .topbar-inner {
+    padding: 7px 0;
+
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 5px;
+  }
+
+  .topbar-contact {
+    gap: 8px 15px;
+  }
+
+  .topbar-social {
+    display: none;
+  }
+
+  /* Header */
+
+  .nav-container {
+    min-height: 72px;
+  }
+
+  .brand img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand-text strong {
+    font-size: 13px;
+  }
+
+  .brand-text span {
+    font-size: 9px;
+  }
+
+  .mobile-menu {
+    max-height:
+      calc(100vh - 72px);
+  }
+
+  /* Hero */
+
+  .hero {
+    min-height: 600px;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(16,40,61,0.94),
+        rgba(16,40,61,0.80)
+      ),
+      url("../assets/images/eon-hero.jpg")
+      center / cover no-repeat;
+  }
+
+  .hero-content {
+    padding: 60px 0;
+  }
+
+  .hero h1 {
+    font-size:
+      clamp(36px, 11vw, 54px);
+
+    letter-spacing: -1.5px;
+  }
+
+  .hero p {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  /* Intro */
+
+  .intro {
+    margin-top: -35px;
+  }
+
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-card {
+    padding: 22px;
+  }
+
+  /* Headings */
+
+  .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .section-heading h2 {
+    font-size: 30px;
+  }
+
+  /* Gallery */
+
+  .activity-item {
+    width: 250px;
+    height: 180px;
+
+    flex-basis: 250px;
+  }
+
+  /* About */
+
+  .about-image {
+    min-height: 300px;
+  }
+
+  .vision-mission {
+    grid-template-columns: 1fr;
+  }
+
+  /* Grids */
+
+  .theme-grid,
+  .card-grid,
+  .directory-grid,
+  .election-grid,
+  .country-grid,
+  .stats-grid,
+  .involved-grid,
+  .staff-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Process */
+
+  .process-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  /* Civic */
+
+  .civic-grid {
+    gap: 35px;
+  }
+
+  .vote-mark {
+    width: 145px;
+    height: 145px;
+  }
+
+  .civic-copy h2 {
+    font-size: 31px;
+  }
+
+  /* CTA */
+
+  .final-cta {
+    padding: 55px 0;
+  }
+
+  .final-cta-inner {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .final-cta .btn {
+    width: 100%;
+  }
+
+  /* Page hero */
+
+  .page-hero {
+    min-height: 300px;
+  }
+
+  .page-hero h1 {
+    font-size: 38px;
+  }
+
+  .page-hero p {
+    font-size: 15px;
+  }
+
+  /* Forms */
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-group.full {
+    grid-column: auto;
+  }
+
+  /* Footer */
+
+  footer {
+    padding-top: 50px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+
+    gap: 32px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+}
+
+
+/* =========================================================
+   44. VERY SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .brand-text {
+    max-width: 170px;
+  }
+
+  .brand-text strong {
+    font-size: 12px;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile-nav-row > a {
+    padding-left: 14px;
+  }
+
+  .mobile-submenu a {
+    padding-left: 30px;
+  }
+
+}
+
+
+/* =========================================================
+   45. REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+}
