@@ -1,1415 +1,268 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description" content="Leadership and staff of the Elections Observer Network Sierra Leone (EON-SL).">
-
-<title>Leadership & Staff | EON-SL</title>
-
-<style>
-:root{
-  --blue:#38A9E8;
-  --blue-dark:#1687C7;
-  --navy:#17324D;
-  --footer:#10283D;
-  --light:#F2F9FD;
-  --grey:#64748B;
-  --border:#E8EEF3;
-  --white:#FFFFFF;
-  --shadow:0 12px 35px rgba(23,50,77,.10);
-}
-
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  color:var(--navy);
-  line-height:1.6;
-  background:#fff;
-  overflow-x:hidden;
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-img{
-  display:block;
-  max-width:100%;
-}
-
-.container{
-  width:min(92%,1180px);
-  margin:auto;
-}
-
-/* HEADER */
-
-header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(255,255,255,.97);
-  border-bottom:1px solid var(--border);
-  backdrop-filter:blur(10px);
-}
-
-.nav{
-  min-height:78px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:25px;
-}
-
-.brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  font-weight:800;
-}
-
-.brand img{
-  width:52px;
-  height:52px;
-  object-fit:contain;
-}
-
-.brand-text{
-  line-height:1.15;
-}
-
-.brand-text span{
-  display:block;
-  color:var(--blue-dark);
-  font-size:.78rem;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-
-.brand-text strong{
-  font-size:1rem;
-}
-
-nav ul{
-  list-style:none;
-  display:flex;
-  flex-wrap:wrap;
-  gap:20px;
-}
-
-nav a{
-  font-size:.9rem;
-  font-weight:700;
-}
-
-nav a:hover,
-nav a.active{
-  color:var(--blue-dark);
-}
-
-/* HERO */
-
-.hero{
-  background:
-    linear-gradient(
-      135deg,
-      rgba(56,169,232,.13),
-      rgba(255,255,255,.98)
-    ),
-    var(--light);
-  padding:85px 0 70px;
-  border-bottom:1px solid var(--border);
-}
-
-.eyebrow{
-  color:var(--blue-dark);
-  font-size:.78rem;
-  font-weight:800;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  margin-bottom:14px;
-}
-
-.hero h1{
-  font-size:clamp(2.3rem,5vw,4.1rem);
-  line-height:1.05;
-  margin-bottom:20px;
-}
-
-.hero p{
-  max-width:800px;
-  color:var(--grey);
-  font-size:1.08rem;
-}
-
-/* SECTIONS */
-
-.section-heading{
-  text-align:center;
-  max-width:800px;
-  margin:0 auto 50px;
-}
-
-.section-heading h2{
-  font-size:clamp(2rem,4vw,2.8rem);
-  line-height:1.15;
-  margin-bottom:14px;
-}
-
-.section-heading p{
-  color:var(--grey);
-}
-
-/* CARDS */
-
-.card{
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:var(--shadow);
-  transition:transform .25s ease,box-shadow .25s ease;
-}
-
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 18px 45px rgba(23,50,77,.15);
-}
-
-.photo{
-  width:100%;
-  aspect-ratio:4 / 4.8;
-  overflow:hidden;
-  background:var(--light);
-}
-
-.photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.info{
-  text-align:center;
-  padding:20px 16px 23px;
-  min-height:115px;
-}
-
-.info h3{
-  font-size:1.04rem;
-  line-height:1.3;
-  margin-bottom:7px;
-}
-
-.role{
-  color:var(--blue-dark);
-  font-size:.88rem;
-  font-weight:800;
-  line-height:1.4;
-}
-
-/* SAT */
-
-.sat-section{
-  padding:90px 0;
-  background:#fff;
-}
-
-.sat-leader{
-  max-width:330px;
-  margin:0 auto 30px;
-}
-
-.sat-vice{
-  max-width:330px;
-  margin:0 auto 45px;
-}
-
-.sat-members{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:28px;
-  max-width:1000px;
-  margin:0 auto;
-}
-
-/* NATIONAL STAFF */
-
-.staff-section{
-  padding:90px 0;
-  background:var(--light);
-}
-
-.staff-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:28px;
-}
-
-/* REGIONAL */
-
-.regional-section{
-  padding:90px 0;
-  background:#fff;
-}
-
-.regional-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:28px;
-  max-width:1050px;
-  margin:0 auto;
-}
-
-/* DISTRICTS */
-
-.district-section{
-  padding:90px 0;
-  background:var(--light);
-}
-
-.district-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:24px;
-}
-
-.district-card{
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:16px;
-  overflow:hidden;
-  box-shadow:var(--shadow);
-  transition:transform .25s ease,box-shadow .25s ease;
-}
-
-.district-card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 18px 40px rgba(23,50,77,.14);
-}
-
-.district-card .photo{
-  aspect-ratio:4 / 4.7;
-}
-
-.district-card .info{
-  min-height:135px;
-  padding:19px 14px 22px;
-}
-
-.district-number{
-  display:block;
-  color:var(--blue-dark);
-  font-size:.72rem;
-  font-weight:800;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  margin-bottom:5px;
-}
-
-.district-name{
-  font-size:.9rem;
-  font-weight:800;
-  margin-bottom:7px;
-}
-
-/* CTA */
-
-.cta{
-  padding:75px 0;
-  background:var(--navy);
-  color:#fff;
-  text-align:center;
-}
-
-.cta h2{
-  font-size:clamp(1.8rem,4vw,2.7rem);
-  margin-bottom:14px;
-}
-
-.cta p{
-  max-width:700px;
-  margin:0 auto 28px;
-  color:rgba(255,255,255,.78);
-}
-
-.btn{
-  display:inline-block;
-  padding:13px 23px;
-  border-radius:999px;
-  background:var(--blue);
-  color:#fff;
-  font-weight:800;
-}
-
-.btn:hover{
-  background:var(--blue-dark);
-}
-
-/* FOOTER */
-
-footer{
-  background:var(--footer);
-  color:#fff;
-  padding:48px 0 25px;
-}
-
-.footer-grid{
-  display:grid;
-  grid-template-columns:1.5fr 1fr 1fr;
-  gap:40px;
-  padding-bottom:35px;
-  border-bottom:1px solid rgba(255,255,255,.13);
-}
-
-footer h3{
-  margin-bottom:12px;
-  font-size:1rem;
-}
-
-footer p,
-footer li{
-  color:rgba(255,255,255,.72);
-  font-size:.9rem;
-}
-
-footer ul{
-  list-style:none;
-}
-
-footer li{
-  margin-bottom:7px;
-}
-
-footer a:hover{
-  color:var(--blue);
-}
-
-.bottom{
-  padding-top:22px;
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  flex-wrap:wrap;
-  color:rgba(255,255,255,.62);
-  font-size:.82rem;
-}
-
-.motto{
-  color:var(--blue);
-  font-weight:800;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:1050px){
-
-  .staff-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .district-grid{
-    grid-template-columns:repeat(3,1fr);
-  }
-}
-
-@media(max-width:900px){
-
-  .sat-members{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .regional-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr 1fr;
-  }
-}
-
-@media(max-width:720px){
-
-  .nav{
-    padding:14px 0;
-    align-items:flex-start;
-    flex-direction:column;
-  }
-
-  nav ul{
-    gap:12px 16px;
-  }
-
-  nav a{
-    font-size:.84rem;
-  }
-
-  .hero{
-    padding:60px 0 50px;
-  }
-
-  .sat-section,
-  .staff-section,
-  .regional-section,
-  .district-section{
-    padding:60px 0;
-  }
-
-  .sat-members,
-  .regional-grid,
-  .staff-grid,
-  .district-grid{
-    grid-template-columns:1fr;
-    max-width:430px;
-    margin-left:auto;
-    margin-right:auto;
-  }
-
-  .sat-leader,
-  .sat-vice{
-    max-width:360px;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr;
-    gap:28px;
-  }
-
-  .bottom{
-    flex-direction:column;
-  }
-}
-
-@media(max-width:480px){
-
-  .container{
-    width:min(94%,1180px);
-  }
-
-  .brand img{
-    width:46px;
-    height:46px;
-  }
-
-  .brand-text strong{
-    font-size:.92rem;
-  }
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Leadership &amp; Staff | Elections Observer Network Sierra Leone</title>
+  <meta name="description" content="Meet the leadership and staff of Elections Observer Network Sierra Leone (EON-SL).">
+  <meta name="theme-color" content="#38a9e8">
+  <link rel="canonical" href="https://www.eonsl.org/staff.html">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <style>
+    .topbar { color: rgba(255,255,255,.88); background: var(--eon-dark); font-size: .8rem; }
+    .topbar-inner { min-height: 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .topbar-contact, .social-links { display: flex; align-items: center; flex-wrap: wrap; gap: .8rem; }
+    .topbar-contact a, .social-links a { color: inherit; text-decoration: none; }
+    .social-links a { display: inline-grid; place-items: center; min-width: 2rem; min-height: 2rem; border-radius: 50%; }
+    .social-links a:hover { color: var(--eon-sky); background: rgba(255,255,255,.1); }
+
+    .page-hero {
+      position: relative;
+      min-height: clamp(22rem, 42vw, 30rem);
+      display: grid;
+      align-items: center;
+      color: #fff;
+      background: linear-gradient(90deg, rgba(16,40,61,.92), rgba(16,40,61,.76), rgba(16,40,61,.38)), url("assets/images/hero/about-hero.jpg") center/cover no-repeat;
+    }
+    .page-hero-inner { position: relative; z-index: 1; padding: 4rem 0; max-width: 48rem; }
+    .eyebrow { display: inline-block; margin-bottom: 1rem; color: #d9f4ff; font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 800; }
+    .page-hero h1 { margin: 0 0 1rem; font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.05; }
+    .page-hero p { margin: 0; font-size: 1.08rem; color: rgba(255,255,255,.9); }
+
+    .section { padding: clamp(3rem, 7vw, 5rem) 0; }
+    .section--light { background: var(--eon-light); }
+    .section-heading { max-width: 44rem; margin: 0 auto 2rem; text-align: center; }
+    .section-heading h2 { margin: 0 0 .8rem; color: var(--eon-navy); font-size: clamp(2rem, 4vw, 2.9rem); line-height: 1.1; }
+    .section-heading p { color: var(--eon-grey); }
+
+    .team-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+    .team-card { background: #fff; border: 1px solid var(--eon-border); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+    .team-card img { width: 100%; aspect-ratio: 4 / 4.8; object-fit: cover; display: block; }
+    .team-card-body { padding: 1.1rem 1rem 1.2rem; }
+    .team-card h3 { margin: 0 0 .3rem; color: var(--eon-navy); font-size: 1.05rem; }
+    .team-role { color: var(--eon-sky-dark); font-size: .82rem; letter-spacing: .04em; font-weight: 700; text-transform: uppercase; }
+
+    .cta { padding: 3rem 0; background: var(--eon-navy); color: #fff; }
+    .cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.25rem; }
+    .cta h2 { margin: 0 0 .35rem; }
+    .cta p { margin: 0; color: rgba(255,255,255,.82); }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 2.875rem; padding: .7rem 1rem; border-radius: .5rem; color: #fff; background: var(--eon-sky); font-weight: 700; text-decoration: none; }
+    .button:hover { background: var(--eon-sky-dark); }
+    .button--light { color: var(--eon-navy); background: #fff; }
+    .button--light:hover { background: #ecf9ff; }
+
+    @media (max-width: 980px) {
+      .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .cta-inner { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 600px) {
+      .team-grid { grid-template-columns: 1fr; }
+      .topbar { display: none; }
+    }
+  </style>
 </head>
-
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-<!-- HEADER -->
-
-<header>
-  <div class="container nav">
-
-    <a href="index.html" class="brand">
-      <img src="assets/images/eon-logo.png" alt="EON-SL Logo">
-
-      <div class="brand-text">
-        <span>EON-SL</span>
-        <strong>Elections Observer Network</strong>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-contact">
+        <a href="mailto:electionsobsnet@gmail.com">electionsobsnet@gmail.com</a>
+        <a href="tel:+23234210118">+232 34 210 118</a>
       </div>
-    </a>
-
-    <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="elections.html">Elections</a></li>
-        <li><a href="observation.html">Observation</a></li>
-        <li><a href="reports.html">Reports &amp; Data</a></li>
-        <li><a href="civic-education.html">Civic Education</a></li>
-        <li><a href="staff.html" class="active">Leadership &amp; Staff</a></li>
-        <li><a href="get-involved.html">Get Involved</a></li>
-      </ul>
-    </nav>
-
-  </div>
-</header>
-
-
-<!-- HERO -->
-
-<section class="hero">
-
-  <div class="container">
-
-    <div class="eyebrow">
-      EON-SL Leadership
+      <div class="social-links" aria-label="EON-SL social media links">
+        <a href="https://www.facebook.com/EON-Sierra-Leone" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
+        <a href="https://wa.me/23234210118" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WhatsApp</a>
+        <a href="https://www.linkedin.com/company/eon-sierra-leone/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+        <a href="https://x.com/EON_OBSERVE2023" target="_blank" rel="noopener noreferrer" aria-label="X">X</a>
+      </div>
     </div>
-
-    <h1>
-      Leadership &amp; Staff
-    </h1>
-
-    <p>
-      Meet the Strategic Advisory Team, National Staff,
-      Regional Coordinators and District Coordinators supporting
-      the Elections Observer Network Sierra Leone in its work
-      to promote transparent, inclusive, peaceful and credible
-      electoral processes.
-    </p>
-
   </div>
 
-</section>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a class="brand" href="index.html" aria-label="EON-SL home">
+        <img src="assets/images/eon-logo.png" alt="EON-SL logo" width="52" height="52">
+        <span class="brand-text"><strong>Elections Observer Network</strong><span>Sierra Leone</span></span>
+      </a>
+      <button class="mobile-menu-button" type="button" data-mobile-menu-button aria-controls="site-navigation" aria-expanded="false" aria-label="Open navigation menu">☰</button>
+      <nav class="site-nav" id="site-navigation" data-site-nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About EON-SL</a>
+        <a href="staff.html" aria-current="page">Leadership &amp; Staff</a>
+        <a href="about.html#international-presence">Regional Presence</a>
+        <a href="mailto:electionsobsnet@gmail.com">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-
-<main>
-
-
-<!-- =========================================================
-     STRATEGIC ADVISORY TEAM
-========================================================= -->
-
-<section class="sat-section" id="strategic-advisory-team">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <div class="eyebrow">
-        Strategic Advisory Team
+  <main id="main-content">
+    <section class="page-hero" aria-labelledby="staff-title">
+      <div class="container page-hero-inner">
+        <p class="eyebrow">Leadership &amp; staff</p>
+        <h1 id="staff-title">The people behind EON-SL</h1>
+        <p>Our team works across leadership, community engagement, training, administration and democratic accountability.</p>
       </div>
+    </section>
 
-      <h2>
-        Strategic Advisory Team (SAT)
-      </h2>
-
-      <p>
-        The Strategic Advisory Team provides strategic guidance,
-        institutional advice and high-level support to the work
-        of EON-SL.
-      </p>
-
-    </div>
-
-
-    <!-- CHAIRMAN -->
-
-    <div class="sat-leader">
-
-      <article class="card">
-
-        <div class="photo">
-          <img
-            src="assets/images/leadership/sat/soulay-basirou-daramy.jpg"
-            alt="Amb. Soulay Basirou Daramy, Chairman, Strategic Advisory Team"
-          >
+    <section class="section section--light" aria-labelledby="leadership-heading">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow" style="color:var(--eon-sky-dark)">Leadership</p>
+          <h2 id="leadership-heading">Senior leadership team</h2>
         </div>
+        <div class="team-grid">
+          <article class="team-card">
+            <img src="assets/images/leadership/samuel-patrick-mattia.jpg" alt="Samuel Patrick Mattia" loading="lazy" decoding="async" width="420" height="500">
+            <div class="team-card-body">
+              <h3>Samuel Patrick Mattia</h3>
+              <div class="team-role">Executive Director</div>
+            </div>
+          </article>
 
-        <div class="info">
-          <h3>Amb. Soulay Basirou Daramy</h3>
-          <div class="role">Chairman</div>
+          <article class="team-card">
+            <img src="assets/images/leadership/emmanuel-sattie.jpg" alt="Emmanuel Sattie" loading="lazy" decoding="async" width="420" height="500">
+            <div class="team-card-body">
+              <h3>Emmanuel Sattie</h3>
+              <div class="team-role">National Coordinator</div>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <img src="assets/images/leadership/julius-barbour-aruna.jpg" alt="Julius Barbour Aruna" loading="lazy" decoding="async" width="420" height="500">
+            <div class="team-card-body">
+              <h3>Julius Barbour Aruna</h3>
+              <div class="team-role">Head of Secretariat</div>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <img src="assets/images/leadership/theresa-abrina-baindu-sheriff.jpg" alt="Theresa Abrina Baindu Sheriff" loading="lazy" decoding="async" width="420" height="500">
+            <div class="team-card-body">
+              <h3>Theresa Abrina Baindu Sheriff</h3>
+              <div class="team-role">Program Manager</div>
+            </div>
+          </article>
         </div>
-
-      </article>
-
-    </div>
-
-
-    <!-- VICE CHAIRMAN -->
-
-    <div class="sat-vice">
-
-      <article class="card">
-
-        <div class="photo">
-          <img
-            src="assets/images/leadership/sat/kalilu-o-bah.jpg"
-            alt="Kalilu O. Bah, Vice Chairman, Strategic Advisory Team"
-          >
-        </div>
-
-        <div class="info">
-          <h3>Kalilu O. Bah</h3>
-          <div class="role">Vice Chairman</div>
-        </div>
-
-      </article>
-
-    </div>
-
-
-    <!-- SAT MEMBERS -->
-
-    <div class="sat-members">
-
-      <article class="card">
-        <div class="photo">
-          <img
-            src="assets/images/leadership/sat/betty-alimamy-wahd-sesay.jpg"
-            alt="Mrs Betty Alimamy Wahd-Sesay, SAT Member"
-          >
-        </div>
-        <div class="info">
-          <h3>Mrs Betty Alimamy Wahd-Sesay</h3>
-          <div class="role">Member</div>
-        </div>
-      </article>
-
-
-      <article class="card">
-        <div class="photo">
-          <img
-            src="assets/images/leadership/sat/abubakar-bangura.jpg"
-            alt="Mr Abubakar Bangura, SAT Member"
-          >
-        </div>
-        <div class="info">
-          <h3>Mr Abubakar Bangura</h3>
-          <div class="role">Member</div>
-        </div>
-      </article>
-
-
-      <article class="card">
-        <div class="photo">
-          <img
-            src="assets/images/leadership/sat/sally-ndimawa-adams.jpg"
-            alt="Mrs Sally Ndimawa Adams, SAT Member"
-          >
-        </div>
-        <div class="info">
-          <h3>Mrs Sally Ndimawa Adams</h3>
-          <div class="role">Member</div>
-        </div>
-      </article>
-
-
-      <article class="card">
-        <div class="photo">
-          <img
-            src="assets/images/leadership/sat/solomon-m-sogbandi.jpg"
-            alt="Solomon M. Sogbandi, SAT Member"
-          >
-        </div>
-        <div class="info">
-          <h3>Solomon M. Sogbandi</h3>
-          <div class="role">Member</div>
-        </div>
-      </article>
-
-
-      <article class="card">
-        <div class="photo">
-          <img
-            src="assets/images/leadership/sat/boi-jeneh-jalloh.jpg"
-            alt="Mrs Boi-Jeneh Jalloh, SAT Member"
-          >
-        </div>
-        <div class="info">
-          <h3>Mrs Boi-Jeneh Jalloh</h3>
-          <div class="role">Member</div>
-        </div>
-      </article>
-
-
-      <article class="card">
-        <div class="photo">
-          <img
-            src="assets/images/leadership/sat/briama-m-koroma.jpg"
-            alt="Briama M. Koroma, SAT Member"
-          >
-        </div>
-        <div class="info">
-          <h3>Briama M. Koroma</h3>
-          <div class="role">Member</div>
-        </div>
-      </article>
-
-
-      <article class="card">
-        <div class="photo">
-          <img
-            src="assets/images/leadership/sat/gertrude-gbassay-karimu.jpg"
-            alt="Mrs Gertrude Gbassay Karimu, SAT Member"
-          >
-        </div>
-        <div class="info">
-          <h3>Mrs Gertrude Gbassay Karimu</h3>
-          <div class="role">Member</div>
-        </div>
-      </article>
-
-
-      <article class="card">
-        <div class="photo">
-          <img
-            src="assets/images/leadership/sat/brima-victor-kamara.jpg"
-            alt="Mr Brima Victor Kamara, SAT Member"
-          >
-        </div>
-        <div class="info">
-          <h3>Mr Brima Victor Kamara</h3>
-          <div class="role">Member</div>
-        </div>
-      </article>
-
-
-      <article class="card">
-        <div class="photo">
-          <img
-            src="assets/images/leadership/sat/maria-isata-gborie.jpg"
-            alt="Mrs Maria Isata Gborie, SAT Member"
-          >
-        </div>
-        <div class="info">
-          <h3>Mrs Maria Isata Gborie</h3>
-          <div class="role">Member</div>
-        </div>
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     NATIONAL STAFF
-========================================================= -->
-
-<section class="staff-section" id="national-staff">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <div class="eyebrow">
-        National Secretariat
       </div>
+    </section>
 
-      <h2>
-        National Staff
-      </h2>
-
-      <p>
-        EON-SL's National Staff provides leadership, coordination,
-        technical and operational support across the organisation's
-        programmes and electoral observation activities.
-      </p>
-
-    </div>
-
-
-    <div class="staff-grid">
-
-
-      <article class="card">
-        <div class="photo">
-          <img
-            src="assets/images/leadership/national/samuel-patrick-mattia.jpg"
-            alt="Samuel Patrick Mattia"
-          >
+    <section class="section" aria-labelledby="team-heading">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow" style="color:var(--eon-sky-dark)">Our team</p>
+          <h2 id="team-heading">Management and programme staff</h2>
         </div>
-        <div class="info">
-          <h3>Samuel Patrick Mattia</h3>
-          <div class="role">Executive Director</div>
+        <div class="team-grid">
+          <article class="team-card">
+            <img src="assets/images/leadership/mariama-ibrahim-conteh.jpg" alt="Mariama Ibrahim Conteh" loading="lazy" decoding="async" width="420" height="500">
+            <div class="team-card-body">
+              <h3>Mariama Ibrahim Conteh</h3>
+              <div class="team-role">Finance Manager</div>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <img src="assets/images/leadership/patrick-gibao-massaquoi.jpg" alt="Patrick Gibao Massaquoi" loading="lazy" decoding="async" width="420" height="500">
+            <div class="team-card-body">
+              <h3>Patrick Gibao Massaquoi</h3>
+              <div class="team-role">Head of Training</div>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <img src="assets/images/leadership/haja-suafiatu-habib-tunis-kiawu.jpg" alt="Haja Suafiatu Habib Tunis-Kiawu" loading="lazy" decoding="async" width="420" height="500">
+            <div class="team-card-body">
+              <h3>Haja Suafiatu Habib Tunis-Kiawu</h3>
+              <div class="team-role">QA &amp; Accreditation Manager</div>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <img src="assets/images/leadership/andrew-yembeh-yandi-mansaray.jpg" alt="Andrew Yembeh Yandi Mansaray" loading="lazy" decoding="async" width="420" height="500">
+            <div class="team-card-body">
+              <h3>Andrew Yembeh Yandi Mansaray</h3>
+              <div class="team-role">Programme Lead</div>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <img src="assets/images/leadership/abubakar-bangura.jpg" alt="Abubakar Bangura" loading="lazy" decoding="async" width="420" height="500">
+            <div class="team-card-body">
+              <h3>Abubakar Bangura</h3>
+              <div class="team-role">SAT Member</div>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <img src="assets/images/leadership/sally-ndimawa-adams.jpg" alt="Sally Ndimawa Adams" loading="lazy" decoding="async" width="420" height="500">
+            <div class="team-card-body">
+              <h3>Sally Ndimawa Adams</h3>
+              <div class="team-role">SAT Member</div>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <img src="assets/images/leadership/solomon-m-sogbandi.jpg" alt="Solomon M. Sogbandi" loading="lazy" decoding="async" width="420" height="500">
+            <div class="team-card-body">
+              <h3>Solomon M. Sogbandi</h3>
+              <div class="team-role">SAT Member</div>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <img src="assets/images/leadership/boi-jeneh-jalloh.jpg" alt="Boi-Jeneh Jalloh" loading="lazy" decoding="async" width="420" height="500">
+            <div class="team-card-body">
+              <h3>Boi-Jeneh Jalloh</h3>
+              <div class="team-role">SAT Member</div>
+            </div>
+          </article>
         </div>
-      </article>
-
-
-      <article class="card">
-        <div class="photo">
-          <img
-            src="assets/images/leadership/national/emmanuel-sattie.jpg"
-            alt="Emmanuel Sattie"
-          >
-        </div>
-        <div class="info">
-          <h3>Emmanuel Sattie</h3>
-          <div class="role">National Coordinator</div>
-        </div>
-      </article>
-
-
-      <article class="card">
-        <div class="photo">
-          <img
-            src="assets/images/leadership/national/julius-barbour-aruna.jpg"
-            alt="Julius Barbour Aruna"
-          >
-        </div>
-        <div class="info">
-          <h3>Julius Barbour Aruna</h3>
-          <div class="role">Head of Secretariat</div>
-        </div>
-      </article>
-
-
-      <article class="card">
-        <div class="photo">
-          <img
-            src="assets/images/leadership/national/theresa-abrina-baindu-sheriff.jpg"
-            alt="Theresa Abrina Baindu Sheriff"
-          >
-        </div>
-        <div class="info">
-          <h3>Theresa Abrina Baindu Sheriff</h3>
-          <div class="role">Program Manager</div>
-        </div>
-      </article>
-
-
-      <article class="card">
-        <div class="photo">
-          <img
-            src="assets/images/leadership/national/mariama-ibrahim-conteh.jpg"
-            alt="Mariama Ibrahim Conteh"
-          >
-        </div>
-        <div class="info">
-          <h3>Mariama Ibrahim Conteh</h3>
-          <div class="role">Finance Manager</div>
-        </div>
-      </article>
-
-
-      <article class="card">
-        <div class="photo">
-          <img
-            src="assets/images/leadership/national/patrick-gibao-massaquoi.jpg"
-            alt="Patrick Gibao Massaquoi"
-          >
-        </div>
-        <div class="info">
-          <h3>Patrick Gibao Massaquoi</h3>
-          <div class="role">Head of Training</div>
-        </div>
-      </article>
-
-
-      <article class="card">
-        <div class="photo">
-          <img
-            src="assets/images/leadership/national/haja-suafiatu-habib-tunis-kiawu.jpg"
-            alt="Haja Suafiatu Habib Tunis-Kiawu"
-          >
-        </div>
-        <div class="info">
-          <h3>Haja Suafiatu Habib Tunis-Kiawu</h3>
-          <div class="role">Quality Assurance &amp; Accreditation Manager</div>
-        </div>
-      </article>
-
-
-      <article class="card">
-        <div class="photo">
-          <img
-            src="assets/images/leadership/national/andrew-yembeh-yandi-mansaray.jpg"
-            alt="Andrew Yembeh Yandi Mansaray"
-          >
-        </div>
-        <div class="info">
-          <h3>Andrew Yembeh Yandi Mansaray</h3>
-          <div class="role">IT Manager</div>
-        </div>
-      </article>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     REGIONAL COORDINATORS
-========================================================= -->
-
-<section class="regional-section" id="regional-coordinators">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <div class="eyebrow">
-        Field Coordination
       </div>
+    </section>
 
-      <h2>
-        Regional Coordinators
-      </h2>
-
-      <p>
-        Regional Coordinators support EON-SL's programmes,
-        electoral observation activities, civic engagement
-        and district-level coordination across Sierra Leone.
-      </p>
-
-    </div>
-
-
-    <div class="regional-grid">
-
-
-      <article class="card">
-        <div class="photo">
-          <img
-            src="assets/images/leadership/regional/western.jpg"
-            alt="Western Region Coordinator"
-          >
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="container cta-inner">
+        <div>
+          <h2 id="cta-title">Want to collaborate?</h2>
+          <p>Connect with EON-SL to learn more about civic engagement and election observation.</p>
         </div>
-        <div class="info">
-          <h3>James Kamara</h3>
-          <div class="role">Western Region Coordinator</div>
-        </div>
-      </article>
-
-
-      <article class="card">
-        <div class="photo">
-          <img
-            src="assets/images/leadership/regional/northern.jpg"
-            alt="Northern Region Coordinator"
-          >
-        </div>
-        <div class="info">
-          <h3>Ibrahim Sesay</h3>
-          <div class="role">Northern Region Coordinator</div>
-        </div>
-      </article>
-
-
-      <article class="card">
-        <div class="photo">
-          <img
-            src="assets/images/leadership/regional/north-west.jpg"
-            alt="North-West Region Coordinator"
-          >
-        </div>
-        <div class="info">
-          <h3>Abdulai Koroma</h3>
-          <div class="role">North-West Region Coordinator</div>
-        </div>
-      </article>
-
-
-      <article class="card">
-        <div class="photo">
-          <img
-            src="assets/images/leadership/regional/southern.jpg"
-            alt="Southern Region Coordinator"
-          >
-        </div>
-        <div class="info">
-          <h3>Mohamed Bangura</h3>
-          <div class="role">Southern Region Coordinator</div>
-        </div>
-      </article>
-
-
-      <article class="card">
-        <div class="photo">
-          <img
-            src="assets/images/leadership/regional/eastern.jpg"
-            alt="Eastern Region Coordinator"
-          >
-        </div>
-        <div class="info">
-          <h3>Mariama Koroma</h3>
-          <div class="role">Eastern Region Coordinator</div>
-        </div>
-      </article>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     DISTRICT COORDINATORS
-========================================================= -->
-
-<section class="district-section" id="district-coordinators">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <div class="eyebrow">
-        District-Level Coordination
+        <a class="button button--light" href="mailto:electionsobsnet@gmail.com">Get in touch</a>
       </div>
+    </section>
+  </main>
 
-      <h2>
-        District Coordinators
-      </h2>
-
-      <p>
-        District Coordinators support EON-SL's local-level
-        coordination, civic engagement and electoral observation
-        activities across the districts of Sierra Leone.
-      </p>
-
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h2>EON-SL</h2>
+          <p>Elections Observer Network Sierra Leone.</p>
+          <p>We Observe, Document and Report.</p>
+          <div class="social-links footer-social" aria-label="EON-SL social media links">
+            <a href="https://www.facebook.com/EON-Sierra-Leone" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
+            <a href="https://wa.me/23234210118" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WhatsApp</a>
+            <a href="https://www.linkedin.com/company/eon-sierra-leone/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+            <a href="https://x.com/EON_OBSERVE2023" target="_blank" rel="noopener noreferrer" aria-label="X">X</a>
+            <a href="https://www.instagram.com/eon_sierra_leone/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+            <a href="https://www.youtube.com/@EON-SierraLeone" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a>
+            <a href="https://www.tiktok.com/@eon_sierra_leone/" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TikTok</a>
+          </div>
+        </div>
+        <div>
+          <h2>Explore</h2>
+          <p><a href="index.html">Home</a><br><a href="about.html">About EON-SL</a><br><a href="staff.html">Leadership &amp; Staff</a></p>
+        </div>
+        <div>
+          <h2>Contact</h2>
+          <p>Freetown, Sierra Leone<br><a href="mailto:electionsobsnet@gmail.com">electionsobsnet@gmail.com</a><br><a href="tel:+23234210118">+232 34 210 118</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Elections Observer Network Sierra Leone.</span><span><a href="/sitemap.xml">Sitemap</a></span></div>
     </div>
+  </footer>
 
-
-    <div class="district-grid">
-
-
-      <article class="district-card">
-        <div class="photo">
-          <img src="assets/images/leadership/district/bo.jpg" alt="Bo District Coordinator">
-        </div>
-        <div class="info">
-          <span class="district-number">District 01</span>
-          <div class="district-name">Bo District</div>
-          <h3>Abdul Rahman Kamara</h3>
-          <div class="role">District Coordinator</div>
-        </div>
-      </article>
-
-
-      <article class="district-card">
-        <div class="photo">
-          <img src="assets/images/leadership/district/bombali.jpg" alt="Bombali District Coordinator">
-        </div>
-        <div class="info">
-          <span class="district-number">District 02</span>
-          <div class="district-name">Bombali District</div>
-          <h3>Alusine Sesay</h3>
-          <div class="role">District Coordinator</div>
-        </div>
-      </article>
-
-
-      <article class="district-card">
-        <div class="photo">
-          <img src="assets/images/leadership/district/bonthe.jpg" alt="Bonthe District Coordinator">
-        </div>
-        <div class="info">
-          <span class="district-number">District 03</span>
-          <div class="district-name">Bonthe District</div>
-          <h3>Abu Bakarr Jalloh</h3>
-          <div class="role">District Coordinator</div>
-        </div>
-      </article>
-
-
-      <article class="district-card">
-        <div class="photo">
-          <img src="assets/images/leadership/district/falaba.jpg" alt="Falaba District Coordinator">
-        </div>
-        <div class="info">
-          <span class="district-number">District 04</span>
-          <div class="district-name">Falaba District</div>
-          <h3>Mustapha Koroma</h3>
-          <div class="role">District Coordinator</div>
-        </div>
-      </article>
-
-
-      <article class="district-card">
-        <div class="photo">
-          <img src="assets/images/leadership/district/kailahun.jpg" alt="Kailahun District Coordinator">
-        </div>
-        <div class="info">
-          <span class="district-number">District 05</span>
-          <div class="district-name">Kailahun District</div>
-          <h3>Joseph Foday Sesay</h3>
-          <div class="role">District Coordinator</div>
-        </div>
-      </article>
-
-
-      <article class="district-card">
-        <div class="photo">
-          <img src="assets/images/leadership/district/kambia.jpg" alt="Kambia District Coordinator">
-        </div>
-        <div class="info">
-          <span class="district-number">District 06</span>
-          <div class="district-name">Kambia District</div>
-          <h3>Mohamed Turay</h3>
-          <div class="role">District Coordinator</div>
-        </div>
-      </article>
-
-
-      <article class="district-card">
-        <div class="photo">
-          <img src="assets/images/leadership/district/karene.jpg" alt="Karene District Coordinator">
-        </div>
-        <div class="info">
-          <span class="district-number">District 07</span>
-          <div class="district-name">Karene District</div>
-          <h3>Alimamy Bangura</h3>
-          <div class="role">District Coordinator</div>
-        </div>
-      </article>
-
-
-      <article class="district-card">
-        <div class="photo">
-          <img src="assets/images/leadership/district/kenema.jpg" alt="Kenema District Coordinator">
-        </div>
-        <div class="info">
-          <span class="district-number">District 08</span>
-          <div class="district-name">Kenema District</div>
-          <h3>Augustine Kallon</h3>
-          <div class="role">District Coordinator</div>
-        </div>
-      </article>
-
-
-      <article class="district-card">
-        <div class="photo">
-          <img src="assets/images/leadership/district/koinadugu.jpg" alt="Koinadugu District Coordinator">
-        </div>
-        <div class="info">
-          <span class="district-number">District 09</span>
-          <div class="district-name">Koinadugu District</div>
-          <h3>Abdulai Mansaray</h3>
-          <div class="role">District Coordinator</div>
-        </div>
-      </article>
-
-
-      <article class="district-card">
-        <div class="photo">
-          <img src="assets/images/leadership/district/kono.jpg" alt="Kono District Coordinator">
-        </div>
-        <div class="info">
-          <span class="district-number">District 10</span>
-          <div class="district-name">Kono District</div>
-          <h3>Patrick S. Koroma</h3>
-          <div class="role">District Coordinator</div>
-        </div>
-      </article>
-
-
-      <article class="district-card">
-        <div class="photo">
-          <img src="assets/images/leadership/district/moyamba.jpg" alt="Moyamba District Coordinator">
-        </div>
-        <div class="info">
-          <span class="district-number">District 11</span>
-          <div class="district-name">Moyamba District</div>
-          <h3>Alfred Bangura</h3>
-          <div class="role">District Coordinator</div>
-        </div>
-      </article>
-
-
-      <article class="district-card">
-        <div class="photo">
-          <img src="assets/images/leadership/district/port-loko.jpg" alt="Port Loko District Coordinator">
-        </div>
-        <div class="info">
-          <span class="district-number">District 12</span>
-          <div class="district-name">Port Loko District</div>
-          <h3>Francis A. Sesay</h3>
-          <div class="role">District Coordinator</div>
-        </div>
-      </article>
-
-
-      <article class="district-card">
-        <div class="photo">
-          <img src="assets/images/leadership/district/pujehun.jpg" alt="Pujehun District Coordinator">
-        </div>
-        <div class="info">
-          <span class="district-number">District 13</span>
-          <div class="district-name">Pujehun District</div>
-          <h3>Mohamed Jalloh</h3>
-          <div class="role">District Coordinator</div>
-        </div>
-      </article>
-
-
-      <article class="district-card">
-        <div class="photo">
-          <img src="assets/images/leadership/district/tonkolili.jpg" alt="Tonkolili District Coordinator">
-        </div>
-        <div class="info">
-          <span class="district-number">District 14</span>
-          <div class="district-name">Tonkolili District</div>
-          <h3>Sheku Amara Conteh</h3>
-          <div class="role">District Coordinator</div>
-        </div>
-      </article>
-
-
-      <article class="district-card">
-        <div class="photo">
-          <img src="assets/images/leadership/district/western-area-rural.jpg" alt="Western Area Rural District Coordinator">
-        </div>
-        <div class="info">
-          <span class="district-number">District 15</span>
-          <div class="district-name">Western Area Rural</div>
-          <h3>Abu Bakarr Kamara</h3>
-          <div class="role">District Coordinator</div>
-        </div>
-      </article>
-
-
-      <article class="district-card">
-        <div class="photo">
-          <img src="assets/images/leadership/district/western-area-urban.jpg" alt="Western Area Urban District Coordinator">
-        </div>
-        <div class="info">
-          <span class="district-number">District 16</span>
-          <div class="district-name">Western Area Urban</div>
-          <h3>Edward T. Bangura</h3>
-          <div class="role">District Coordinator</div>
-        </div>
-      </article>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- CTA -->
-
-<section class="cta">
-
-  <div class="container">
-
-    <h2>
-      Anchoring Transparent &amp; Credible Elections
-    </h2>
-
-    <p>
-      EON-SL continues to work with citizens, civil society,
-      electoral stakeholders and communities to strengthen
-      transparent, inclusive and credible electoral processes.
-    </p>
-
-    <a href="about.html" class="btn">
-      About EON-SL
-    </a>
-
-  </div>
-
-</section>
-
-</main>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-  <div class="container">
-
-    <div class="footer-grid">
-
-      <div>
-
-        <h3>
-          Elections Observer Network Sierra Leone
-        </h3>
-
-        <p>
-          An independent, impartial and non-partisan consortium
-          observing electoral processes in Sierra Leone.
-        </p>
-
-        <p style="margin-top:12px">
-          <span class="motto">
-            Anchoring Transparent &amp; Credible Elections
-          </span>
-        </p>
-
-      </div>
-
-
-      <div>
-
-        <h3>Contact</h3>
-
-        <ul>
-
-          <li>
-            5 Jesse Drive, Bango Farm, Ghana Compound
-          </li>
-
-          <li>
-            Adonkia, Goderich, Freetown, Sierra Leone
-          </li>
-
-          <li>
-            <a href="mailto:electionsobsnet@gmail.com">
-              electionsobsnet@gmail.com
-            </a>
-          </li>
-
-          <li>
-            <a href="mailto:eonslhq@gmail.com">
-              eonslhq@gmail.com
-            </a>
-          </li>
-
-          <li>+232 34 210 118</li>
-          <li>+232 76 508 888</li>
-
-        </ul>
-
-      </div>
-
-
-      <div>
-
-        <h3>Quick Links</h3>
-
-        <ul>
-
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About EON-SL</a></li>
-          <li><a href="elections.html">Elections</a></li>
-          <li><a href="observation.html">Observation</a></li>
-          <li><a href="reports.html">Reports &amp; Data</a></li>
-          <li><a href="civic-education.html">Civic Education</a></li>
-          <li><a href="staff.html">Leadership &amp; Staff</a></li>
-          <li><a href="get-involved.html">Get Involved</a></li>
-
-        </ul>
-
-      </div>
-
-    </div>
-
-
-    <div class="bottom">
-
-      <div>
-        &copy; 2026 Elections Observer Network Sierra Leone.
-        All rights reserved.
-      </div>
-
-      <div class="motto">
-        We Observe, Document and Report
-      </div>
-
-    </div>
-
-  </div>
-
-</footer>
-
+  <script src="assets/js/site.js" defer></script>
 </body>
 </html>
