@@ -1,0 +1,16 @@
+{
+  "name": "Elections Observer Network Sierra Leone",
+  "short_name": "EON-SL",
+  "description": "Elections Observer Network Sierra Leone — anchoring transparent and credible elections.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#38a9e8",
+  "icons": [
+    {
+      "src": "/assets/images/eon-logo.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}
